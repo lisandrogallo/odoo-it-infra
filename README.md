@@ -1,4 +1,4 @@
-odoo-it-infrastructure
-======================
+odoo-it-infra
+=============
 
 IT Infrastructure Management for Odoo
