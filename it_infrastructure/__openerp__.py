@@ -18,7 +18,6 @@
         u'view/instance_host_view.xml',
         u'view/server_repository_view.xml',
         u'view/partner_view.xml',
-        # u'view/mailserver_view.xml',
         u'view/repository_view.xml',
         # u'view/service_view.xml',
         u'view/environment_version_view.xml',
