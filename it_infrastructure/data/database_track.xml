@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record id="database_draft" model="mail.message.subtype">
+    <field name="name">Draft</field>
+    <field name="res_model">it_infrastructure.database</field>
+    <field name="default" eval="True"/>
+    <field name="description">Draft</field>
+</record>
+
+<record id="database_maintenance" model="mail.message.subtype">
+    <field name="name">Maintenance</field>
+    <field name="res_model">it_infrastructure.database</field>
+    <field name="default" eval="True"/>
+    <field name="description">Maintenance</field>
+</record>
+
+<record id="database_active" model="mail.message.subtype">
+    <field name="name">Active</field>
+    <field name="res_model">it_infrastructure.database</field>
+    <field name="default" eval="True"/>
+    <field name="description">Active</field>
+</record>
+
+<record id="database_deactivated" model="mail.message.subtype">
+    <field name="name">Deactivated</field>
+    <field name="res_model">it_infrastructure.database</field>
+    <field name="default" eval="True"/>
+    <field name="description">Deactivated</field>
+</record>
+
+<record id="database_cancel" model="mail.message.subtype">
+    <field name="name">Cancel</field>
+    <field name="res_model">it_infrastructure.database</field>
+    <field name="default" eval="True"/>
+    <field name="description">Cancel</field>
+</record>
+
+</data>
+</openerp>

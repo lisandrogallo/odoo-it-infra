@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+
+from openerp import models, fields
+
+
+class supply(models.Model):
+
+    _name = 'it_infrastructure.supply'
+    _description = 'supply'
+    _inherit = ['ir.needaction_mixin', 'mail.thread']
+
+    name = fields.Char(
+        string='Name',
+        required=True
+    )
+
+    description = fields.Html(
+        string='Description'
+    )
+
+    supply_category_id = fields.Many2one(
+        'it_infrastructure.supply_category',
+        string='Category',
+        required=True
+    )
+
+    quantity = fields.Integer(
+        string='Quantity',
+        default=0
+    )
+
+    partner_id = fields.Many2one(
+        'res.partner',
+        string='Partner'
+    )
+
+    # device_id = fields.Many2one(
+    # )

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- it_infrastructure.supply -->
+<openerp>
+<data>
+
+<!-- SEARCH VIEW -->
+<record id="view_it_infrastructure_supply_filter" model="ir.ui.view">
+    <field name="name">it_infrastructure.supply.select</field>
+    <field name="model">it_infrastructure.supply</field>
+    <field name="arch" type="xml">
+        <search string="supply" version="7.0">
+            <group string="By Attribute">
+                <field name="name"/>
+                <field name="description"/>
+            </group>
+            <group string="By object">
+                <field name="supply_category_id" string="Category"/>
+                <field name="quantity" string="Quantity"/>
+            </group>
+        </search>
+    </field>
+</record>
+
+<!-- FORMVIEW -->
+<record id="view_it_infrastructure_supply_form" model="ir.ui.view">
+    <field name="name">it_infrastructure.supply.form</field>
+    <field name="model">it_infrastructure.supply</field>
+    <field name="arch" type="xml">
+        <form string="supply">
+            <sheet string="supply">
+                <div>
+                    <h1>
+                        <field name="name"
+                            placeholder="Name..."/>
+                    </h1>
+                    <div class="col-md-6">
+                        <group>
+                            <field name="supply_category_id"/>
+                            <field name="quantity"/>
+                        </group>
+                    </div>
+                    <div class="col-md-6">
+                        <group>
+                            <field name="partner_id"/>
+                        </group>
+                    </div>
+                </div>
+                <notebook>
+                    <page string="Description">
+                        <field name="description"/>
+                    </page>
+               </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </form>
+    </field>
+</record>
+
+<!-- TREEVIEW -->
+<record id="view_it_infrastructure_supply_tree" model="ir.ui.view">
+    <field name="name">it_infrastructure.supply.tree</field>
+    <field name="model">it_infrastructure.supply</field>
+    <field name="arch" type="xml">
+        <tree string="supply">
+            <field name="name"/>
+            <field name="description"/>
+            <field name="supply_category_id"/>
+            <field name="quantity"/>
+            <field name="message_unread" invisible="1"/>
+        </tree>
+    </field>
+</record>
+
+<record id="action_it_infrastructure_supply_supplies" model="ir.actions.act_window">
+    <field name="name">Supplies</field>
+    <field name="res_model">it_infrastructure.supply</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+    name="Supplies"
+    id="menu_supplies"
+    sequence="30"
+    action="action_it_infrastructure_supply_supplies"
+    parent="menu_it_infrastructure_main"
+    groups="group_user"
+    />
+
+</data>
+</openerp>
