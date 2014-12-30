@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- it_infrastructure.supply -->
+<openerp>
+<data>
+
+<record id="action_it_infrastructure_device_devices" model="ir.actions.act_window">
+    <field name="name">Devices</field>
+    <field name="res_model">it_infrastructure.device</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+    name="Devices"
+    id="menu_devices"
+    sequence="40"
+    action="action_it_infrastructure_device_devices"
+    parent="menu_it_infrastructure_main"
+    groups="group_user"
+    />
+
+</data>
+</openerp>

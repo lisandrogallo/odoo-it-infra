@@ -25,3 +25,5 @@ import wizard
 import supply
 import supply_category
 import equipment
+import device
+import device_category

@@ -25,6 +25,7 @@
         u'view/database_backup_policy_view.xml',
         u'view/instance_view.xml',
         u'view/supply_view.xml',
+        u'view/device_view.xml',
         u'view/repository_branch_view.xml',
         u'view/server_configuration_view.xml',
         u'view/server_change_view.xml',
