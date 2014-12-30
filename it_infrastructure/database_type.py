@@ -51,14 +51,14 @@ class database_type(models.Model):
         string='URL Example'
     )
 
-    db_name_example = fields.Char(
+    database_name_example = fields.Char(
         string='Database Name Example'
     )
 
-    db_backup_policy_ids = fields.Many2many(
-        'it_infrastructure.db_backup_policy',
-        'infrastructure_database_type_ids_db_backup_policy_ids_rel',
+    database_backup_policy_ids = fields.Many2many(
+        'it_infrastructure.database_backup_policy',
+        'db_type_ids_database_backup_policy_ids_rel',
         'database_type_id',
-        'db_backup_policy_id',
+        'database_backup_policy_id',
         string='Suggested Backup Policies'
     )

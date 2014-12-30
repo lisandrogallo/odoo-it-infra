@@ -57,9 +57,9 @@ class instance(models.Model):
         default='none_secure'
     )
 
-    db_filter = fields.Many2one(
-        'it_infrastructure.db_filter',
-        string='DB Filter',
+    database_filter = fields.Many2one(
+        'it_infrastructure.database_filter',
+        string='Database Filter',
         required=True
     )
 
@@ -395,7 +395,7 @@ class instance(models.Model):
 
         if addons_path:
             command += ' --addons-path=' + addons_path
-        command += ' --db-filter=' + self.db_filter.rule
+        command += ' --db-filter=' + self.database_filter.rule
         command += ' --xmlrpc-port=' + str(self.xml_rpc_port)
         command += ' --logfile=' + self.logfile
 
@@ -425,7 +425,7 @@ class instance(models.Model):
             command += ' --no-xmlrpcs'
 
         # TODO --cert-file and --pkey-file
-        # TODO ver de agregar --log-db=LOG_DB
+        # TODO ver de agregar --log-db=LOG_Database
         # TODO check that user exists
         # TODO tal vez -r -w para database data
         try:

@@ -2,18 +2,18 @@
 <openerp>
 <data noupdate="0">
 
-<record forcecreate="True" id="ir_cron_db_backup_hourly" model="ir.cron">
+<record forcecreate="True" id="ir_cron_database_backup_hourly" model="ir.cron">
     <field name="name">Backup Hourly</field>
     <field name="interval_number">4</field>
     <field name="interval_type">hours</field>
     <field name="numbercall">-1</field>
     <field eval="False" name="doall"/>
     <field name="model">it_infrastructure.database</field>
-    <field name="function">_cron_db_backup</field>
+    <field name="function">_cron_database_backup</field>
     <field name="args">('hourly',)</field>
 </record>
 
-<record forcecreate="True" id="ir_cron_db_backup_daily" model="ir.cron">
+<record forcecreate="True" id="ir_cron_database_backup_daily" model="ir.cron">
     <field name="name">Backup Daily</field>
     <field name="interval_number">1</field>
     <field name="interval_type">days</field>
@@ -21,11 +21,11 @@
     <field name="numbercall">-1</field>
     <field eval="False" name="doall"/>
     <field name="model">it_infrastructure.database</field>
-    <field name="function">_cron_db_backup</field>
+    <field name="function">_cron_database_backup</field>
     <field name="args">('daily',)</field>
 </record>
 
-<record forcecreate="True" id="ir_cron_db_backup_weekly" model="ir.cron">
+<record forcecreate="True" id="ir_cron_database_backup_weekly" model="ir.cron">
     <field name="name">Backup Weekly</field>
     <field name="interval_number">1</field>
     <field name="interval_type">weeks</field>
@@ -33,11 +33,11 @@
     <field name="numbercall">-1</field>
     <field eval="False" name="doall"/>
     <field name="model">it_infrastructure.database</field>
-    <field name="function">_cron_db_backup</field>
+    <field name="function">_cron_database_backup</field>
     <field name="args">('weekly',)</field>
 </record>
 
-<record forcecreate="True" id="ir_cron_db_backup_monthly" model="ir.cron">
+<record forcecreate="True" id="ir_cron_database_backup_monthly" model="ir.cron">
     <field name="name">Backup Monthly</field>
     <field name="interval_number">1</field>
     <field name="interval_type">months</field>
@@ -45,7 +45,7 @@
     <field name="numbercall">-1</field>
     <field eval="False" name="doall"/>
     <field name="model">it_infrastructure.database</field>
-    <field name="function">_cron_db_backup</field>
+    <field name="function">_cron_database_backup</field>
     <field name="args">('monthly',)</field>
 </record>
 

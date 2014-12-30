@@ -42,8 +42,8 @@
                     attrs="{'invisible':[('automatic_deactivation','!=',True)],'required':[('automatic_deactivation','=',True)]}"
                     />
                 <field name="url_example"/>
-                <field name="db_name_example"/>
-                <field name="db_backup_policy_ids"
+                <field name="database_name_example"/>
+                <field name="database_backup_policy_ids"
                     widget="many2many_tags"
                     />
              </group>

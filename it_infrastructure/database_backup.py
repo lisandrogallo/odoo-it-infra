@@ -35,8 +35,8 @@ class database_backup(models.Model):
         required=True
     )
 
-    db_backup_policy_id = fields.Many2one(
-        'it_infrastructure.db_backup_policy',
+    database_backup_policy_id = fields.Many2one(
+        'it_infrastructure.database_backup_policy',
         string='Backup Policy',
         readonly=True
     )

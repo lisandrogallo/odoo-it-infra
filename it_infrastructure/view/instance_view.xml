@@ -14,7 +14,7 @@
                 <field name="name" string="Name"/>
                 <field name="type" string="Instance Type"/>
                 <field name="xml_rpc_port" string="XML-RPC Port"/>
-                <field name="db_filter" string="DB filter"/>
+                <field name="database_filter" string="Database filter"/>
                 <field name="user" string="User / Service File"/>
             </group>
             <group string="By Object">
@@ -82,7 +82,7 @@
                                     type="object"
                                     class="oe_link"/>
                             </div>
-                        <field name="db_filter"/>
+                        <field name="database_filter"/>
                         <field name="main_hostname" widget="url"/>
                     </group>
                     <group>
@@ -149,7 +149,7 @@
             <field name="name"/>
             <field name="type"/>
             <field name="xml_rpc_port"/>
-            <field name="db_filter"/>
+            <field name="database_filter"/>
             <field name="user"/>
             <field name="environment_id"/>
             <field name="state" />

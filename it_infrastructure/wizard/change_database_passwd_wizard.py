@@ -5,15 +5,15 @@ from openerp.osv import osv
 from openerp.exceptions import Warning
 
 
-class infrastructure_change_db_passwd_wizard(osv.osv_memory):
-    _name = "it_infrastructure.change_db_passwd.wizard"
+class infrastructure_change_database_passwd_wizard(osv.osv_memory):
+    _name = "it_infrastructure.change_database_passwd.wizard"
     _description = "IT Infrastructure Change Database Password Wizard"
 
     new_passwd = fields.Char(string='New Password', required=True)
     confirm_passwd = fields.Char(string='Confirm Password', required=True)
 
     @api.one
-    def change_db_passwd(self):
+    def change_database_passwd(self):
         active_ids = self.env.context.get('active_ids', False)
         databases = self.env['it_infrastructure.database'].browse(active_ids)
         for database in databases:

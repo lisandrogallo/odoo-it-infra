@@ -115,11 +115,11 @@ class database(models.Model):
         default='draft'
     )
 
-    db_backup_policy_ids = fields.Many2many(
-        'it_infrastructure.db_backup_policy',
-        'infrastructure_database_ids_db_backup_policy_ids_rel',
+    database_backup_policy_ids = fields.Many2many(
+        'it_infrastructure.database_backup_policy',
+        'it_infrastructure_db_ids_db_backup_policy_ids_rel',
         'database_id',
-        'db_backup_policy_id',
+        'database_backup_policy_id',
         string='Suggested Backup Policies'
     )
 
@@ -139,7 +139,7 @@ class database(models.Model):
     )
 
     protected_db = fields.Boolean(
-        string='Protected DB?',
+        string='Protected Database?',
         related='database_type_id.protect_db',
         store=True,
         readonly=True
@@ -189,7 +189,7 @@ class database(models.Model):
     def onchange_database_type_id(self):
         if self.database_type_id:
             self.name = self.database_type_id.prefix + '_'
-            self.db_backup_policy_ids = self.database_type_id.db_backup_policy_ids
+            self.database_backup_policy_ids = self.database_type_id.database_backup_policy_ids
 
     @api.one
     @api.depends('database_type_id', 'issue_date')
@@ -207,13 +207,13 @@ class database(models.Model):
         base_url = self.instance_id.main_hostname
         server_port = 80
         # server_port = self.instance_id.xml_rpc_port
-        rpc_db_url = 'http://%s:%d/xmlrpc/db' % (base_url, server_port)
-        return xmlrpclib.ServerProxy(rpc_db_url)
+        rpc_database_url = 'http://%s:%d/xmlrpc/db' % (base_url, server_port)
+        return xmlrpclib.ServerProxy(rpc_database_url)
 
     @api.one
     def create_db(self):
         sock = self.get_sock()[0]
-        new_db_name = self.name
+        new_database_name = self.name
         demo = self.demo_data
         user_password = 'admin'
         lang = False  # lang = 'en_US'
@@ -221,14 +221,14 @@ class database(models.Model):
         try:
             sock.create_database(
                 self.instance_id.admin_pass,
-                new_db_name,
+                new_database_name,
                 demo,
                 lang,
                 user_password
             )
         except Exception, e:
             raise except_orm(
-                _("Unable to create '%s' database") % new_db_name,
+                _("Unable to create '%s' database") % new_database_name,
                 _('Command output: %s') % e
             )
         self.signal_workflow('sgn_to_active')
@@ -281,7 +281,7 @@ class database(models.Model):
                     restarting service.'))
 
     @api.one
-    def kill_db_connection(self):
+    def kill_database_connection(self):
         self.server_id.get_env()
         psql_command = "/SELECT pg_terminate_backend(pg_stat_activity.procpid)\
          FROM pg_stat_activity WHERE pg_stat_activity.datname = '"
@@ -343,10 +343,10 @@ class database(models.Model):
         new_db.signal_workflow('sgn_to_active')
         # TODO retornar accion de ventana a la bd creada
 
-    def _cron_db_backup(self, cr, uid, policy, context=None):
+    def _cron_database_backup(self, cr, uid, policy, context=None):
         """"""
         # Search for the backup policy having 'policy' as backup prefix
-        backup_policy_obj = self.pool['it_infrastructure.db_backup_policy']
+        backup_policy_obj = self.pool['it_infrastructure.database_backup_policy']
         backup_policy_id = backup_policy_obj.search(
             cr, uid, [('backup_prefix', '=', policy)], context=context)[0]
 
@@ -371,7 +371,7 @@ class database(models.Model):
         if not backup_policy_id:
             policy_name = 'manual'
         else:
-            backup_policy = self.env['it_infrastructure.db_backup_policy'].search(
+            backup_policy = self.env['it_infrastructure.database_backup_policy'].search(
                 [('id', '=', backup_policy_id)])
             policy_name = backup_policy.backup_prefix
 
@@ -390,7 +390,7 @@ class database(models.Model):
             'database_id': self.id,
             'name': dump_name,
             'create_date': datetime.now(),
-            'db_backup_policy_id': backup_policy_id
+            'database_backup_policy_id': backup_policy_id
         }
 
         try:
