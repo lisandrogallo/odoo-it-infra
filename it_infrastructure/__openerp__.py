@@ -7,7 +7,7 @@
     'category': u'base.module_category_knowledge_management',
     'author': u'Liso Gallo',
     'license': 'AGPL-3',
-    'depends': [u'mail'],
+    'depends': [u'mail', u'hr'],
     'data': [
         u'wizard/duplicate_database_wizard_view.xml',
         u'wizard/change_database_passwd_wizard_view.xml',

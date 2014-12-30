@@ -24,3 +24,4 @@ import wizard
 
 import supply
 import supply_category
+import equipment
