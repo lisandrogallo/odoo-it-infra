@@ -1,7 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- it_infrastructure.supply -->
+<!-- it_infrastructure.device -->
 <openerp>
 <data>
+
+<!-- SEARCH VIEW -->
+<record id="view_it_infrastructure_device_filter" model="ir.ui.view">
+    <field name="name">it_infrastructure.device.select</field>
+    <field name="model">it_infrastructure.device</field>
+    <field name="arch" type="xml">
+        <search version="7.0">
+            <group string="By Attribute">
+                <field name="name"/>
+            </group>
+            <group string="By object">
+                <field name="office_id" string="Office"/>
+                <field name="state" string="State"/>
+            </group>
+        </search>
+    </field>
+</record>
+
+<!-- FORMVIEW -->
+<record id="view_it_infrastructure_device_form" model="ir.ui.view">
+    <field name="name">it_infrastructure.device.form</field>
+    <field name="model">it_infrastructure.device</field>
+    <field name="arch" type="xml">
+        <form>
+            <header>
+                <button name="action_wfk_set_pending"
+                    type="object"
+                    states="active,stored,decommissioned"
+                    string="to Pending"
+                    />
+                <button name="sgn_to_active"
+                    states="pending,stored,decommissioned"
+                    string="to Active"
+                    />
+                <button name="sgn_to_stored"
+                    states="active"
+                    string="to Stored"
+                    />
+                <button name="sgn_to_decommissioned"
+                    states="active,stored"
+                    string="Decommissioned"
+                    />
+                <field name="state" widget="statusbar"
+                    statusbar_colors='{}'
+                    />
+            </header>
+            <sheet>
+                <div>
+                    <h1>
+                        <field name="name"
+                            placeholder="Name..."/>
+                    </h1>
+                    <div class="col-md-6">
+                        <group>
+                            <field name="stock_number"/>
+                            <field name="input_date"/>
+                            <field name="warranty"/>
+                        </group>
+                    </div>
+                    <div class="col-md-6">
+                        <group>
+                            <field name="device_category_id"/>
+                            <field name="office_id"/>
+                        </group>
+                    </div>
+                </div>
+                <notebook>
+                    <page string="Description">
+                        <field name="description"/>
+                    </page>
+               </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </form>
+    </field>
+</record>
+
+<!-- TREEVIEW -->
+<record id="view_it_infrastructure_device_tree" model="ir.ui.view">
+    <field name="name">it_infrastructure.device.tree</field>
+    <field name="model">it_infrastructure.device</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="device_category_id"/>
+            <field name="stock_number"/>
+            <field name="input_date"/>
+            <field name="warranty"/>
+            <field name="state"/>
+            <field name="message_unread" invisible="1"/>
+        </tree>
+    </field>
+</record>
 
 <record id="action_it_infrastructure_device_devices" model="ir.actions.act_window">
     <field name="name">Devices</field>

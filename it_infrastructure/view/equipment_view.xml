@@ -25,7 +25,7 @@
     <field name="name">it_infrastructure.equipment.form</field>
     <field name="model">it_infrastructure.equipment</field>
     <field name="arch" type="xml">
-        <form string="equipment">
+        <form>
             <header>
                 <button name="action_wfk_set_pending"
                     type="object"
@@ -57,7 +57,7 @@
                     statusbar_colors='{}'
                     />
             </header>
-            <sheet string="equipment">
+            <sheet>
                 <div>
                     <h1>
                         <field name="name"
