@@ -28,7 +28,7 @@
      </field>
  </record>
 
-<record id="action_infrastructure_restore_database_wizard" model="ir.actions.act_window">
+<record id="action_it_infrastructure_restore_database_wizard" model="ir.actions.act_window">
      <field name="name">Restore Database Wizard</field>
      <field name="res_model">it_infrastructure.restore_database.wizard</field>
      <field name="type">ir.actions.act_window</field>

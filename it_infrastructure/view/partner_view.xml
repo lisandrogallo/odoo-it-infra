@@ -36,7 +36,7 @@
     </field>
 </record>
 
-<record id="action_infrastructure_partner_partners" model="ir.actions.act_window">
+<record id="action_it_infrastructure_partner_partners" model="ir.actions.act_window">
     <field name="name">Partners</field>
     <field name="res_model">res.partner</field>
     <field name="view_type">form</field>
@@ -50,7 +50,7 @@
     name="Partners"
     id="menu_partners"
     sequence="10"
-    action="action_infrastructure_partner_partners"
+    action="action_it_infrastructure_partner_partners"
     parent="menu_data"
     groups="group_user"
     />

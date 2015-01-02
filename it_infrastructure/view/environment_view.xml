@@ -58,7 +58,7 @@
                     </h1>
                 </div>
                 <div class="oe_right oe_button_box" name="buttons">
-                    <button name="%(action_infrastructure_instance_instances)d" icon="fa-th" type="action" class="oe_stat_button" context="{'search_default_environment_id': active_id}">
+                    <button name="%(action_it_infrastructure_instance_instances)d" icon="fa-th" type="action" class="oe_stat_button" context="{'search_default_environment_id': active_id}">
                         <field name="instance_count" widget="statinfo"/>
                     </button>
                 </div>
@@ -154,13 +154,13 @@
 </record>
 
 <!-- TODO hacerla linda vista kanban y agregar aqui abajo-->
-    <!-- <record id="it_infrastructure.action_infrastructure_environment_environments" model="ir.actions.act_window"> -->
+    <!-- <record id="it_infrastructure.action_it_infrastructure_environment_environments" model="ir.actions.act_window"> -->
         <!-- <field name="view_mode">tree,form</field> -->
         <!-- <field name="view_mode">kanban,tree,form</field> -->
         <!-- <field name="view_id" ref=""/> -->
     <!-- </record> -->
 
-<record id="action_infrastructure_environment_environments" model="ir.actions.act_window">
+<record id="action_it_infrastructure_environment_environments" model="ir.actions.act_window">
     <field name="name">Environments</field>
     <field name="res_model">it_infrastructure.environment</field>
     <field name="view_type">form</field>
@@ -174,7 +174,7 @@
     name="Environments"
     id="menu_environments"
     sequence="20"
-    action="action_infrastructure_environment_environments"
+    action="action_it_infrastructure_environment_environments"
     parent="menu_it_infrastructure_main"
     groups="group_user"
     />

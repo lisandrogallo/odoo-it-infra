@@ -56,7 +56,7 @@
                     </h2>
                 </div>
                 <div class="oe_right oe_button_box" name="buttons">
-                    <button name="%(action_infrastructure_environment_environments)d" icon="fa-th" type="action" class="oe_stat_button" context="{'search_default_server_id': active_id}">
+                    <button name="%(action_it_infrastructure_environment_environments)d" icon="fa-th" type="action" class="oe_stat_button" context="{'search_default_server_id': active_id}">
                         <field name="environment_count" widget="statinfo"/>
                     </button>
                     <button name="reboot_server" icon="fa-refresh" string="Reboot Server" class="oe_stat_button" help="Reboot Server"/>
@@ -161,7 +161,7 @@
     </field>
 </record>
 
-<record id="action_infrastructure_server_servers" model="ir.actions.act_window">
+<record id="action_it_infrastructure_server_servers" model="ir.actions.act_window">
     <field name="name">Servers</field>
     <field name="res_model">it_infrastructure.server</field>
     <field name="view_type">form</field>
@@ -175,7 +175,7 @@
     name="Servers"
     id="menu_servers"
     sequence="10"
-    action="action_infrastructure_server_servers"
+    action="action_it_infrastructure_server_servers"
     parent="menu_it_infrastructure_main"
     groups="group_user"
     />

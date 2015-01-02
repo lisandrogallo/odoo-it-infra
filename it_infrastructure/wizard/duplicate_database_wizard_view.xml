@@ -22,7 +22,7 @@
      </field>
  </record>
 
-<record id="action_infrastructure_duplicate_database_wizard" model="ir.actions.act_window">
+<record id="action_it_infrastructure_duplicate_database_wizard" model="ir.actions.act_window">
      <field name="name">Duplicate db Wizard</field>
      <field name="res_model">it_infrastructure.duplicate_db.wizard</field>
      <field name="type">ir.actions.act_window</field>

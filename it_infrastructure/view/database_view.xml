@@ -73,8 +73,8 @@
                     <button icon="fa-download" type="object" string="Backup Now" class="oe_inline oe_stat_button" name="action_backup_now" attrs="{'invisible':[('state','!=','active')]}"/>
                     <button icon="fa-download" type="object" string="Dump" class="oe_inline oe_stat_button" name="dump_db" attrs="{'invisible':[('state','!=','active')]}"/>
                     <button icon="fa-sun-o" type="object" string="Create" class="oe_inline oe_stat_button" name="create_db" attrs="{'invisible':[('state','!=','draft')]}"/>
-                    <button icon="fa-copy" type="action" string="Duplicate" class="oe_stat_button" name="%(action_infrastructure_duplicate_database_wizard)d" attrs="{'invisible':[('state','!=','active')]}"/>
-                    <button type="action" string="Change Password" class="oe_stat_button" name="%(action_infrastructure_change_database_passwd_wizard)d" attrs="{'invisible':[('state','!=','active')]}"/>
+                    <button icon="fa-copy" type="action" string="Duplicate" class="oe_stat_button" name="%(action_it_infrastructure_duplicate_database_wizard)d" attrs="{'invisible':[('state','!=','active')]}"/>
+                    <button type="action" string="Change Password" class="oe_stat_button" name="%(action_it_infrastructure_change_database_passwd_wizard)d" attrs="{'invisible':[('state','!=','active')]}"/>
                     <button icon="fa-trash-o" type="object" string="Drop" class="oe_stat_button" name="drop_db" attrs="{'invisible':[('state','!=','active')]}"/>
                     <button type="object" string="Kill Connections" class="oe_stat_button" name="kill_database_connection" attrs="{'invisible':[('state','!=','active')]}"/>
                 </div>
@@ -105,11 +105,11 @@
                         <field name="attachment_location" attrs="{'required':[('attachment_loc_type','=','filesystem')],'invisible':[('attachment_loc_type','!=','filesystem')]}"/> -->
                     </group>
                     <group>
-                        <label for="smtp_server_id"/>
+<!--                         <label for="smtp_server_id"/>
                         <div class="oe_inline">
                             <field name="smtp_server_id" class="oe_inline"/>
                             <button class="oe_link oe_inline" type="object" name="upload_mail_server_config" string="Upload Config"/>
-                        </div>
+                        </div> -->
                         <field name="domain_alias"/>
 <!--                         <label for="alias_domain"/>
                         <div class="oe_inline">
@@ -159,7 +159,7 @@
     </field>
 </record>
 
-<record id="action_infrastructure_database_databases" model="ir.actions.act_window">
+<record id="action_it_infrastructure_database_databases" model="ir.actions.act_window">
     <field name="name">Databases</field>
     <field name="res_model">it_infrastructure.database</field>
     <field name="view_type">form</field>
@@ -173,7 +173,7 @@
     name="Databases"
     id="menu_databases"
     sequence="40"
-    action="action_infrastructure_database_databases"
+    action="action_it_infrastructure_database_databases"
     parent="menu_it_infrastructure_main"
     groups="group_user"
     />

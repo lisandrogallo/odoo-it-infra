@@ -70,7 +70,7 @@
     </field>
 </record>
 
-<record id="action_infrastructure_repository_repositories" model="ir.actions.act_window">
+<record id="action_it_infrastructure_repository_repositories" model="ir.actions.act_window">
     <field name="name">Repositories</field>
     <field name="res_model">it_infrastructure.repository</field>
     <field name="view_type">form</field>
@@ -84,7 +84,7 @@
     name="Repositories"
     id="menu_repositories"
     sequence="100"
-    action="action_infrastructure_repository_repositories"
+    action="action_it_infrastructure_repository_repositories"
     parent="menu_repositories_conf"
     groups="group_manager"
     />

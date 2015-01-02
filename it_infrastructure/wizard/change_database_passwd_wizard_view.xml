@@ -20,7 +20,7 @@
      </field>
  </record>
 
-<record id="action_infrastructure_change_database_passwd_wizard" model="ir.actions.act_window">
+<record id="action_it_infrastructure_change_database_passwd_wizard" model="ir.actions.act_window">
      <field name="name">Change Database Password</field>
      <field name="res_model">it_infrastructure.change_database_passwd.wizard</field>
      <field name="type">ir.actions.act_window</field>
