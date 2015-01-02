@@ -29,7 +29,6 @@
         u'view/repository_branch_view.xml',
         u'view/server_configuration_view.xml',
         u'view/server_change_view.xml',
-        u'view/server_service_view.xml',
         u'view/database_type_view.xml',
         u'view/command_view.xml',
         u'view/server_configuration_command_view.xml',

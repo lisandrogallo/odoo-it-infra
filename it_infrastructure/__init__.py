@@ -19,7 +19,6 @@ import server_configuration
 import server_configuration_command
 import server_hostname
 import server_repository
-import server_service
 import wizard
 
 import supply
