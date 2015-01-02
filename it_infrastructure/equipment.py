@@ -8,6 +8,7 @@ class equipment(models.Model):
     _name = 'it_infrastructure.equipment'
     _description = 'Equipment'
     _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _order = "input_date desc"
 
     _states_ = [
         ('pending', 'Pending'),
@@ -34,13 +35,18 @@ class equipment(models.Model):
         required=True
     )
 
+    description = fields.Html(
+        string='Description'
+    )
+
     stock_number = fields.Integer(
         string='Stock Number',
         required=True
     )
 
     input_date = fields.Date(
-        string='Input Date'
+        string='Input Date',
+        required=True
     )
 
     warranty = fields.Integer(
@@ -52,4 +58,10 @@ class equipment(models.Model):
         'hr.department',
         string='Office',
         required=True
+    )
+
+    state = fields.Selection(
+        _states_,
+        'State',
+        default='pending'
     )

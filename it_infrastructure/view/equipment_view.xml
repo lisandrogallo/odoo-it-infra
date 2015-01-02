@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- it_infrastructure.equipment -->
+<openerp>
+<data>
+
+<!-- SEARCH VIEW -->
+<record id="view_it_infrastructure_equipment_filter" model="ir.ui.view">
+    <field name="name">it_infrastructure.equipment.select</field>
+    <field name="model">it_infrastructure.equipment</field>
+    <field name="arch" type="xml">
+        <search string="equipment" version="7.0">
+            <group string="By Attribute">
+                <field name="name"/>
+            </group>
+            <group string="By object">
+                <field name="office_id" string="Office"/>
+                <field name="state" string="State"/>
+            </group>
+        </search>
+    </field>
+</record>
+
+<!-- FORMVIEW -->
+<record id="view_it_infrastructure_equipment_form" model="ir.ui.view">
+    <field name="name">it_infrastructure.equipment.form</field>
+    <field name="model">it_infrastructure.equipment</field>
+    <field name="arch" type="xml">
+        <form string="equipment">
+            <header>
+                <button name="action_wfk_set_pending"
+                    type="object"
+                    states="active,stored,decommissioned"
+                    string="to Pending"
+                    />
+                <button name="sgn_to_active"
+                    states="pending,stored,decommissioned"
+                    string="to Active"
+                    />
+                <button name="sgn_to_stored"
+                    states="active"
+                    string="to Stored"
+                    />
+                <button name="sgn_to_decommissioned"
+                    states="active,stored"
+                    string="Decommissioned"
+                    />
+<!--                 <button name="sgn_to_active"
+                    states="deactivated,draft,maintenance"
+                    string="to Active"
+                    class="oe_highlight"
+                    />
+                <button name="sgn_cancel"
+                    states="active,deactivated,maintenance"
+                    string="Cancel"
+                    /> -->
+                <field name="state" widget="statusbar"
+                    statusbar_colors='{}'
+                    />
+            </header>
+            <sheet string="equipment">
+                <div>
+                    <h1>
+                        <field name="name"
+                            placeholder="Name..."/>
+                    </h1>
+                    <div class="col-md-6">
+                        <group>
+                            <field name="stock_number"/>
+                            <field name="input_date"/>
+                            <field name="warranty"/>
+                        </group>
+                    </div>
+                    <div class="col-md-6">
+                        <group>
+                            <field name="office_id"/>
+                        </group>
+                    </div>
+                </div>
+                <notebook>
+                    <page string="Description">
+                        <field name="description"/>
+                    </page>
+               </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </form>
+    </field>
+</record>
+
+<!-- TREEVIEW -->
+<record id="view_it_infrastructure_equipment_tree" model="ir.ui.view">
+    <field name="name">it_infrastructure.equipment.tree</field>
+    <field name="model">it_infrastructure.equipment</field>
+    <field name="arch" type="xml">
+        <tree string="equipment">
+            <field name="name"/>
+            <field name="stock_number"/>
+            <field name="input_date"/>
+            <field name="warranty"/>
+            <field name="state"/>
+            <field name="message_unread" invisible="1"/>
+        </tree>
+    </field>
+</record>
+
+<record id="action_it_infrastructure_equipment_equipments" model="ir.actions.act_window">
+    <field name="name">Equipments</field>
+    <field name="res_model">it_infrastructure.equipment</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+    name="Equipments"
+    id="menu_equipments"
+    sequence="50"
+    action="action_it_infrastructure_equipment_equipments"
+    parent="menu_it_infrastructure_main"
+    groups="group_user"
+    />
+
+</data>
+</openerp>
