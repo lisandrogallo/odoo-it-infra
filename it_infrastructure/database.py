@@ -82,11 +82,6 @@ class database(models.Model):
         string='Color Index'
     )
 
-    smtp_server_id = fields.Many2one(
-        'it_infrastructure.mailserver',
-        string='SMTP Server'
-    )
-
     domain_alias = fields.Char(
         string='Domain Alias'
     )

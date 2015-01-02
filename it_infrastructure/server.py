@@ -79,12 +79,6 @@ class server(models.Model):
         required=True
     )
 
-    # owner_id = fields.Many2one(
-    #     'res.partner',
-    #     string='Owner',
-    #     required=True
-    # )
-
     user_id = fields.Many2one(
         'res.partner',
         string='User',
@@ -187,12 +181,6 @@ class server(models.Model):
         _states_,
         string="State",
         default='draft'
-    )
-
-    server_service_ids = fields.One2many(
-        'it_infrastructure.server_service',
-        'server_id',
-        string='Services'
     )
 
     server_repository_ids = fields.One2many(

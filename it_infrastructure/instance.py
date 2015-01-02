@@ -57,12 +57,6 @@ class instance(models.Model):
         default='none_secure'
     )
 
-    database_filter = fields.Many2one(
-        'it_infrastructure.database_filter',
-        string='Database Filter',
-        required=True
-    )
-
     note = fields.Html(
         string='Note'
     )
