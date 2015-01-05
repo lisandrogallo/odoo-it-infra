@@ -27,3 +27,6 @@ import equipment
 import device
 import device_category
 import computer
+import software
+import software_category
+
