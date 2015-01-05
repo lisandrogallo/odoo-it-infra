@@ -9,8 +9,6 @@ class computer(models.Model):
     _description = 'Computer'
     _inherit = [
         'it_infrastructure.equipment',
-        'mail.thread',
-        'ir.needaction_mixin'
     ]
 
     hostname = fields.Char(
