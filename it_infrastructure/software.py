@@ -7,10 +7,6 @@ class software(models.Model):
 
     _name = 'it_infrastructure.software'
     _description = 'Software'
-    _inherit = [
-        'mail.thread',
-        'ir.needaction_mixin'
-    ]
 
     name = fields.Char(
         string='Name',
