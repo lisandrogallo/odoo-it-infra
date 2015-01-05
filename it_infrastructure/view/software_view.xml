@@ -157,7 +157,7 @@
 </record>
 
 <record id="action_it_infrastructure_software_objects" model="ir.actions.act_window">
-    <field name="name">Software</field>
+    <field name="name">Software List</field>
     <field name="res_model">it_infrastructure.software</field>
     <field name="view_type">form</field>
     <field name="view_mode">tree,form</field>
