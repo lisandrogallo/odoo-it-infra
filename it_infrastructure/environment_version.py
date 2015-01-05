@@ -20,7 +20,7 @@ class environment_version(models.Model):
     _description = 'environment_version'
 
     name = fields.Selection(
-        _odoo_versions_,
+        selection=_odoo_versions_,
         string='Name',
         required=True
     )

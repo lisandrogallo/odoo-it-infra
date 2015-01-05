@@ -61,7 +61,7 @@ class equipment(models.Model):
     )
 
     state = fields.Selection(
-        _states_,
-        'State',
+        selection=_states_,
+        string='State',
         default='pending'
     )

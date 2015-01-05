@@ -178,8 +178,8 @@ class server(models.Model):
     )
 
     state = fields.Selection(
-        _states_,
-        string="State",
+        selection=_states_,
+        string='State',
         default='draft'
     )
 
