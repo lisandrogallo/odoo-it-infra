@@ -34,6 +34,7 @@
         u'view/server_configuration_command_view.xml',
         u'view/environment_view.xml',
         u'view/server_view.xml',
+        u'view/software_view.xml',
         u'view/database_backup_view.xml',
         u'data/cron.xml',
         u'data/database_track.xml',
