@@ -1,4 +1,4 @@
-FROM lisogallo/odoo_server:8.0
+FROM lisogallo/odoo_server:latest
 MAINTAINER Liso Gallo <liso@riseup.net>
 
 ENV REFRESHED_AT 2014-12-12
