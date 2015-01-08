@@ -36,8 +36,8 @@ class computer(models.Model):
         string='Network Mask'
     )
 
-    # os = fields.Many2one(
-    #     'it_infrastructure.os',
-    #     string='Operating System',
-    #     required=True
-    # )
+    os = fields.Many2one(
+        'it_infrastructure.software',
+        string='Operating System',
+        required=True
+    )
