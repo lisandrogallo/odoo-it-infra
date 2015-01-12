@@ -20,6 +20,7 @@ RUN git --work-tree=/opt/odoo/sources/web --git-dir=/opt/odoo/sources/web/.git c
 ## Python dependencies
 RUN pip install Fabric
 RUN pip install erppeek
+RUN pip install pyinotify 
 
 RUN apt-get install -y postgresql-client
 
