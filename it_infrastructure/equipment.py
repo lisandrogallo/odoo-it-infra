@@ -11,7 +11,7 @@ class equipment(models.Model):
     _order = "input_date desc"
 
     _states_ = [
-        ('pending', 'Pending'),
+        ('Draft', 'Draft'),
         ('active', 'Active'),
         ('stored', 'Stored'),
         ('decommissioned', 'Decommissioned'),
@@ -19,8 +19,8 @@ class equipment(models.Model):
 
     _track = {
         'state': {
-            'it_infrastructure.equipment_pending':
-            lambda self, cr, uid, obj, ctx=None: obj['state'] == 'pending',
+            'it_infrastructure.equipment_draft':
+            lambda self, cr, uid, obj, ctx=None: obj['state'] == 'draft',
             'it_infrastructure.equipment_active':
             lambda self, cr, uid, obj, ctx=None: obj['state'] == 'active',
             'it_infrastructure.equipment_stored':
@@ -63,5 +63,5 @@ class equipment(models.Model):
     state = fields.Selection(
         selection=_states_,
         string='State',
-        default='pending'
+        default='draft'
     )
