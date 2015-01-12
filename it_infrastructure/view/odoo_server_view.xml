@@ -15,7 +15,7 @@
                 <field name="user_id" string="Used By"/>
             </group>
             <group string="By object">
-                <field name="server_configuration_id" string="Configuration"/>
+                <field name="server_configuration_id" string="Server Config."/>
             </group>
         </search>
     </field>
@@ -56,14 +56,18 @@
                     </h2>
                 </div>
                 <div class="oe_right oe_button_box" name="buttons">
+                    <button name="%(action_it_infrastructure_environment_environments)d" icon="fa-th" type="action" class="oe_stat_button" context="{'search_default_server_id': active_id}">
+                        <field name="environment_count" widget="statinfo"/>
+                    </button>
                     <button name="reboot_server" icon="fa-refresh" string="Reboot Server" class="oe_stat_button" help="Reboot Server"/>
+                    <button name="restart_nginx" icon="fa-refresh" string="Restart Nginx" class="oe_stat_button" help="Restart Nginx"/>
+                    <button name="restart_postgres" icon="fa-refresh" string="Restart Postgres" class="oe_stat_button" help="Restart Nginx"/>
                 </div>
                 <group>
                     <group>
                         <field name="ip_address"/>
-                        <field name="open_ports"/>
-                        <field name="remote_mgmt_port"/>
-                        <field name="vpn_required"/>
+                        <field name="ssh_port"/>
+                        <field name="requires_vpn"/>
                         <field name="username"/>
                         <label for="password"/>
                             <div>
@@ -78,10 +82,28 @@
                             </div>
                     </group>
                     <group>
+                        <field name="base_path"/>
+                        <field name="instance_user_group"/>
                         <field name="user_id"/>
                     </group>
                 </group>
                 <notebook>
+                    <page string="More Info">
+                        <group>
+                            <group>
+                                <field name="sources_path"/>
+                                <field name="service_path"/>
+                                <field name="nginx_sites_path"/>
+                                <field name="nginx_log_path"/>
+                            </group>
+                            <group>
+                                <field name="open_ports"/>
+                                <field name="gdrive_account"/>
+                                <field name="gdrive_passw"/>
+                                <field name="gdrive_space"/>
+                            </group>
+                        </group>
+                    </page>
                     <page string="Repositories">
                        <field name="server_repository_ids"/>
                     </page>
@@ -91,22 +113,25 @@
                     <page string="Hostnames">
                        <field name="hostname_ids"/>
                     </page>
-                    <page string="Hardware">
+                    <page string="Data">
                         <group col="1">
+                           <field name="software_data"/>
                            <field name="hardware_data"/>
-                           <field name="hardware_specs"/>
-                       </group>
-                   </page>
-                    <page string="Notes">
-                        <group col="1">
+                           <field name="contract_data"/>
                            <field name="note"/>
                        </group>
                    </page>
-<!--                     <page string="Installation">
+                    <page string="Installation">
                         <group col="1">
                             <field name="install_command_ids" context="{'server_id':id}"/>
                         </group>
-                    </page> -->
+                    </page>
+                    <page string="Catch-All Aliases">
+                        <group>
+                            <field name="local_aliases_path"/>
+                            <field name="virtual_aliases_path"/>
+                        </group>
+                    </page>
                </notebook>
             </sheet>
             <div class="oe_chatter">
