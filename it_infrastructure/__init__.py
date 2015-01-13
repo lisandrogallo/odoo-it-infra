@@ -10,7 +10,7 @@ import command
 # import environment_version
 # import instance
 # import instance_host
-import partner
+# import partner
 import repository
 import repository_branch
 import wizard
