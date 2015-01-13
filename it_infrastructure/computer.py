@@ -41,3 +41,20 @@ class computer(models.Model):
         string='Operating System',
         required=True
     )
+
+    hardware_data = fields.Html(
+        string='Hardware Data'
+    )
+
+    hardware_specs = fields.Binary(
+        string='Hardware Specifications'
+    )
+
+    note = fields.Html(
+        string='Note'
+    )
+
+    _sql_constraints = [
+        ('name_uniq', 'unique(name)',
+            'Computer name must be unique!'),
+    ]

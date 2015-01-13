@@ -226,7 +226,7 @@ class server(models.Model):
                 _('Could Not Restart Service!'),
                 _("Check if service is installed!"))
 
-    def action_wfk_set_draft(self, cr, uid, ids, *args):
+    def action_wkf_set_draft(self, cr, uid, ids, *args):
         self.write(cr, uid, ids, {'state': 'draft'})
         wf_service = netsvc.LocalService("workflow")
         for obj_id in ids:

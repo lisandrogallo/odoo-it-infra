@@ -29,7 +29,7 @@
     <field name="arch" type="xml">
         <form string="database" version="7.0">
             <header>
-                <button name="action_wfk_set_draft"
+                <button name="action_wkf_set_draft"
                     type="object"
                     states="cancel"
                     string="to Draft"

@@ -255,7 +255,7 @@ class instance(models.Model):
             _("%s") % self.admin_pass
         )
 
-    def action_wfk_set_draft(self, cr, uid, ids, *args):
+    def action_wkf_set_draft(self, cr, uid, ids, *args):
         self.write(cr, uid, ids, {'state': 'draft'})
         wf_service = netsvc.LocalService("workflow")
         for obj_id in ids:

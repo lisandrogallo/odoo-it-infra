@@ -33,7 +33,7 @@
                     string="to Active"
                     class="oe_highlight"
                     />
-                <button name="action_wfk_set_draft"
+                <button name="action_wkf_set_draft"
                     type="object"
                     states="cancel"
                     string="to Draft"

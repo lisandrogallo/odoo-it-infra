@@ -432,7 +432,7 @@ class database(models.Model):
                     subtype='mt_backup_fail'
                 )
 
-    def action_wfk_set_draft(self, cr, uid, ids, *args):
+    def action_wkf_set_draft(self, cr, uid, ids, *args):
         self.write(cr, uid, ids, {'state': 'draft'})
         wf_service = netsvc.LocalService("workflow")
         for obj_id in ids:

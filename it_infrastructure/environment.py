@@ -277,7 +277,7 @@ class environment(models.Model):
         self.make_env_paths()
         self.signal_workflow('sgn_to_active')
 
-    def action_wfk_set_draft(self, cr, uid, ids, *args):
+    def action_wkf_set_draft(self, cr, uid, ids, *args):
         self.write(cr, uid, ids, {'state': 'draft'})
         wf_service = netsvc.LocalService("workflow")
         for obj_id in ids:
