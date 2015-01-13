@@ -1,146 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- it_infrastructure.server -->
+<!-- it_infrastructure.software -->
 <openerp>
 <data>
 
 <!-- SEARCH VIEW -->
-<!-- <record id="view_infrastructure_server_filter" model="ir.ui.view">
-    <field name="name">it_infrastructure.server.select</field>
-    <field name="model">it_infrastructure.server</field>
+<record id="view_infrastructure_software_filter" model="ir.ui.view">
+    <field name="name">it_infrastructure.software.select</field>
+    <field name="model">it_infrastructure.software</field>
     <field name="arch" type="xml">
-        <search string="server" version="7.0">
+        <search string="software" version="7.0">
             <group string="By Attribute">
                 <field name="name" string="Name"/>
-                <field name="ip_address" string="IP Address"/>
-                <field name="user_id" string="Used By"/>
             </group>
             <group string="By object">
-                <field name="server_configuration_id" string="Server Config."/>
+                <field name="category_id" string="Category"/>
             </group>
         </search>
     </field>
-</record> -->
+</record>
 
 <!-- FORMVIEW -->
-<!-- <record id="view_infrastructure_server_form" model="ir.ui.view">
-    <field name="name">it_infrastructure.server.form</field>
-    <field name="model">it_infrastructure.server</field>
+<record id="view_infrastructure_software_form" model="ir.ui.view">
+    <field name="name">it_infrastructure.software.form</field>
+    <field name="model">it_infrastructure.software</field>
     <field name="arch" type="xml">
-        <form string="server" version="7.0">
-            <header>
-                <button name="sgn_to_active"
-                    states="draft"
-                    string="to Active"
-                    class="oe_highlight"
-                    />
-                <button name="action_wkf_set_draft"
-                    type="object"
-                    states="cancel"
-                    string="to Draft"
-                    />
-                <button name="sgn_cancel"
-                    states="active"
-                    string="Cancel"
-                    />
-                <field name="state" widget="statusbar"
-                    statusbar_colors='{}'
-                    />
-            </header>
-            <sheet string="server">
-                <div class="col-md-6">
-                    <h1>
-                        <field name="name" placeholder="Name..."/>
-                    </h1>
-                    <h2>
-                        <field name="server_configuration_id" placeholder="Server Configuration..."/>
-                    </h2>
-                </div>
-                <div class="oe_right oe_button_box" name="buttons">
-                    <button name="%(action_it_infrastructure_environment_environments)d" icon="fa-th" type="action" class="oe_stat_button" context="{'search_default_server_id': active_id}">
-                        <field name="environment_count" widget="statinfo"/>
-                    </button>
-                    <button name="reboot_server" icon="fa-refresh" string="Reboot Server" class="oe_stat_button" help="Reboot Server"/>
-                    <button name="restart_nginx" icon="fa-refresh" string="Restart Nginx" class="oe_stat_button" help="Restart Nginx"/>
-                    <button name="restart_postgres" icon="fa-refresh" string="Restart Postgres" class="oe_stat_button" help="Restart Nginx"/>
-                </div>
+        <form string="software" version="7.0">
+            <sheet>
                 <group>
                     <group>
-                        <field name="ip_address"/>
-                        <field name="ssh_port"/>
-                        <field name="requires_vpn"/>
-                        <field name="username"/>
-                        <label for="password"/>
-                            <div>
-                                <field
-                                    name="password"
-                                    password="True"
-                                    class="oe_inline"/>
-                                <button name="show_passwd"
-                                    string="⇒ View Password"
-                                    type="object"
-                                    class="oe_link"/>
-                            </div>
+                        <field name="name"/>
+                        <field name="version"/>
                     </group>
                     <group>
-                        <field name="base_path"/>
-                        <field name="instance_user_group"/>
-                        <field name="user_id"/>
+                        <field name="category_id"/>
                     </group>
                 </group>
                 <notebook>
-                    <page string="More Info">
-                        <group>
-                            <group>
-                                <field name="sources_path"/>
-                                <field name="service_path"/>
-                                <field name="nginx_sites_path"/>
-                                <field name="nginx_log_path"/>
-                            </group>
-                            <group>
-                                <field name="open_ports"/>
-                                <field name="gdrive_account"/>
-                                <field name="gdrive_passw"/>
-                                <field name="gdrive_space"/>
-                            </group>
-                        </group>
+                    <page string="Description">
+                        <field name="description" nolabel="1"/>
                     </page>
-                    <page string="Repositories">
-                       <field name="server_repository_ids"/>
-                    </page>
-                    <page string="Changes">
-                       <field name="change_ids"/>
-                    </page>
-                    <page string="Hostnames">
-                       <field name="hostname_ids"/>
-                    </page>
-                    <page string="Data">
-                        <group col="1">
-                           <field name="software_data"/>
-                           <field name="hardware_data"/>
-                           <field name="contract_data"/>
-                           <field name="note"/>
-                       </group>
-                   </page>
-                    <page string="Installation">
-                        <group col="1">
-                            <field name="install_command_ids" context="{'server_id':id}"/>
-                        </group>
-                    </page>
-                    <page string="Catch-All Aliases">
-                        <group>
-                            <field name="local_aliases_path"/>
-                            <field name="virtual_aliases_path"/>
-                        </group>
-                    </page>
-               </notebook>
+                </notebook>
             </sheet>
-            <div class="oe_chatter">
-                <field name="message_follower_ids" widget="mail_followers"/>
-                <field name="message_ids" widget="mail_thread"/>
-            </div>
         </form>
     </field>
-</record> -->
+</record>
 
 <!-- TREEVIEW -->
 <record id="view_infrastructure_software_tree" model="ir.ui.view">
@@ -148,10 +51,9 @@
     <field name="model">it_infrastructure.software</field>
     <field name="arch" type="xml">
         <tree>
-            <!-- <field name="message_unread" invisible="1"/> -->
             <field name="name"/>
             <field name="version"/>
-            <field name="software_category_id"/>
+            <field name="category_id"/>
         </tree>
     </field>
 </record>
@@ -162,7 +64,7 @@
     <field name="view_type">form</field>
     <field name="view_mode">tree,form</field>
     <field name="view_id" ref="view_infrastructure_software_tree"/>
-<!--     <field name="search_view_id" ref="view_infrastructure_software_filter"/> -->
+    <field name="search_view_id" ref="view_infrastructure_software_filter"/>
     <field name="domain">[]</field>
 </record>
 
