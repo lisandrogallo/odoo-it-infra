@@ -11,7 +11,7 @@ class equipment(models.Model):
     _order = "input_date desc"
 
     _states_ = [
-        ('Draft', 'Draft'),
+        ('draft', 'Draft'),
         ('active', 'Active'),
         ('stored', 'Stored'),
         ('decommissioned', 'Decommissioned'),
