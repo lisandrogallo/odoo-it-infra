@@ -22,7 +22,7 @@ class software(models.Model):
         required=True
     )
 
-    software_category_id = fields.Many2one(
+    category_id = fields.Many2one(
         'it_infrastructure.software_category',
         string='Category',
         required=True
