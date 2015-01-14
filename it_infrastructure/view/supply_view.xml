@@ -84,7 +84,7 @@
 <menuitem
     name="Supplies"
     id="menu_supplies"
-    sequence="30"
+    sequence="40"
     action="action_it_infrastructure_supply_supplies"
     parent="menu_it_infrastructure_main"
     groups="group_user"

@@ -15,7 +15,7 @@
             </group>
             <group string="By object">
                 <field name="server_configuration_id" string="Configuration"/>
-                <field name="os" string="Operating System"/>
+                <field name="os_id" string="Operating System"/>
             </group>
         </search>
     </field>
@@ -60,8 +60,9 @@
                 </div>
                 <group>
                     <group>
-                        <field name="os"/>
+                        <field name="os_id"/>
                         <field name="ip_address"/>
+                        <field name="netmask"/>
                         <field name="open_ports"/>
                         <field name="remote_mgmt_port"/>
                         <field name="vpn_required"/>
@@ -129,11 +130,10 @@
             >
             <field name="message_unread" invisible="1"/>
             <field name="name"/>
-            <field name="os"/>
+            <field name="os_id"/>
             <field name="ip_address"/>
             <field name="user_id"/>
             <field name="server_configuration_id"/>
-            <field name="state" />
         </tree>
     </field>
 </record>
