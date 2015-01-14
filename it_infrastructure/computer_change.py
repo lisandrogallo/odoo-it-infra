@@ -3,11 +3,11 @@
 from openerp import models, fields
 
 
-class server_change(models.Model):
+class computer_change(models.Model):
     """"""
 
-    _name = 'it_infrastructure.server_change'
-    _description = 'server_change'
+    _name = 'it_infrastructure.computer_change'
+    _description = 'computer_change'
 
     name = fields.Char(
         string='Summary',
@@ -32,9 +32,9 @@ class server_change(models.Model):
         required=True
     )
 
-    server_id = fields.Many2one(
-        'it_infrastructure.server',
-        string='Server',
+    computer_id = fields.Many2one(
+        'it_infrastructure.computer',
+        string='Computer',
         ondelete='cascade',
         required=True
     )

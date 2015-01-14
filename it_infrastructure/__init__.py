@@ -24,8 +24,9 @@ import computer
 import software
 import server
 import software_category
-import server_change
+import computer_change
 import server_configuration
 import server_configuration_command
 import server_hostname
 import server_repository
+import workstation

@@ -114,8 +114,8 @@ class server(models.Model):
     )
 
     change_ids = fields.One2many(
-        'it_infrastructure.server_change',
-        'server_id',
+        'it_infrastructure.computer_change',
+        'computer_id',
         string='Changes'
     )
 
