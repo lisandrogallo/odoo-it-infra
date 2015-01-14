@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- it_infrastructure.workstation -->
+<openerp>
+<data>
+
+<!-- SEARCH VIEW -->
+<record id="view_infrastructure_workstation_filter" model="ir.ui.view">
+    <field name="name">it_infrastructure.workstation.select</field>
+    <field name="model">it_infrastructure.workstation</field>
+    <field name="arch" type="xml">
+        <search string="workstation" version="7.0">
+            <group string="By Attribute">
+                <field name="name" string="Name"/>
+                <field name="user_id" string="Used By"/>
+            </group>
+            <group string="By object">
+                <field name="os_id" string="Operating System"/>
+                <field name="office_suite_id" string="Office Suite"/>
+            </group>
+        </search>
+    </field>
+</record>
+
+<!-- FORMVIEW -->
+<record id="view_infrastructure_workstation_form" model="ir.ui.view">
+    <field name="name">it_infrastructure.workstation.form</field>
+    <field name="model">it_infrastructure.workstation</field>
+    <field name="arch" type="xml">
+        <form string="workstation" version="7.0">
+            <header>
+                <button name="sgn_to_active"
+                    states="draft"
+                    string="to Active"
+                    class="oe_highlight"
+                    />
+                <button name="action_wkf_set_draft"
+                    type="object"
+                    states="cancel"
+                    string="to Draft"
+                    />
+                <button name="sgn_cancel"
+                    states="active"
+                    string="Cancel"
+                    />
+                <field name="state" widget="statusbar"
+                    statusbar_colors='{}'
+                    />
+            </header>
+            <sheet string="workstation">
+                <div class="col-md-6">
+                    <h1>
+                        <field name="name" placeholder="Name..."/>
+                    </h1>
+                </div>
+                <group>
+                    <group>
+                        <field name="os_id"/>
+                        <field name="office_suite_id"/>
+                    </group>
+                    <group>
+                        <field name="user_id"/>
+                        <field name="username"/>
+                    </group>
+                    <group>
+                        <field name="ip_address"/>
+                        <field name="netmask"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Changes">
+                       <field name="change_ids"/>
+                    </page>
+                    <page string="Hardware">
+                        <group col="1">
+                           <field name="hardware_data"/>
+                           <field name="hardware_specs"/>
+                       </group>
+                   </page>
+                    <page string="Notes">
+                        <group col="1">
+                           <field name="note" nolabel="1"/>
+                       </group>
+                   </page>
+               </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </form>
+    </field>
+</record>
+
+<!-- TREEVIEW -->
+<record id="view_infrastructure_workstation_tree" model="ir.ui.view">
+    <field name="name">it_infrastructure.workstation.tree</field>
+    <field name="model">it_infrastructure.workstation</field>
+    <field name="arch" type="xml">
+        <tree string="workstation"
+            fonts="bold:message_unread==True"
+            colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('active',); red:state in ()"
+            >
+            <field name="message_unread" invisible="1"/>
+            <field name="name"/>
+            <field name="os_id"/>
+            <field name="office_suite_id"/>
+            <field name="ip_address"/>
+            <field name="user_id"/>
+        </tree>
+    </field>
+</record>
+
+<record id="action_it_infrastructure_workstation_workstations" model="ir.actions.act_window">
+    <field name="name">Workstations</field>
+    <field name="res_model">it_infrastructure.workstation</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+    <field name="view_id" ref="view_infrastructure_workstation_tree"/>
+    <field name="search_view_id" ref="view_infrastructure_workstation_filter"/>
+    <field name="domain">[]</field>
+</record>
+
+<menuitem
+    name="Workstations"
+    id="menu_workstations"
+    sequence="20"
+    action="action_it_infrastructure_workstation_workstations"
+    parent="menu_it_infrastructure_main"
+    groups="group_user"
+    />
+
+</data>
+</openerp>
