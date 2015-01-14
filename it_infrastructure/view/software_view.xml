@@ -35,11 +35,6 @@
                         <field name="category_id"/>
                     </group>
                 </group>
-                <notebook>
-                    <page string="Description">
-                        <field name="description" nolabel="1"/>
-                    </page>
-                </notebook>
             </sheet>
         </form>
     </field>

@@ -13,10 +13,6 @@ class software(models.Model):
         required=True
     )
 
-    description = fields.Text(
-        string='Description'
-    )
-
     version = fields.Char(
         string='Version',
         required=True
