@@ -33,10 +33,11 @@ class computer(models.Model):
     )
 
     netmask = fields.Char(
-        string='Network Mask'
+        string='Network Mask',
+        default='255.255.255.0'
     )
 
-    os = fields.Many2one(
+    os_id = fields.Many2one(
         'it_infrastructure.software',
         string='Operating System',
         required=True
@@ -52,6 +53,12 @@ class computer(models.Model):
 
     note = fields.Html(
         string='Note'
+    )
+
+    change_ids = fields.One2many(
+        'it_infrastructure.computer_change',
+        'computer_id',
+        string='Changes'
     )
 
     _sql_constraints = [
