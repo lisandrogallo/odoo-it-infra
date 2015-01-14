@@ -16,7 +16,7 @@ class software_category(models.Model):
     software_ids = fields.One2many(
         'it_infrastructure.software',
         'category_id',
-        string='Supplies'
+        string='Software'
     )
 
     parent_id = fields.Many2one(

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- it_infrastructure.software_category -->
+<openerp>
+<data>
+
+<!-- FORMVIEW -->
+<record id="view_infrastructure_software_category_form" model="ir.ui.view">
+    <field name="name">it_infrastructure.software_category.form</field>
+    <field name="model">it_infrastructure.software_category</field>
+    <field name="arch" type="xml">
+        <form string="software_category" version="7.0">
+            <sheet>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="parent_id"/>
+                    </group>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+</data>
+</openerp>
