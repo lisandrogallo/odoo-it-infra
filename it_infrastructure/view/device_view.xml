@@ -63,7 +63,7 @@
                     </div>
                     <div class="col-md-6">
                         <group>
-                            <field name="device_category_id"/>
+                            <field name="device_category_id" domain="[('parent_id', '!=', False)]"/>
                             <field name="office_id"/>
                         </group>
                     </div>
