@@ -52,6 +52,7 @@
         u'workflow/server_workflow.xml',
         u'data/software_category.xml',
         u'data/supply_category.xml',
+        u'data/device_category.xml',
         u'data/software.xml',
         # u'security/ir.model.access.csv',
     ],
