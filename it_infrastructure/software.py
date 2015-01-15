@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from openerp import fields, models
+from openerp import fields, models, api
 
 
 class software(models.Model):
@@ -14,8 +14,7 @@ class software(models.Model):
     )
 
     version = fields.Char(
-        string='Version',
-        required=True
+        string='Version'
     )
 
     category_id = fields.Many2one(
@@ -23,3 +22,10 @@ class software(models.Model):
         string='Category',
         required=True
     )
+
+    @api.multi
+    def name_get(self):
+        result = []
+        for soft in self:
+            result.append((soft.id, "%s %s" % (soft.name, soft.version or '')))
+        return result
