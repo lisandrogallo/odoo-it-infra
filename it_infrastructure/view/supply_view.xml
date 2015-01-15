@@ -35,7 +35,7 @@
                     </h1>
                     <div class="col-md-6">
                         <group>
-                            <field name="supply_category_id"/>
+                            <field name="supply_category_id" domain="[('parent_id', '!=', False)]"/>
                             <field name="quantity"/>
                         </group>
                     </div>
