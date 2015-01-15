@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record id="software_category_operating_systems" model="it_infrastructure.software_category">
+            <field name="name">Operating System</field>
+        </record>
+
+        <record id="software_category_os_windows" model="it_infrastructure.software_category">
+            <field name="name">Microsoft Windows</field>
+            <field name="parent_id" ref="software_category_operating_systems"/>
+        </record>
+
+        <record id="software_category_os_linux" model="it_infrastructure.software_category">
+            <field name="name">Linux</field>
+            <field name="parent_id" ref="software_category_operating_systems"/>
+        </record>
+
+        <record id="software_category_office_suite" model="it_infrastructure.software_category">
+            <field name="name">Office Suite</field>
+        </record>
+
+        <record id="software_category_ms_office" model="it_infrastructure.software_category">
+            <field name="name">Microsoft Office</field>
+            <field name="parent_id" ref="software_category_office_suite"/>
+        </record>
+
+    </data>
+</openerp>
