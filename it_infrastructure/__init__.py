@@ -15,6 +15,7 @@ import repository
 import repository_branch
 import wizard
 
+import category
 import supply
 import supply_category
 import equipment

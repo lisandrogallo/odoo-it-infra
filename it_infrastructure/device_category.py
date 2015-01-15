@@ -7,11 +7,7 @@ class device_category(models.Model):
 
     _name = 'it_infrastructure.device_category'
     _description = 'device_category'
-
-    name = fields.Char(
-        string='Name',
-        required=True
-    )
+    _inherit = 'it_infrastructure.category'
 
     device_ids = fields.One2many(
         'it_infrastructure.device',
