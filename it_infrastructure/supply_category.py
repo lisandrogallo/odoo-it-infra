@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from openerp import models, fields
+from openerp import models, fields, api
 
 
 class supply_category(models.Model):
@@ -29,3 +29,13 @@ class supply_category(models.Model):
         'parent_id',
         string='Childs'
     )
+
+    @api.multi
+    def name_get(self):
+        result = []
+        for cat in self:
+            prefix = None
+            if cat.parent_id:
+                prefix = cat.parent_id.name + ' / '
+            result.append((cat.id, "%s %s" % (prefix or '', cat.name)))
+        return result
