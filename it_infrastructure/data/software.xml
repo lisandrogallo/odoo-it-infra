@@ -50,5 +50,19 @@
             <field name="category_id" ref="software_category_os_linux"/>
         </record>
 
+        <record id="software_office_2003" model="it_infrastructure.software">
+            <field name="name">Microsoft Office</field>
+            <field name="description">Office 2003</field>
+            <field name="version">2003</field>
+            <field name="category_id" ref="software_category_ms_office"/>
+        </record>
+
+        <record id="software_office_2007" model="it_infrastructure.software">
+            <field name="name">Microsoft Office</field>
+            <field name="description">Office 2007</field>
+            <field name="version">2007</field>
+            <field name="category_id" ref="software_category_ms_office"/>
+        </record>
+
     </data>
 </openerp>
