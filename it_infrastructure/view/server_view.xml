@@ -79,9 +79,17 @@
                                     class="oe_link"/>
                             </div>
                     </group>
-                    <group>
-                        <field name="user_id"/>
-                    </group>
+                    <div class="col-md-12">
+                        <group>
+                            <field name="user_id"/>
+                        </group>
+                        <group>
+                            <field name="stock_number"/>
+                            <field name="input_date"/>
+                            <field name="warranty"/>
+                        </group>
+                </div>
+
                 </group>
                 <notebook>
                     <page string="Repositories">

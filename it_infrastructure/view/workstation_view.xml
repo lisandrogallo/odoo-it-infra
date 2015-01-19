@@ -65,6 +65,11 @@
                         <field name="ip_address"/>
                         <field name="netmask"/>
                     </group>
+                    <group>
+                        <field name="stock_number"/>
+                        <field name="input_date"/>
+                        <field name="warranty"/>
+                    </group>
                 </group>
                 <notebook>
                     <page string="Changes">
