@@ -14,7 +14,7 @@ class server_configuration(models.Model):
         required=True
     )
 
-    install_command_ids = fields.One2many(
+    installation_command_ids = fields.One2many(
         'it_infrastructure.server_configuration_command',
         'server_configuration_id',
         string='Installation Commands',
@@ -28,7 +28,7 @@ class server_configuration(models.Model):
         string='server_ids'
     )
 
-    maint_command_ids = fields.One2many(
+    maintenance_command_ids = fields.One2many(
         'it_infrastructure.server_configuration_command',
         'server_configuration_id',
         string='Maintenance Commands',

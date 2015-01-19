@@ -29,7 +29,7 @@
             <sheet string="server_configuration">
              <group>
                 <field name="name"/>
-                <field name="install_command_ids"/>
+                <field name="installation_command_ids"/>
              </group>
             </sheet>
         </form>

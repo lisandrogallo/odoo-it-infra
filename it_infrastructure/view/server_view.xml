@@ -99,16 +99,21 @@
                            <field name="hardware_specs"/>
                        </group>
                    </page>
+                    <page string="Installation">
+                        <group col="1">
+                            <field name="installation_command_ids" nolabel="1"/>
+                        </group>
+                    </page>
+                    <page string="Maintenance">
+                        <group col="1">
+                            <field name="maintenance_command_ids" nolabel="1"/>
+                        </group>
+                    </page>
                     <page string="Notes">
                         <group col="1">
                            <field name="note" nolabel="1"/>
                        </group>
                    </page>
-<!--                     <page string="Installation">
-                        <group col="1">
-                            <field name="install_command_ids" context="{'server_id':id}"/>
-                        </group>
-                    </page> -->
                </notebook>
             </sheet>
             <div class="oe_chatter">

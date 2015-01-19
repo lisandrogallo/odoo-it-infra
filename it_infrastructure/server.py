@@ -55,17 +55,24 @@ class server(models.Model):
         required=True
     )
 
+    installation_command_ids = fields.One2many(
+        'it_infrastructure.server_configuration_command',
+        related='server_configuration_id.installation_command_ids',
+        string='Installation Commands'
+    )
+
+    maintenance_command_ids = fields.One2many(
+        'it_infrastructure.server_configuration_command',
+        related='server_configuration_id.maintenance_command_ids',
+        string='Maintenance Commands'
+    )
+
     @api.one
     def unlink(self):
         if self.state not in ('draft', 'cancel'):
             raise Warning(_(
                 'You cannot delete a server which is not draft or cancelled.'))
         return super(server, self).unlink()
-
-    @api.one
-    @api.depends('environment_ids')
-    def _get_environments(self):
-        self.environment_count = len(self.environment_ids)
 
     @api.one
     def get_env(self):
