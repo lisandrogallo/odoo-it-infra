@@ -13,5 +13,6 @@ class workstation(models.Model):
 
     office_suite_id = fields.Many2one(
         'it_infrastructure.software',
-        string='Office Suite'
+        string='Office Suite',
+        domain=[('category_id.parent_id', 'ilike', 'Office Suite')]
     )

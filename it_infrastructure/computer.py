@@ -40,6 +40,7 @@ class computer(models.Model):
     os_id = fields.Many2one(
         'it_infrastructure.software',
         string='Operating System',
+        domain=[('category_id.parent_id', 'ilike', 'Operating System')],
         required=True
     )
 
