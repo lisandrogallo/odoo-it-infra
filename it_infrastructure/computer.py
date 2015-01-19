@@ -18,8 +18,7 @@ class computer(models.Model):
 
     user_id = fields.Many2one(
         'res.partner',
-        string='User',
-        required=True
+        string='User'
     )
 
     username = fields.Char(
