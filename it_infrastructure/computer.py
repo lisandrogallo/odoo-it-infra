@@ -33,7 +33,8 @@ class computer(models.Model):
 
     netmask = fields.Char(
         string='Network Mask',
-        default='255.255.255.0'
+        default='255.255.255.0',
+        required=True
     )
 
     os_id = fields.Many2one(
