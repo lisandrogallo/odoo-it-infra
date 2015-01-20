@@ -68,7 +68,7 @@
                     </group>
                     <group>
                         <field name="stock_number"/>
-                        <field name="input_date"/>
+                        <field name="purchase_date"/>
                         <field name="warranty"/>
                     </group>
                 </group>

@@ -8,7 +8,7 @@ class equipment(models.Model):
     _name = 'it_infrastructure.equipment'
     _description = 'Equipment'
     _inherit = ['mail.thread', 'ir.needaction_mixin']
-    _order = "input_date desc"
+    _order = "purchase_date desc"
 
     _states_ = [
         ('draft', 'Draft'),
@@ -55,8 +55,8 @@ class equipment(models.Model):
         help='Format: XXXX (For example: 1234)'
     )
 
-    input_date = fields.Date(
-        string='Input Date',
+    purchase_date = fields.Date(
+        string='Purchase Date',
         required=True
     )
 

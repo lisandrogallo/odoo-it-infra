@@ -57,7 +57,7 @@
                     <div class="col-md-6">
                         <group>
                             <field name="stock_number"/>
-                            <field name="input_date"/>
+                            <field name="purchase_date"/>
                             <field name="warranty"/>
                         </group>
                     </div>
@@ -94,7 +94,7 @@
             <field name="name"/>
             <field name="device_category_id"/>
             <field name="stock_number"/>
-            <field name="input_date"/>
+            <field name="purchase_date"/>
             <field name="warranty"/>
             <field name="state"/>
             <field name="message_unread" invisible="1"/>
