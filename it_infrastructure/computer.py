@@ -63,6 +63,7 @@ class computer(models.Model):
     )
 
     _sql_constraints = [
-        ('name_uniq', 'unique(name)',
-            'Computer name must be unique!'),
+        ('name_unique', 'unique(name)', 'Computer name must be unique!'),
+        ('ip_address_unique', 'unique(ip_address)', 'Computer IP address must be unique!'),
+        ('hostname_unique', 'unique(hostname)', 'Computer hostname must be unique!')
     ]
