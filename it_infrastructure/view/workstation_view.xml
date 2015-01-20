@@ -62,6 +62,7 @@
                         <field name="username"/>
                     </group>
                     <group>
+                        <field name="hostname"/>
                         <field name="ip_address"/>
                         <field name="netmask"/>
                     </group>
@@ -105,6 +106,7 @@
             fonts="bold:message_unread==True"
             colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('active',); red:state in ()"
             >
+            <field name="state" invisible="1"/>
             <field name="message_unread" invisible="1"/>
             <field name="name"/>
             <field name="os_id"/>
