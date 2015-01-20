@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from openerp import models, fields
+from openerp import models, fields, api
 
 
 class equipment(models.Model):
@@ -30,6 +30,16 @@ class equipment(models.Model):
         },
     }
 
+    @api.multi
+    def _check_stock_number(self):
+        if len(str(self.stock_number)) != 4:
+            return False
+        return True
+
+    _constraints = [
+        (_check_stock_number, 'Error: Invalid stock number', ['stock_number'])
+    ]
+
     name = fields.Char(
         string='Name',
         required=True
@@ -41,7 +51,8 @@ class equipment(models.Model):
 
     stock_number = fields.Integer(
         string='Stock Number',
-        required=True
+        required=True,
+        help='Format: XXXX (For example: 1234)'
     )
 
     input_date = fields.Date(
@@ -56,8 +67,7 @@ class equipment(models.Model):
 
     office_id = fields.Many2one(
         'hr.department',
-        string='Office',
-        required=True
+        string='Office'
     )
 
     state = fields.Selection(
@@ -65,3 +75,7 @@ class equipment(models.Model):
         string='State',
         default='draft'
     )
+
+    _sql_constraints = [
+        ('stock_number_unique', 'unique(stock_number)', 'Stock number already exists')
+    ]
