@@ -31,7 +31,7 @@ class supply(models.Model):
 
     partner_id = fields.Many2one(
         'res.partner',
-        string='Partner'
+        string='Provider'
     )
 
     device_ids = fields.Many2many(
