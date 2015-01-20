@@ -34,5 +34,10 @@ class supply(models.Model):
         string='Partner'
     )
 
-    # device_id = fields.Many2one(
-    # )
+    device_ids = fields.Many2many(
+        'it_infrastructure.device',
+        'it_infrastructure_supply_ids_device_ids_rel',
+        'supply_id',
+        'device_id',
+        string='Devices'
+    )

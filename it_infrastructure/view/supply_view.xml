@@ -49,6 +49,9 @@
                     <page string="Description">
                         <field name="description"/>
                     </page>
+                    <page string="Devices">
+                        <field name="device_ids"/>
+                    </page>
                </notebook>
             </sheet>
             <div class="oe_chatter">
@@ -74,6 +77,7 @@
     </field>
 </record>
 
+<!-- WINDOW ACTION -->
 <record id="action_it_infrastructure_supply_supplies" model="ir.actions.act_window">
     <field name="name">Supplies</field>
     <field name="res_model">it_infrastructure.supply</field>
@@ -81,6 +85,7 @@
     <field name="view_mode">tree,form</field>
 </record>
 
+<!-- MENU ITEM -->
 <menuitem
     name="Supplies"
     id="menu_supplies"

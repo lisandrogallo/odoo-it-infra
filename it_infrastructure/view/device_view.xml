@@ -72,6 +72,9 @@
                     <page string="Description">
                         <field name="description"/>
                     </page>
+                    <page string="Supplies">
+                        <field name="supply_ids"/>
+                    </page>
                </notebook>
             </sheet>
             <div class="oe_chatter">

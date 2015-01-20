@@ -14,3 +14,11 @@ class device(models.Model):
         string='Category',
         required=True
     )
+
+    supply_ids = fields.Many2many(
+        'it_infrastructure.supply',
+        'it_infrastructure_supply_ids_device_ids_rel',
+        'device_id',
+        'supply_id',
+        string='Supplies'
+    )
