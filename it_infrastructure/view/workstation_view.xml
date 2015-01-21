@@ -70,6 +70,7 @@
                         <field name="stock_number"/>
                         <field name="purchase_date"/>
                         <field name="warranty"/>
+                        <field name="source_document_number"/>
                     </group>
                 </group>
                 <notebook>

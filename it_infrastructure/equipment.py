@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from openerp import models, fields, api
+from openerp import models, fields, api, _
+from openerp.exceptions import Warning
+import re
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 
 class equipment(models.Model):
@@ -31,14 +35,31 @@ class equipment(models.Model):
     }
 
     @api.multi
+    @api.constrains('stock_number')
     def _check_stock_number(self):
         if len(str(self.stock_number)) != 4:
             return False
         return True
 
-    _constraints = [
-        (_check_stock_number, 'Error: Invalid stock number', ['stock_number'])
-    ]
+    __check_document_number_re = re.compile(r'([0-9]{3}\-[A-z]{3}\-[0-9]{4})$')
+
+    @api.onchange('source_document_number')
+    def onchange_source_document_number(self):
+        if self.source_document_number:
+            if self.__check_document_number_re.match(self.source_document_number):
+                self.source_document_number = self.source_document_number.upper()
+
+    @api.multi
+    @api.constrains('source_document_number')
+    def _check_document_number(self):
+        if not self.__check_document_number_re.match(self.source_document_number):
+            raise Warning(_('Invalid document format'))
+        else:
+            tmp = self.source_document_number.split('-')[2]
+            input_date = datetime.strptime(tmp, '%Y')
+            year_limit = datetime.today() - relativedelta(years=20)
+            if input_date < year_limit or input_date > datetime.today():
+                raise Warning(_('Invalid document year.'))
 
     name = fields.Char(
         string='Name',
@@ -53,6 +74,12 @@ class equipment(models.Model):
         string='Stock Number',
         required=True,
         help='Format: XXXX (For example: 1234)'
+    )
+
+    source_document_number = fields.Char(
+        string='Source Document',
+        required=True,
+        help='Format: XXX-AAA-YYYY (For example: 123-ABC-2014)',
     )
 
     purchase_date = fields.Date(
