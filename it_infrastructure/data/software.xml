@@ -2,57 +2,73 @@
 <openerp>
     <data noupdate="0">
 
-        <record id="software_windows_xp_sp3" model="it_infrastructure.software">
+        <record id="software_windows_xp_sp3_32" model="it_infrastructure.software">
             <field name="name">Windows XP</field>
             <field name="version">Service Pack 3</field>
+            <field name="architecture">x86</field>
             <field name="category_id" ref="software_category_os_windows"/>
         </record>
 
-        <record id="software_windows_7" model="it_infrastructure.software">
+        <record id="software_windows_7_32" model="it_infrastructure.software">
             <field name="name">Windows 7</field>
             <field name="version">Service Pack 1</field>
+            <field name="architecture">x86</field>
             <field name="category_id" ref="software_category_os_windows"/>
         </record>
 
-        <record id="software_linux_debian_lenny" model="it_infrastructure.software">
+        <record id="software_windows_7_64" model="it_infrastructure.software">
+            <field name="name">Windows 7</field>
+            <field name="version">Service Pack 1</field>
+            <field name="architecture">x64</field>
+            <field name="category_id" ref="software_category_os_windows"/>
+        </record>
+
+        <record id="software_linux_debian_lenny_32" model="it_infrastructure.software">
             <field name="name">Debian</field>
             <field name="version">5.0 Lenny</field>
+            <field name="architecture">x86</field>
             <field name="category_id" ref="software_category_os_linux"/>
         </record>
 
-        <record id="software_linux_debian_squeeze" model="it_infrastructure.software">
+        <record id="software_linux_debian_squeeze_64" model="it_infrastructure.software">
             <field name="name">Debian</field>
             <field name="version">6.0 Squeeze</field>
+            <field name="architecture">x64</field>
             <field name="category_id" ref="software_category_os_linux"/>
         </record>
 
-        <record id="software_linux_debian_wheezy" model="it_infrastructure.software">
+        <record id="software_linux_debian_wheezy_64" model="it_infrastructure.software">
             <field name="name">Debian</field>
             <field name="version">7.0 Wheezy</field>
+            <field name="architecture">x64</field>
             <field name="category_id" ref="software_category_os_linux"/>
         </record>
 
-        <record id="software_linux_ubuntu_14_04" model="it_infrastructure.software">
+        <record id="software_linux_ubuntu_14_04_64" model="it_infrastructure.software">
             <field name="name">Ubuntu</field>
             <field name="version">14.04 LTS</field>
+            <field name="architecture">x64</field>
             <field name="category_id" ref="software_category_os_linux"/>
         </record>
 
-        <record id="software_linux_ubuntu_12_04" model="it_infrastructure.software">
+        <record id="software_linux_ubuntu_12_04_64" model="it_infrastructure.software">
             <field name="name">Ubuntu</field>
             <field name="version">12.04 LTS</field>
+            <field name="architecture">x64</field>
             <field name="category_id" ref="software_category_os_linux"/>
         </record>
 
-        <record id="software_office_2003" model="it_infrastructure.software">
+        <record id="software_office_2003_32" model="it_infrastructure.software">
             <field name="name">Microsoft Office</field>
             <field name="version">2003</field>
+            <field name="architecture">x86</field>
             <field name="category_id" ref="software_category_ms_office"/>
         </record>
 
-        <record id="software_office_2007" model="it_infrastructure.software">
+        <record id="software_office_2007_64" model="it_infrastructure.software">
             <field name="name">Microsoft Office</field>
             <field name="version">2007</field>
+            <field name="architecture">x64</field>
             <field name="category_id" ref="software_category_ms_office"/>
         </record>
 

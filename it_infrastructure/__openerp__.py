@@ -36,11 +36,11 @@
     'installable': True,
     'auto_install': False,
     'demo': [
-        u'data/demo/it_infrastructure.repository.csv',
         u'data/demo/it_infrastructure.repository_branch.csv',
-        u'data/demo/it_infrastructure.server.csv',
+        u'data/demo/it_infrastructure.repository.csv',
         u'data/demo/it_infrastructure.server_configuration.csv',
         u'data/demo/it_infrastructure.server_configuration_command.csv',
+        u'data/demo/it_infrastructure.server.csv',
         u'data/demo/it_infrastructure.server_hostname.csv',
         u'data/demo/it_infrastructure.server_repository.csv',
         ],

@@ -8,6 +8,11 @@ class software(models.Model):
     _name = 'it_infrastructure.software'
     _description = 'Software'
 
+    _architecture_ = [
+        ('x86', '32 bits'),
+        ('x64', '64 bits'),
+    ]
+
     name = fields.Char(
         string='Name',
         required=True
@@ -15,6 +20,11 @@ class software(models.Model):
 
     version = fields.Char(
         string='Version'
+    )
+
+    architecture = fields.Selection(
+        selection=_architecture_,
+        string='Architecture'
     )
 
     category_id = fields.Many2one(
@@ -27,5 +37,8 @@ class software(models.Model):
     def name_get(self):
         result = []
         for soft in self:
-            result.append((soft.id, "%s %s" % (soft.name, soft.version or '')))
+            if soft.category_id.parent_id.name == 'Operating System':
+                result.append((soft.id, "%s %s (%s)" % (soft.name, soft.version, soft.architecture or '')))
+            else:
+                result.append((soft.id, "%s %s" % (soft.name, soft.version or '')))
         return result
