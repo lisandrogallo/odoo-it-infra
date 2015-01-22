@@ -64,7 +64,7 @@
     id="menu_server_hostname"
     sequence="30"
     action="action_it_infrastructure_server_hostname"
-    parent="menu_serv__env_and_inst"
+    parent="menu_serv_env_and_inst"
     groups="group_manager"
     />
 

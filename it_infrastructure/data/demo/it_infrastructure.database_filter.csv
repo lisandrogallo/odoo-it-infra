@@ -1,4 +1,0 @@
-id,name,rule
-inf_database_filter_exact,"Exact Subdomain (not implemented yet)",^\\b%d\\b$
-inf_database_filter_sub,Subdomain Contains,%d.*$
-inf_database_filter_no_filter,No Filter,^.*$

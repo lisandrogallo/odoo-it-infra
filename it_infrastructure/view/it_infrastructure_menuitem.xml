@@ -43,7 +43,7 @@
 
 <menuitem
     name="Server Configurations"
-    id="menu_serv__env_and_inst"
+    id="menu_serv_env_and_inst"
     sequence="20"
     parent="menu_configuration"
     groups="group_manager"

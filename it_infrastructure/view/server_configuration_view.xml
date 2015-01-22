@@ -47,7 +47,7 @@
     </field>
 </record>
 
-<record id="action_it_infrastructure_server_configuration_server_configurations" model="ir.actions.act_window">
+<record id="action_it_infrastructure_server_conf_server_confs" model="ir.actions.act_window">
     <field name="name">Server Templates</field>
     <field name="res_model">it_infrastructure.server_configuration</field>
     <field name="view_type">form</field>
@@ -61,8 +61,8 @@
     name="Server Templates"
     id="menu_server_configurations"
     sequence="10"
-    action="action_it_infrastructure_server_configuration_server_configurations"
-    parent="menu_serv__env_and_inst"
+    action="action_it_infrastructure_server_conf_server_confs"
+    parent="menu_serv_env_and_inst"
     groups="group_manager"
     />
 

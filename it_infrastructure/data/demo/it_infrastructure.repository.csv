@@ -5,7 +5,7 @@ inf_repo_git_adhoc_addons,odoo ADHOC,odoo-adhoc,,https://github.com/ingadhoc/odo
 inf_repo_git_odoo_saas_mgr,odoo SaaS Manager,odoo-saas-manager,addons,https://github.com/ingadhoc/odoo-saas-manager,openerp-client-lib,git,,inf_rep_branch_master
 inf_repo_git_odoo_logistic,odoo Logistic,odoo-logistic,addons,https://github.com/ingadhoc/odoo-logistic,,git,,inf_rep_branch_master
 inf_repo_git_odoo_academic,odoo Academic,odoo-academic,addons,https://github.com/ingadhoc/odoo-academic,,git,,inf_rep_branch_master
-inf_repo_git_odoo_infrastructure,odoo IT Infrastructure,odoo-infrastructure,addons,https://github.com/ingadhoc/odoo-infrastructure,openerp-client-lib fabric,git,,inf_rep_branch_master
+inf_repo_git_odoo_infrastructure,odoo Infrastructure,odoo-infrastructure,addons,https://github.com/ingadhoc/odoo-infrastructure,openerp-client-lib fabric,git,,inf_rep_branch_master
 inf_repo_git_odoo_law_tracking,odoo Law Tracking,odoo-law-tracking,addons,https://github.com/ingadhoc/odoo-law-tracking,,git,,inf_rep_branch_master
 inf_repo_git_odoo_etl,odoo ETL,odoo-etl,addons,https://github.com/ingadhoc/odoo-etl,openerp-client-lib fabric,git,,inf_rep_branch_master
 inf_repo_git_odoo_personalizations,odoo Personalizations,odoo-personalizations,,https://github.com/ingadhoc/odoo-personalizations,,git,,inf_rep_branch_master
