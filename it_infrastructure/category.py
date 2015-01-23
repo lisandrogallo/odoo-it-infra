@@ -19,6 +19,6 @@ class category(models.Model):
         for cat in self:
             prefix = None
             if cat.parent_id:
-                prefix = cat.parent_id.name + ' / '
+                prefix = cat.parent_id.name_get()[0][1] + ' / '
             result.append((cat.id, "%s %s" % (prefix or '', cat.name)))
         return result
