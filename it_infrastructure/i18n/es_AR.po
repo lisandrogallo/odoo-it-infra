@@ -1,0 +1,1102 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* it_infrastructure
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-23 15:13+0000\n"
+"PO-Revision-Date: 2015-01-23 14:03-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: Spanish (AR)\n"
+
+#. module: it_infrastructure
+#: selection:it_infrastructure.software,architecture:0
+msgid "32 bits"
+msgstr "32 bits"
+
+#. module: it_infrastructure
+#: selection:it_infrastructure.software,architecture:0
+msgid "64 bits"
+msgstr "64 bits"
+
+#. module: it_infrastructure
+#: selection:it_infrastructure.computer,state:0
+#: selection:it_infrastructure.device,state:0
+#: selection:it_infrastructure.equipment,state:0
+#: selection:it_infrastructure.server,state:0
+#: selection:it_infrastructure.workstation,state:0
+#: model:mail.message.subtype,description:it_infrastructure.equipment_active
+#: model:mail.message.subtype,name:it_infrastructure.equipment_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.repository,addons_subdirectory:0
+msgid "Addons Subdirectory"
+msgstr "Subdirectorio de Módulos"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.software,architecture:0
+msgid "Architecture"
+msgstr "Arquitectura"
+
+#. module: it_infrastructure
+#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_repository_branch_branches
+#: model:ir.ui.menu,name:it_infrastructure.menu_branches
+#: field:it_infrastructure.repository,branch_ids:0
+msgid "Branches"
+msgstr "Ramas"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.command:it_infrastructure.view_infrastructure_command_filter
+#: view:it_infrastructure.computer_change:it_infrastructure.view_infrastructure_computer_change_filter
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_filter
+#: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
+#: view:it_infrastructure.repository_branch:it_infrastructure.view_infrastructure_repository_branch_filter
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
+#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_filter
+#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_filter
+#: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
+#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_filter
+#: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_filter
+#: view:it_infrastructure.supply:it_infrastructure.view_it_infrastructure_supply_filter
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_filter
+msgid "By Attribute"
+msgstr "By Attribute"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.command:it_infrastructure.view_infrastructure_command_filter
+#: view:it_infrastructure.computer_change:it_infrastructure.view_infrastructure_computer_change_filter
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_filter
+#: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
+#: view:it_infrastructure.repository_branch:it_infrastructure.view_infrastructure_repository_branch_filter
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
+#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_filter
+#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_filter
+#: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
+#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_filter
+#: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_filter
+#: view:it_infrastructure.supply:it_infrastructure.view_it_infrastructure_supply_filter
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_filter
+msgid "By object"
+msgstr "By object"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.device,device_category_id:0
+#: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_filter
+#: field:it_infrastructure.software,category_id:0
+#: view:it_infrastructure.supply:it_infrastructure.view_it_infrastructure_supply_filter
+#: field:it_infrastructure.supply,supply_category_id:0
+msgid "Category"
+msgstr "Categoría"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,change_ids:0
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: field:it_infrastructure.server,change_ids:0
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
+#: field:it_infrastructure.workstation,change_ids:0
+msgid "Changes"
+msgstr "Cambios"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.device_category,child_ids:0
+#: field:it_infrastructure.software_category,child_ids:0
+#: field:it_infrastructure.supply_category,child_ids:0
+msgid "Childs"
+msgstr "Childs"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.command:it_infrastructure.view_infrastructure_command_filter
+#: field:it_infrastructure.command,command:0
+#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_filter
+#: field:it_infrastructure.server_configuration_command,command:0
+msgid "Command"
+msgstr "Comando"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_computer
+#: field:it_infrastructure.computer_change,computer_id:0
+msgid "Computer"
+msgstr "Computer"
+
+#. module: it_infrastructure
+#: sql_constraint:it_infrastructure.computer:0
+#: sql_constraint:it_infrastructure.server:0
+#: sql_constraint:it_infrastructure.workstation:0
+msgid "Computer IP address must be unique!"
+msgstr "La dirección IP debe ser única!"
+
+#. module: it_infrastructure
+#: sql_constraint:it_infrastructure.computer:0
+#: sql_constraint:it_infrastructure.server:0
+#: sql_constraint:it_infrastructure.workstation:0
+msgid "Computer hostname must be unique!"
+msgstr "El nombre de host debe ser único!"
+
+#. module: it_infrastructure
+#: sql_constraint:it_infrastructure.computer:0
+#: sql_constraint:it_infrastructure.server:0
+#: sql_constraint:it_infrastructure.workstation:0
+msgid "Computer name must be unique!"
+msgstr "El nombre de la computadora debe ser único!"
+
+#. module: it_infrastructure
+#: model:ir.ui.menu,name:it_infrastructure.menu_configuration
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
+#: field:it_infrastructure.server,server_configuration_id:0
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.category,create_uid:0
+#: field:it_infrastructure.command,create_uid:0
+#: field:it_infrastructure.computer,create_uid:0
+#: field:it_infrastructure.computer_change,create_uid:0
+#: field:it_infrastructure.device,create_uid:0
+#: field:it_infrastructure.device_category,create_uid:0
+#: field:it_infrastructure.equipment,create_uid:0
+#: field:it_infrastructure.repository,create_uid:0
+#: field:it_infrastructure.repository_branch,create_uid:0
+#: field:it_infrastructure.server,create_uid:0
+#: field:it_infrastructure.server_configuration,create_uid:0
+#: field:it_infrastructure.server_configuration_command,create_uid:0
+#: field:it_infrastructure.server_hostname,create_uid:0
+#: field:it_infrastructure.server_repository,create_uid:0
+#: field:it_infrastructure.software,create_uid:0
+#: field:it_infrastructure.software_category,create_uid:0
+#: field:it_infrastructure.supply,create_uid:0
+#: field:it_infrastructure.supply_category,create_uid:0
+#: field:it_infrastructure.workstation,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.category,create_date:0
+#: field:it_infrastructure.command,create_date:0
+#: field:it_infrastructure.computer,create_date:0
+#: field:it_infrastructure.computer_change,create_date:0
+#: field:it_infrastructure.device,create_date:0
+#: field:it_infrastructure.device_category,create_date:0
+#: field:it_infrastructure.equipment,create_date:0
+#: field:it_infrastructure.repository,create_date:0
+#: field:it_infrastructure.repository_branch,create_date:0
+#: field:it_infrastructure.server,create_date:0
+#: field:it_infrastructure.server_configuration,create_date:0
+#: field:it_infrastructure.server_configuration_command,create_date:0
+#: field:it_infrastructure.server_hostname,create_date:0
+#: field:it_infrastructure.server_repository,create_date:0
+#: field:it_infrastructure.software,create_date:0
+#: field:it_infrastructure.software_category,create_date:0
+#: field:it_infrastructure.supply,create_date:0
+#: field:it_infrastructure.supply_category,create_date:0
+#: field:it_infrastructure.workstation,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: it_infrastructure
+#: model:ir.ui.menu,name:it_infrastructure.menu_data
+msgid "Data"
+msgstr "Datos"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.computer_change:it_infrastructure.view_infrastructure_computer_change_filter
+#: field:it_infrastructure.computer_change,date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: it_infrastructure
+#: help:it_infrastructure.computer,message_last_post:0
+#: help:it_infrastructure.device,message_last_post:0
+#: help:it_infrastructure.equipment,message_last_post:0
+#: help:it_infrastructure.server,message_last_post:0
+#: help:it_infrastructure.supply,message_last_post:0
+#: help:it_infrastructure.workstation,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Date of the last message posted on the record."
+
+#. module: it_infrastructure
+#: selection:it_infrastructure.computer,state:0
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
+#: selection:it_infrastructure.device,state:0
+#: selection:it_infrastructure.equipment,state:0
+#: selection:it_infrastructure.server,state:0
+#: selection:it_infrastructure.workstation,state:0
+#: model:mail.message.subtype,description:it_infrastructure.equipment_decommissioned
+#: model:mail.message.subtype,name:it_infrastructure.equipment_decommissioned
+msgid "Decommissioned"
+msgstr "Dado de Baja"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,description:0
+#: view:it_infrastructure.computer_change:it_infrastructure.view_infrastructure_computer_change_filter
+#: field:it_infrastructure.computer_change,description:0
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
+#: field:it_infrastructure.device,description:0
+#: field:it_infrastructure.equipment,description:0
+#: field:it_infrastructure.server,description:0
+#: view:it_infrastructure.supply:it_infrastructure.view_it_infrastructure_supply_form
+#: field:it_infrastructure.supply,description:0
+#: field:it_infrastructure.workstation,description:0
+msgid "Description"
+msgstr "Descripción"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_device
+msgid "Device"
+msgstr "Dispositivo"
+
+#. module: it_infrastructure
+#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_device_devices
+#: model:ir.ui.menu,name:it_infrastructure.menu_devices
+#: view:it_infrastructure.supply:it_infrastructure.view_it_infrastructure_supply_form
+#: field:it_infrastructure.supply,device_ids:0
+msgid "Devices"
+msgstr "Dispositivos"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
+#: field:it_infrastructure.repository,directory:0
+msgid "Directory"
+msgstr "Directorio"
+
+#. module: it_infrastructure
+#: selection:it_infrastructure.computer,state:0
+#: selection:it_infrastructure.device,state:0
+#: selection:it_infrastructure.equipment,state:0
+#: selection:it_infrastructure.server,state:0
+#: selection:it_infrastructure.workstation,state:0
+#: model:mail.message.subtype,description:it_infrastructure.equipment_draft
+#: model:mail.message.subtype,name:it_infrastructure.equipment_draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_equipment
+msgid "Equipment"
+msgstr "Equipment"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_tree
+msgid "Execute"
+msgstr "Ejecutar"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_tree
+#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_tree
+msgid "Execute Command"
+msgstr "Ejecutar Comando"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,message_follower_ids:0
+#: field:it_infrastructure.device,message_follower_ids:0
+#: field:it_infrastructure.equipment,message_follower_ids:0
+#: field:it_infrastructure.server,message_follower_ids:0
+#: field:it_infrastructure.supply,message_follower_ids:0
+#: field:it_infrastructure.workstation,message_follower_ids:0
+msgid "Followers"
+msgstr "Followers"
+
+#. module: it_infrastructure
+#: help:it_infrastructure.computer,source_document_number:0
+#: help:it_infrastructure.device,source_document_number:0
+#: help:it_infrastructure.equipment,source_document_number:0
+#: help:it_infrastructure.server,source_document_number:0
+#: help:it_infrastructure.workstation,source_document_number:0
+msgid "Format: XXX-AAA-YYYY (For example: 123-ABC-2014)"
+msgstr "Formato: XXX-AAA-YYYY (Por ejemplo: 123-ABC-2014)"
+
+#. module: it_infrastructure
+#: help:it_infrastructure.computer,stock_number:0
+#: help:it_infrastructure.device,stock_number:0
+#: help:it_infrastructure.equipment,stock_number:0
+#: help:it_infrastructure.server,stock_number:0
+#: help:it_infrastructure.workstation,stock_number:0
+msgid "Format: XXXX (For example: 1234)"
+msgstr "Formato: XXXX (Por ejemplo: 1234)"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_tree
+msgid "Get/Update Repository"
+msgstr "Clonar/Actualizar Repositorio"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
+msgid "Hardware"
+msgstr "Hardware"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,hardware_data:0
+#: field:it_infrastructure.server,hardware_data:0
+#: field:it_infrastructure.workstation,hardware_data:0
+msgid "Hardware Data"
+msgstr "Datos de Hardware"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,hardware_specs:0
+#: field:it_infrastructure.server,hardware_specs:0
+#: field:it_infrastructure.workstation,hardware_specs:0
+msgid "Hardware Specifications"
+msgstr "Especificaciones de Hardware"
+
+#. module: it_infrastructure
+#: help:it_infrastructure.computer,message_summary:0
+#: help:it_infrastructure.device,message_summary:0
+#: help:it_infrastructure.equipment,message_summary:0
+#: help:it_infrastructure.server,message_summary:0
+#: help:it_infrastructure.supply,message_summary:0
+#: help:it_infrastructure.workstation,message_summary:0
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,hostname:0
+#: field:it_infrastructure.server,hostname:0
+#: field:it_infrastructure.workstation,hostname:0
+msgid "Hostname"
+msgstr "Nombre de Host"
+
+#. module: it_infrastructure
+#: sql_constraint:it_infrastructure.server_hostname:0
+msgid "Hostname/wildcard must be unique per server!"
+msgstr "El nombre de host debe ser único por servidor!"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: field:it_infrastructure.server,hostname_ids:0
+msgid "Hostnames"
+msgstr "Nombres de Host"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.category,id:0 field:it_infrastructure.command,id:0
+#: field:it_infrastructure.computer,id:0
+#: field:it_infrastructure.computer_change,id:0
+#: field:it_infrastructure.device,id:0
+#: field:it_infrastructure.device_category,id:0
+#: field:it_infrastructure.equipment,id:0
+#: field:it_infrastructure.repository,id:0
+#: field:it_infrastructure.repository_branch,id:0
+#: field:it_infrastructure.server,id:0
+#: field:it_infrastructure.server_configuration,id:0
+#: field:it_infrastructure.server_configuration_command,id:0
+#: field:it_infrastructure.server_hostname,id:0
+#: field:it_infrastructure.server_repository,id:0
+#: field:it_infrastructure.software,id:0
+#: field:it_infrastructure.software_category,id:0
+#: field:it_infrastructure.supply,id:0
+#: field:it_infrastructure.supply_category,id:0
+#: field:it_infrastructure.workstation,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,ip_address:0
+#: field:it_infrastructure.server,ip_address:0
+#: field:it_infrastructure.workstation,ip_address:0
+msgid "IP Address"
+msgstr "Dirección IP"
+
+#. module: it_infrastructure
+#: model:ir.module.category,description:it_infrastructure.module_category_infrastructure
+#: model:ir.module.category,name:it_infrastructure.module_category_infrastructure
+#: model:ir.ui.menu,name:it_infrastructure.menu_infrastructure
+msgid "IT Infrastructure"
+msgstr "Infraestructura IT"
+
+#. module: it_infrastructure
+#: help:it_infrastructure.computer,message_unread:0
+#: help:it_infrastructure.device,message_unread:0
+#: help:it_infrastructure.equipment,message_unread:0
+#: help:it_infrastructure.server,message_unread:0
+#: help:it_infrastructure.supply,message_unread:0
+#: help:it_infrastructure.workstation,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "If checked new messages require your attention."
+
+#. module: it_infrastructure
+#: field:it_infrastructure.repository,install_server_command:0
+msgid "Install Server Command"
+msgstr "Comando de Instalación de Servidor"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+msgid "Installation"
+msgstr "Instalación"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server_configuration,installation_command_ids:0
+msgid "Installation Commands"
+msgstr "Comandos de Instalación"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.repository,is_server:0
+msgid "Is Server?"
+msgstr "Es Servidor?"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,message_is_follower:0
+#: field:it_infrastructure.device,message_is_follower:0
+#: field:it_infrastructure.equipment,message_is_follower:0
+#: field:it_infrastructure.server,message_is_follower:0
+#: field:it_infrastructure.supply,message_is_follower:0
+#: field:it_infrastructure.workstation,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Is a Follower"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,message_last_post:0
+#: field:it_infrastructure.device,message_last_post:0
+#: field:it_infrastructure.equipment,message_last_post:0
+#: field:it_infrastructure.server,message_last_post:0
+#: field:it_infrastructure.supply,message_last_post:0
+#: field:it_infrastructure.workstation,message_last_post:0
+msgid "Last Message Date"
+msgstr "Last Message Date"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.category,write_uid:0
+#: field:it_infrastructure.command,write_uid:0
+#: field:it_infrastructure.computer,write_uid:0
+#: field:it_infrastructure.computer_change,write_uid:0
+#: field:it_infrastructure.device,write_uid:0
+#: field:it_infrastructure.device_category,write_uid:0
+#: field:it_infrastructure.equipment,write_uid:0
+#: field:it_infrastructure.repository,write_uid:0
+#: field:it_infrastructure.repository_branch,write_uid:0
+#: field:it_infrastructure.server,write_uid:0
+#: field:it_infrastructure.server_configuration,write_uid:0
+#: field:it_infrastructure.server_configuration_command,write_uid:0
+#: field:it_infrastructure.server_hostname,write_uid:0
+#: field:it_infrastructure.server_repository,write_uid:0
+#: field:it_infrastructure.software,write_uid:0
+#: field:it_infrastructure.software_category,write_uid:0
+#: field:it_infrastructure.supply,write_uid:0
+#: field:it_infrastructure.supply_category,write_uid:0
+#: field:it_infrastructure.workstation,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.category,write_date:0
+#: field:it_infrastructure.command,write_date:0
+#: field:it_infrastructure.computer,write_date:0
+#: field:it_infrastructure.computer_change,write_date:0
+#: field:it_infrastructure.device,write_date:0
+#: field:it_infrastructure.device_category,write_date:0
+#: field:it_infrastructure.equipment,write_date:0
+#: field:it_infrastructure.repository,write_date:0
+#: field:it_infrastructure.repository_branch,write_date:0
+#: field:it_infrastructure.server,write_date:0
+#: field:it_infrastructure.server_configuration,write_date:0
+#: field:it_infrastructure.server_configuration_command,write_date:0
+#: field:it_infrastructure.server_hostname,write_date:0
+#: field:it_infrastructure.server_repository,write_date:0
+#: field:it_infrastructure.software,write_date:0
+#: field:it_infrastructure.software_category,write_date:0
+#: field:it_infrastructure.supply,write_date:0
+#: field:it_infrastructure.supply_category,write_date:0
+#: field:it_infrastructure.workstation,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: it_infrastructure
+#: model:ir.ui.menu,name:it_infrastructure.menu_it_infrastructure_main
+msgid "Main"
+msgstr "Main"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+msgid "Maintenance"
+msgstr "Mantenimiento"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server_configuration,maintenance_command_ids:0
+msgid "Maintenance Commands"
+msgstr "Comandos de Mantenimiento"
+
+#. module: it_infrastructure
+#: model:res.groups,name:it_infrastructure.group_manager
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,message_ids:0
+#: field:it_infrastructure.device,message_ids:0
+#: field:it_infrastructure.equipment,message_ids:0
+#: field:it_infrastructure.server,message_ids:0
+#: field:it_infrastructure.supply,message_ids:0
+#: field:it_infrastructure.workstation,message_ids:0
+msgid "Messages"
+msgstr "Messages"
+
+#. module: it_infrastructure
+#: help:it_infrastructure.computer,message_ids:0
+#: help:it_infrastructure.device,message_ids:0
+#: help:it_infrastructure.equipment,message_ids:0
+#: help:it_infrastructure.server,message_ids:0
+#: help:it_infrastructure.supply,message_ids:0
+#: help:it_infrastructure.workstation,message_ids:0
+msgid "Messages and communication history"
+msgstr "Messages and communication history"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.category,name:0
+#: view:it_infrastructure.command:it_infrastructure.view_infrastructure_command_filter
+#: field:it_infrastructure.command,name:0
+#: field:it_infrastructure.computer,name:0
+#: field:it_infrastructure.device,name:0
+#: field:it_infrastructure.device_category,name:0
+#: field:it_infrastructure.equipment,name:0
+#: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
+#: field:it_infrastructure.repository,name:0
+#: view:it_infrastructure.repository_branch:it_infrastructure.view_infrastructure_repository_branch_filter
+#: field:it_infrastructure.repository_branch,name:0
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
+#: field:it_infrastructure.server,name:0
+#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_filter
+#: field:it_infrastructure.server_configuration,name:0
+#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_filter
+#: field:it_infrastructure.server_configuration_command,name:0
+#: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
+#: field:it_infrastructure.server_hostname,name:0
+#: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_filter
+#: field:it_infrastructure.software,name:0
+#: field:it_infrastructure.software_category,name:0
+#: field:it_infrastructure.supply,name:0
+#: field:it_infrastructure.supply_category,name:0
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_filter
+#: field:it_infrastructure.workstation,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: view:it_infrastructure.supply:it_infrastructure.view_it_infrastructure_supply_form
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
+msgid "Name..."
+msgstr "Nombre..."
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,netmask:0
+#: field:it_infrastructure.server,netmask:0
+#: field:it_infrastructure.workstation,netmask:0
+msgid "Network Mask"
+msgstr "Máscara de Red"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,note:0
+#: field:it_infrastructure.server,note:0
+#: field:it_infrastructure.workstation,note:0
+msgid "Note"
+msgstr "Nota"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,office_id:0
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_filter
+#: field:it_infrastructure.device,office_id:0
+#: field:it_infrastructure.equipment,office_id:0
+#: field:it_infrastructure.server,office_id:0
+#: field:it_infrastructure.workstation,office_id:0
+msgid "Office"
+msgstr "Oficina"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_filter
+#: field:it_infrastructure.workstation,office_suite_id:0
+msgid "Office Suite"
+msgstr "Paquete de Ofimática"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server,open_ports:0
+msgid "Open Ports"
+msgstr "Puertos Abiertos"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,os_id:0
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
+#: field:it_infrastructure.server,os_id:0
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_filter
+#: field:it_infrastructure.workstation,os_id:0
+msgid "Operating System"
+msgstr "Sistema Operativo"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
+#: field:it_infrastructure.repository,pip_packages:0
+msgid "PIP Packages"
+msgstr "Paquetes Python (PIP)"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.device_category,parent_id:0
+#: field:it_infrastructure.software_category,parent_id:0
+#: field:it_infrastructure.supply_category,parent_id:0
+msgid "Parent"
+msgstr "Padre"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server,password:0
+msgid "Password"
+msgstr "Contraseña"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_filter
+#: field:it_infrastructure.server_repository,path:0
+msgid "Path"
+msgstr "Ruta"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.supply,partner_id:0
+msgid "Provider"
+msgstr "Proveedor"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,purchase_date:0
+#: field:it_infrastructure.device,purchase_date:0
+#: field:it_infrastructure.equipment,purchase_date:0
+#: field:it_infrastructure.server,purchase_date:0
+#: field:it_infrastructure.workstation,purchase_date:0
+msgid "Purchase Date"
+msgstr "Fecha de Compra"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.supply:it_infrastructure.view_it_infrastructure_supply_filter
+#: field:it_infrastructure.supply,quantity:0
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+msgid "Reboot Server"
+msgstr "Reiniciar Servidor"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server,remote_mgmt_port:0
+msgid "Remote Management Port"
+msgstr "Puerto de Administración Remota"
+
+#. module: it_infrastructure
+#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_repository_repositories
+#: model:ir.ui.menu,name:it_infrastructure.menu_repositories
+#: model:ir.ui.menu,name:it_infrastructure.menu_repositories_conf
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+msgid "Repositories"
+msgstr "Repositorios"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_filter
+#: field:it_infrastructure.server_repository,repository_id:0
+msgid "Repository"
+msgstr "Repositorio"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.repository,sequence:0
+msgid "Sequence"
+msgstr "Sequence"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server_hostname,server_id:0
+msgid "Server"
+msgstr "Servidor"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+msgid "Server Configuration..."
+msgstr "Configuración de Servidor..."
+
+#. module: it_infrastructure
+#: model:ir.ui.menu,name:it_infrastructure.menu_serv_env_and_inst
+msgid "Server Configurations"
+msgstr "Configuraciones de Servidor"
+
+#. module: it_infrastructure
+#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_server_hostname
+#: model:ir.ui.menu,name:it_infrastructure.menu_server_hostname
+msgid "Server Hostnames"
+msgstr "Nombres de Host del Servidor"
+
+#. module: it_infrastructure
+#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_server_conf_server_confs
+#: model:ir.ui.menu,name:it_infrastructure.menu_server_configurations
+msgid "Server Templates"
+msgstr "Plantillas de Servidor"
+
+#. module: it_infrastructure
+#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_server_servers
+#: model:ir.ui.menu,name:it_infrastructure.menu_servers
+msgid "Servers"
+msgstr "Servidores"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_software
+#: model:ir.ui.menu,name:it_infrastructure.menu_software
+#: field:it_infrastructure.software_category,software_ids:0
+msgid "Software"
+msgstr "Software"
+
+#. module: it_infrastructure
+#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_software_objects
+msgid "Software List"
+msgstr "Lista de Software"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,source_document_number:0
+#: field:it_infrastructure.device,source_document_number:0
+#: field:it_infrastructure.equipment,source_document_number:0
+#: field:it_infrastructure.server,source_document_number:0
+#: field:it_infrastructure.workstation,source_document_number:0
+msgid "Source Document"
+msgstr "Documento de Origen"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,state:0
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_filter
+#: field:it_infrastructure.device,state:0
+#: field:it_infrastructure.equipment,state:0
+#: field:it_infrastructure.server,state:0
+#: field:it_infrastructure.workstation,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,stock_number:0
+#: field:it_infrastructure.device,stock_number:0
+#: field:it_infrastructure.equipment,stock_number:0
+#: field:it_infrastructure.server,stock_number:0
+#: field:it_infrastructure.workstation,stock_number:0
+msgid "Stock Number"
+msgstr "Número de Inventario"
+
+#. module: it_infrastructure
+#: sql_constraint:it_infrastructure.computer:0
+#: sql_constraint:it_infrastructure.device:0
+#: sql_constraint:it_infrastructure.equipment:0
+#: sql_constraint:it_infrastructure.server:0
+#: sql_constraint:it_infrastructure.workstation:0
+msgid "Stock number already exists"
+msgstr "El número de inventario ya existe"
+
+#. module: it_infrastructure
+#: selection:it_infrastructure.computer,state:0
+#: selection:it_infrastructure.device,state:0
+#: selection:it_infrastructure.equipment,state:0
+#: selection:it_infrastructure.server,state:0
+#: selection:it_infrastructure.workstation,state:0
+#: model:mail.message.subtype,description:it_infrastructure.equipment_stored
+#: model:mail.message.subtype,name:it_infrastructure.equipment_stored
+msgid "Stored"
+msgstr "Almacenado"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,message_summary:0
+#: view:it_infrastructure.computer_change:it_infrastructure.view_infrastructure_computer_change_filter
+#: field:it_infrastructure.computer_change,name:0
+#: field:it_infrastructure.device,message_summary:0
+#: field:it_infrastructure.equipment,message_summary:0
+#: field:it_infrastructure.server,message_summary:0
+#: field:it_infrastructure.supply,message_summary:0
+#: field:it_infrastructure.workstation,message_summary:0
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: it_infrastructure
+#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_supply_supplies
+#: model:ir.ui.menu,name:it_infrastructure.menu_supplies
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
+#: field:it_infrastructure.device,supply_ids:0
+#: field:it_infrastructure.device_category,device_ids:0
+#: field:it_infrastructure.supply_category,supply_ids:0
+msgid "Supplies"
+msgstr "Insumos"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.command,type:0
+#: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
+#: field:it_infrastructure.repository,type:0
+#: field:it_infrastructure.server_configuration_command,type:0
+msgid "Type"
+msgstr "Tipo"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.repository,url:0
+msgid "URL"
+msgstr "URL"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,message_unread:0
+#: field:it_infrastructure.device,message_unread:0
+#: field:it_infrastructure.equipment,message_unread:0
+#: field:it_infrastructure.server,message_unread:0
+#: field:it_infrastructure.supply,message_unread:0
+#: field:it_infrastructure.workstation,message_unread:0
+msgid "Unread Messages"
+msgstr "Unread Messages"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_filter
+msgid "Used By"
+msgstr "Used By"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,user_id:0
+#: view:it_infrastructure.computer_change:it_infrastructure.view_infrastructure_computer_change_filter
+#: field:it_infrastructure.computer_change,user_id:0
+#: field:it_infrastructure.server,user_id:0
+#: field:it_infrastructure.workstation,user_id:0
+#: model:res.groups,name:it_infrastructure.group_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,username:0
+#: field:it_infrastructure.server,username:0
+#: field:it_infrastructure.workstation,username:0
+msgid "Username"
+msgstr "Nombre de Inicio de Sesión"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server,vpn_required:0
+msgid "VPN Required"
+msgstr "Requiere VPN"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.software,version:0
+msgid "Version"
+msgstr "Versión"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.computer,warranty:0
+#: field:it_infrastructure.device,warranty:0
+#: field:it_infrastructure.equipment,warranty:0
+#: field:it_infrastructure.server,warranty:0
+#: field:it_infrastructure.workstation,warranty:0
+msgid "Warranty (months)"
+msgstr "Garantía (meses)"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
+#: field:it_infrastructure.server_hostname,wildcard:0
+msgid "Wild Card"
+msgstr "Wildcard"
+
+#. module: it_infrastructure
+#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_workstation_workstations
+#: model:ir.ui.menu,name:it_infrastructure.menu_workstations
+msgid "Workstations"
+msgstr "Puestos de Trabajo"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_category
+msgid "category"
+msgstr "Categoría"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_command
+#: view:it_infrastructure.command:it_infrastructure.view_infrastructure_command_filter
+#: view:it_infrastructure.command:it_infrastructure.view_infrastructure_command_form
+#: view:it_infrastructure.command:it_infrastructure.view_infrastructure_command_tree
+msgid "command"
+msgstr "Comando"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_computer_change
+#: view:it_infrastructure.computer_change:it_infrastructure.view_infrastructure_computer_change_filter
+#: view:it_infrastructure.computer_change:it_infrastructure.view_infrastructure_computer_change_form
+#: view:it_infrastructure.computer_change:it_infrastructure.view_infrastructure_computer_change_tree
+msgid "computer_change"
+msgstr "Cambios"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_device_category
+msgid "device_category"
+msgstr "Categoría de Dispositivos"
+
+#. module: it_infrastructure
+#: selection:it_infrastructure.repository,type:0
+msgid "git"
+msgstr "git"
+
+#. module: it_infrastructure
+#: selection:it_infrastructure.command,type:0
+#: selection:it_infrastructure.server_configuration_command,type:0
+msgid "installation"
+msgstr "Instalación"
+
+#. module: it_infrastructure
+#: selection:it_infrastructure.command,type:0
+#: selection:it_infrastructure.server_configuration_command,type:0
+msgid "maintenance"
+msgstr "Mantenimiento"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_repository
+#: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
+#: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_form
+#: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_tree
+msgid "repository"
+msgstr "Repositorio"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_repository_branch
+#: view:it_infrastructure.repository_branch:it_infrastructure.view_infrastructure_repository_branch_filter
+#: view:it_infrastructure.repository_branch:it_infrastructure.view_infrastructure_repository_branch_form
+#: view:it_infrastructure.repository_branch:it_infrastructure.view_infrastructure_repository_branch_tree
+msgid "repository_branch"
+msgstr "Rama de Repositorio"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.repository_branch,repository_ids:0
+msgid "repository_ids"
+msgstr "Repositorios"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.command,sequence:0
+#: field:it_infrastructure.server_configuration_command,sequence:0
+msgid "sequence"
+msgstr "sequence"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_server
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_tree
+msgid "server"
+msgstr "Servidor"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_configuration
+#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_filter
+#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_form
+#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_tree
+msgid "server_configuration"
+msgstr "Configuración de Servidor"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_configuration_command
+#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_filter
+#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_form
+#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_tree
+msgid "server_configuration_command"
+msgstr "Comando de Configuración de Servidor"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server_configuration_command,server_configuration_id:0
+msgid "server_configuration_id"
+msgstr "server_configuration_id"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_hostname
+#: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
+#: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_form
+#: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_tree
+msgid "server_hostname"
+msgstr "server_hostname"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server_repository,server_id:0
+msgid "server_id"
+msgstr "server_id"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server_configuration,server_ids:0
+msgid "server_ids"
+msgstr "server_ids"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_repository
+#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_filter
+#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_form
+#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_tree
+msgid "server_repository"
+msgstr "server_repository"
+
+#. module: it_infrastructure
+#: field:it_infrastructure.server,server_repository_ids:0
+msgid "server_repository_ids"
+msgstr "server_repository_ids"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_filter
+#: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_form
+msgid "software"
+msgstr "software"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_software_category
+#: view:it_infrastructure.software_category:it_infrastructure.view_infrastructure_software_category_form
+msgid "software_category"
+msgstr "software_category"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_supply
+#: view:it_infrastructure.supply:it_infrastructure.view_it_infrastructure_supply_filter
+#: view:it_infrastructure.supply:it_infrastructure.view_it_infrastructure_supply_form
+#: view:it_infrastructure.supply:it_infrastructure.view_it_infrastructure_supply_tree
+msgid "supply"
+msgstr "supply"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_supply_category
+msgid "supply_category"
+msgstr "supply_category"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
+msgid "to Active"
+msgstr "pasar a Activo"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
+msgid "to Draft"
+msgstr "pasar a Borrador"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
+msgid "to Pending"
+msgstr "pasar a Pendiente"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
+msgid "to Stored"
+msgstr "pasar a Almacenado"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_workstation
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_filter
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_tree
+msgid "workstation"
+msgstr "Puesto de Trabajo"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+msgid "⇒ View Password"
+msgstr "⇒ Ver Contraseña"
