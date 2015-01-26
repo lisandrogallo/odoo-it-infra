@@ -30,7 +30,7 @@
                     <group>
                         <field name="name"/>
                         <field name="version"/>
-                        <field name="architecture"/>
+                        <field name="architecture" widget="radio"/>
                     </group>
                     <group>
                         <field name="category_id" domain="[('parent_id', '!=', False)]"/>
