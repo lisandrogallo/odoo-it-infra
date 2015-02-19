@@ -1,7 +1,7 @@
 FROM lisogallo/odoo_server:latest
 MAINTAINER Liso Gallo <liso@riseup.net>
 
-ENV REFRESHED_AT 2015-01-26
+ENV REFRESHED_AT 2015-02-19
 
 # Update Odoo server
 WORKDIR /opt/odoo/server/
@@ -25,6 +25,7 @@ RUN pip install erppeek
 RUN pip install pyinotify 
 RUN pip install python-magic 
 
+RUN apt-get update 
 RUN apt-get install -y postgresql-client
 
 CMD ["sudo", "-H", "-u", "odoo", "/opt/odoo/server/odoo.py", "-c", "/opt/odoo/odoo.conf"]
