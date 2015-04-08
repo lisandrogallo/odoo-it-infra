@@ -52,14 +52,15 @@ class equipment(models.Model):
     @api.multi
     @api.constrains('source_document_number')
     def _check_document_number(self):
-        if not self.__check_document_number_re.match(self.source_document_number):
-            raise Warning(_('Invalid document format'))
-        else:
-            tmp = self.source_document_number.split('-')[2]
-            input_date = datetime.strptime(tmp, '%Y')
-            year_limit = datetime.today() - relativedelta(years=20)
-            if input_date < year_limit or input_date > datetime.today():
-                raise Warning(_('Invalid document year.'))
+        if self.source_document_number:
+            if not self.__check_document_number_re.match(self.source_document_number):
+                raise Warning(_('Invalid document format'))
+            else:
+                tmp = self.source_document_number.split('-')[2]
+                input_date = datetime.strptime(tmp, '%Y')
+                year_limit = datetime.today() - relativedelta(years=20)
+                if input_date < year_limit or input_date > datetime.today():
+                    raise Warning(_('Invalid document year.'))
 
     name = fields.Char(
         string='Name',
