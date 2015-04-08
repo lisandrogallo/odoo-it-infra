@@ -78,13 +78,11 @@ class equipment(models.Model):
 
     source_document_number = fields.Char(
         string='Source Document',
-        required=True,
         help='Format: XXX-AAA-YYYY (For example: 123-ABC-2014)',
     )
 
     purchase_date = fields.Date(
         string='Purchase Date',
-        required=True
     )
 
     warranty = fields.Integer(

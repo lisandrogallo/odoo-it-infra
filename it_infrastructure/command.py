@@ -26,7 +26,6 @@ class command(models.Model):
 
     command = fields.Text(
         string='Command',
-        required=True
     )
 
     _order = "sequence"
