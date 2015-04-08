@@ -89,7 +89,7 @@ class server(models.Model):
     @api.one
     def show_passwd(self):
         raise except_orm(
-            _("Password for user '%s':") % self.user_name,
+            _("Password for user '%s':") % self.username,
             _("%s") % self.password
         )
 
