@@ -11,7 +11,7 @@
         <search string="server" version="7.0">
             <group string="By Attribute">
                 <field name="name" string="Name"/>
-                <field name="user_id" string="Used By"/>
+                <field name="employee_id" string="Used By"/>
             </group>
             <group string="By object">
                 <field name="server_configuration_id" string="Configuration"/>
@@ -82,8 +82,9 @@
                     </group>
                     <div class="col-md-12">
                         <group>
-                            <field name="user_id"/>
+                            <field name="employee_id"/>
                             <field name="office_id"/>
+                            <!-- <field name="office_id" domain="[('office_id.member_ids', 'in', employee_id)]"/> -->
                         </group>
                         <group>
                             <field name="stock_number"/>
@@ -149,7 +150,7 @@
             <field name="name"/>
             <field name="os_id"/>
             <field name="ip_address"/>
-            <field name="user_id"/>
+            <field name="employee_id"/>
             <field name="server_configuration_id"/>
         </tree>
     </field>

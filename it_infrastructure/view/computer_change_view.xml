@@ -12,7 +12,7 @@
             <group string="By Attribute">
             <field name="name" string="Summary"/>
             <field name="date" string="Date"/>
-            <field name="user_id" string="User"/>
+            <field name="employee_id" string="User"/>
             <field name="description" string="Description"/>
             </group>
             <group string="By object">
@@ -33,7 +33,7 @@
              <group>
                 <field name="name"/>
                 <field name="date"/>
-                <field name="user_id"/>
+                <field name="employee_id"/>
                 <field name="description"/>
              </group>
             </sheet>
@@ -49,7 +49,7 @@
         <tree string="computer_change">
             <field name="name"/>
             <field name="date"/>
-            <field name="user_id"/>
+            <field name="employee_id"/>
         </tree>
     </field>
 </record>

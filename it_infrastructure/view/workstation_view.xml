@@ -11,7 +11,7 @@
         <search string="workstation" version="7.0">
             <group string="By Attribute">
                 <field name="name" string="Name"/>
-                <field name="user_id" string="Used By"/>
+                <field name="employee_id" string="Used By"/>
             </group>
             <group string="By object">
                 <field name="os_id" string="Operating System"/>
@@ -58,7 +58,7 @@
                         <field name="office_suite_id"/>
                     </group>
                     <group>
-                        <field name="user_id"/>
+                        <field name="employee_id"/>
                         <field name="username"/>
                     </group>
                     <group>
@@ -113,7 +113,7 @@
             <field name="os_id"/>
             <field name="office_suite_id"/>
             <field name="ip_address"/>
-            <field name="user_id"/>
+            <field name="employee_id"/>
         </tree>
     </field>
 </record>

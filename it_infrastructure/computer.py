@@ -16,8 +16,8 @@ class computer(models.Model):
         required=True
     )
 
-    user_id = fields.Many2one(
-        'res.partner',
+    employee_id = fields.Many2one(
+        'hr.employee',
         string='User'
     )
 

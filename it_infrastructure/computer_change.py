@@ -20,7 +20,7 @@ class computer_change(models.Model):
         default=fields.Date.context_today
     )
 
-    user_id = fields.Many2one(
+    employee_id = fields.Many2one(
         'res.users',
         string='User',
         required=True,
