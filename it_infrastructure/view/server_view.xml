@@ -27,23 +27,19 @@
     <field name="arch" type="xml">
         <form string="server" version="7.0">
             <header>
-                <button name="sgn_to_active"
-                    states="draft"
-                    string="to Active"
-                    class="oe_highlight"
-                    />
-                <button name="action_wkf_set_draft"
-                    type="object"
-                    states="cancel"
-                    string="to Draft"
-                    />
-                <button name="sgn_cancel"
-                    states="active"
-                    string="Cancel"
-                    />
-                <field name="state" widget="statusbar"
-                    statusbar_colors='{}'
-                    />
+                <button name="action_draft" type="object"
+                        string="to Draft"
+                        states="active,stored,decommissioned"/>
+                <button name="action_active" type="object"
+                        string="to Active" states="draft"
+                        class="oe_highlight"/>
+                <button name="action_stored" type="object"
+                        string="to Stored" states="active"
+                        class="oe_highlight"/>
+                <button name="action_decommissioned" type="object"
+                        string="to Decommissioned" states="stored"
+                        class="oe_highlight"/>
+                <field name="state" widget="statusbar"/>
             </header>
             <sheet string="server">
                 <div class="col-md-6">

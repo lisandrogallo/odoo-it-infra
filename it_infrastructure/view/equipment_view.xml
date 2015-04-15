@@ -27,32 +27,20 @@
     <field name="arch" type="xml">
         <form>
             <header>
-                <button name="action_wkf_set_draft"
-                    type="object"
-                    states="active,stored,decommissioned"
-                    string="to Draft"
-                    />
                 <button name="sgn_to_active"
-                    states="draft,stored,decommissioned"
-                    string="to Active"
-                    />
-                <button name="sgn_to_stored"
-                    states="active"
-                    string="to Stored"
-                    />
-                <button name="sgn_to_decommissioned"
-                    states="active,stored"
-                    string="Decommissioned"
-                    />
-<!--                 <button name="sgn_to_active"
-                    states="deactivated,draft,maintenance"
+                    states="draft"
                     string="to Active"
                     class="oe_highlight"
                     />
+                <button name="action_wkf_set_draft"
+                    type="object"
+                    states="cancel"
+                    string="to Draft"
+                    />
                 <button name="sgn_cancel"
-                    states="active,deactivated,maintenance"
+                    states="active"
                     string="Cancel"
-                    /> -->
+                    />
                 <field name="state" widget="statusbar"
                     statusbar_colors='{}'
                     />

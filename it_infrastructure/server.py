@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from openerp import netsvc
 from openerp import models, fields, api, _
 from openerp.exceptions import except_orm, Warning
 from fabric.api import env, reboot
@@ -85,11 +84,3 @@ class server(models.Model):
     def reboot_server(self):
         self.get_env()
         reboot()
-
-    def action_wkf_set_draft(self, cr, uid, ids, *args):
-        self.write(cr, uid, ids, {'state': 'draft'})
-        wf_service = netsvc.LocalService("workflow")
-        for obj_id in ids:
-            wf_service.trg_delete(uid, 'it_infrastructure.server', obj_id, cr)
-            wf_service.trg_create(uid, 'it_infrastructure.server', obj_id, cr)
-        return True

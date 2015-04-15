@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from openerp import netsvc
 from openerp import models, fields, api, _
 from openerp.exceptions import Warning
 import re
@@ -61,6 +62,22 @@ class equipment(models.Model):
                 year_limit = datetime.today() - relativedelta(years=20)
                 if input_date < year_limit or input_date > datetime.today():
                     raise Warning(_('Invalid document year.'))
+
+    @api.one
+    def action_draft(self):
+        self.state = 'draft'
+
+    @api.one
+    def action_active(self):
+        self.state = 'active'
+
+    @api.one
+    def action_stored(self):
+        self.state = 'stored'
+
+    @api.one
+    def action_decommissioned(self):
+        self.state = 'decommissioned'
 
     name = fields.Char(
         string='Name',

@@ -27,26 +27,19 @@
     <field name="arch" type="xml">
         <form>
             <header>
-                <button name="action_wfk_set_pending"
-                    type="object"
-                    states="active,stored,decommissioned"
-                    string="to Pending"
-                    />
-                <button name="sgn_to_active"
-                    states="pending,stored,decommissioned"
-                    string="to Active"
-                    />
-                <button name="sgn_to_stored"
-                    states="active"
-                    string="to Stored"
-                    />
-                <button name="sgn_to_decommissioned"
-                    states="active,stored"
-                    string="Decommissioned"
-                    />
-                <field name="state" widget="statusbar"
-                    statusbar_colors='{}'
-                    />
+                <button name="action_draft" type="object"
+                        string="to Draft"
+                        states="active,stored,decommissioned"/>
+                <button name="action_active" type="object"
+                        string="to Active" states="draft"
+                        class="oe_highlight"/>
+                <button name="action_stored" type="object"
+                        string="to Stored" states="active"
+                        class="oe_highlight"/>
+                <button name="action_decommissioned" type="object"
+                        string="to Decommissioned" states="stored"
+                        class="oe_highlight"/>
+                <field name="state" widget="statusbar"/>
             </header>
             <sheet>
                 <div>
