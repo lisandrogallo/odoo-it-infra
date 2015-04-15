@@ -57,6 +57,7 @@
                         <field name="hostname"/>
                         <field name="ip_address"/>
                         <field name="netmask"/>
+                        <field name="vm"/>
                         <field name="open_ports"/>
                         <field name="remote_mgmt_port"/>
                         <field name="vpn_required"/>
@@ -133,6 +134,7 @@
             <field name="message_unread" invisible="1"/>
             <field name="name"/>
             <field name="os_id"/>
+            <field name="vm"/>
             <field name="ip_address"/>
             <field name="employee_id"/>
         </tree>
