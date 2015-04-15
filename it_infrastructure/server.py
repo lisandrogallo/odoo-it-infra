@@ -32,8 +32,7 @@ class server(models.Model):
 
     vm = fields.Boolean(
         string='VM',
-        default=False,
-        required=True
+        default=False
     )
 
     server_repository_ids = fields.One2many(
