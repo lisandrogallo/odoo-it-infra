@@ -29,6 +29,8 @@
         u'view/supply_view.xml',
         u'view/workstation_view.xml',
         u'workflow/server_workflow.xml',
+        u'workflow/device_workflow.xml',
+        u'workflow/workstation_workflow.xml',
         u'security/ir.model.access.csv',
     ],
     'installable': True,
