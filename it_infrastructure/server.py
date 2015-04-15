@@ -49,22 +49,10 @@ class server(models.Model):
         string='Changes'
     )
 
-    server_configuration_id = fields.Many2one(
-        'it_infrastructure.server_configuration',
-        string='Configuration',
-        required=True
-    )
-
-    installation_command_ids = fields.One2many(
-        'it_infrastructure.server_configuration_command',
-        related='server_configuration_id.installation_command_ids',
-        string='Installation Commands'
-    )
-
-    maintenance_command_ids = fields.One2many(
-        'it_infrastructure.server_configuration_command',
-        related='server_configuration_id.maintenance_command_ids',
-        string='Maintenance Commands'
+    category_ids = fields.Many2many(
+        'it_infrastructure.server_category',
+        'server_category_rel',
+        string='Category'
     )
 
     @api.one

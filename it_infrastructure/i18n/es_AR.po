@@ -61,8 +61,6 @@ msgstr "Ramas"
 #: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
 #: view:it_infrastructure.repository_branch:it_infrastructure.view_infrastructure_repository_branch_filter
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
-#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_filter
-#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_filter
 #: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
 #: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_filter
 #: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_filter
@@ -78,8 +76,6 @@ msgstr "By Attribute"
 #: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
 #: view:it_infrastructure.repository_branch:it_infrastructure.view_infrastructure_repository_branch_filter
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
-#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_filter
-#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_filter
 #: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
 #: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_filter
 #: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_filter
@@ -122,8 +118,6 @@ msgstr "Childs"
 #. module: it_infrastructure
 #: view:it_infrastructure.command:it_infrastructure.view_infrastructure_command_filter
 #: field:it_infrastructure.command,command:0
-#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_filter
-#: field:it_infrastructure.server_configuration_command,command:0
 msgid "Command"
 msgstr "Comando"
 
@@ -157,7 +151,6 @@ msgstr "El nombre de la computadora debe ser único!"
 #. module: it_infrastructure
 #: model:ir.ui.menu,name:it_infrastructure.menu_configuration
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
-#: field:it_infrastructure.server,server_configuration_id:0
 msgid "Configuration"
 msgstr "Configuración"
 
@@ -172,8 +165,6 @@ msgstr "Configuración"
 #: field:it_infrastructure.repository,create_uid:0
 #: field:it_infrastructure.repository_branch,create_uid:0
 #: field:it_infrastructure.server,create_uid:0
-#: field:it_infrastructure.server_configuration,create_uid:0
-#: field:it_infrastructure.server_configuration_command,create_uid:0
 #: field:it_infrastructure.server_hostname,create_uid:0
 #: field:it_infrastructure.server_repository,create_uid:0
 #: field:it_infrastructure.software,create_uid:0
@@ -195,8 +186,6 @@ msgstr "Created by"
 #: field:it_infrastructure.repository,create_date:0
 #: field:it_infrastructure.repository_branch,create_date:0
 #: field:it_infrastructure.server,create_date:0
-#: field:it_infrastructure.server_configuration,create_date:0
-#: field:it_infrastructure.server_configuration_command,create_date:0
 #: field:it_infrastructure.server_hostname,create_date:0
 #: field:it_infrastructure.server_repository,create_date:0
 #: field:it_infrastructure.software,create_date:0
@@ -288,17 +277,6 @@ msgstr "Borrador"
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_equipment
 msgid "Equipment"
 msgstr "Equipment"
-
-#. module: it_infrastructure
-#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_tree
-msgid "Execute"
-msgstr "Ejecutar"
-
-#. module: it_infrastructure
-#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_tree
-#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_tree
-msgid "Execute Command"
-msgstr "Ejecutar Comando"
 
 #. module: it_infrastructure
 #: field:it_infrastructure.computer,message_follower_ids:0
@@ -395,8 +373,6 @@ msgstr "Nombres de Host"
 #: field:it_infrastructure.repository,id:0
 #: field:it_infrastructure.repository_branch,id:0
 #: field:it_infrastructure.server,id:0
-#: field:it_infrastructure.server_configuration,id:0
-#: field:it_infrastructure.server_configuration_command,id:0
 #: field:it_infrastructure.server_hostname,id:0
 #: field:it_infrastructure.server_repository,id:0
 #: field:it_infrastructure.software,id:0
@@ -442,11 +418,6 @@ msgid "Installation"
 msgstr "Instalación"
 
 #. module: it_infrastructure
-#: field:it_infrastructure.server_configuration,installation_command_ids:0
-msgid "Installation Commands"
-msgstr "Comandos de Instalación"
-
-#. module: it_infrastructure
 #: field:it_infrastructure.repository,is_server:0
 msgid "Is Server?"
 msgstr "Es Servidor?"
@@ -482,8 +453,6 @@ msgstr "Last Message Date"
 #: field:it_infrastructure.repository,write_uid:0
 #: field:it_infrastructure.repository_branch,write_uid:0
 #: field:it_infrastructure.server,write_uid:0
-#: field:it_infrastructure.server_configuration,write_uid:0
-#: field:it_infrastructure.server_configuration_command,write_uid:0
 #: field:it_infrastructure.server_hostname,write_uid:0
 #: field:it_infrastructure.server_repository,write_uid:0
 #: field:it_infrastructure.software,write_uid:0
@@ -505,8 +474,6 @@ msgstr "Last Updated by"
 #: field:it_infrastructure.repository,write_date:0
 #: field:it_infrastructure.repository_branch,write_date:0
 #: field:it_infrastructure.server,write_date:0
-#: field:it_infrastructure.server_configuration,write_date:0
-#: field:it_infrastructure.server_configuration_command,write_date:0
 #: field:it_infrastructure.server_hostname,write_date:0
 #: field:it_infrastructure.server_repository,write_date:0
 #: field:it_infrastructure.software,write_date:0
@@ -526,11 +493,6 @@ msgstr "Main"
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
 msgid "Maintenance"
 msgstr "Mantenimiento"
-
-#. module: it_infrastructure
-#: field:it_infrastructure.server_configuration,maintenance_command_ids:0
-msgid "Maintenance Commands"
-msgstr "Comandos de Mantenimiento"
 
 #. module: it_infrastructure
 #: model:res.groups,name:it_infrastructure.group_manager
@@ -571,10 +533,6 @@ msgstr "Messages and communication history"
 #: field:it_infrastructure.repository_branch,name:0
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
 #: field:it_infrastructure.server,name:0
-#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_filter
-#: field:it_infrastructure.server_configuration,name:0
-#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_filter
-#: field:it_infrastructure.server_configuration_command,name:0
 #: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
 #: field:it_infrastructure.server_hostname,name:0
 #: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_filter
@@ -740,12 +698,6 @@ msgid "Server Hostnames"
 msgstr "Nombres de Host del Servidor"
 
 #. module: it_infrastructure
-#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_server_conf_server_confs
-#: model:ir.ui.menu,name:it_infrastructure.menu_server_configurations
-msgid "Server Templates"
-msgstr "Plantillas de Servidor"
-
-#. module: it_infrastructure
 #: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_server_servers
 #: model:ir.ui.menu,name:it_infrastructure.menu_servers
 msgid "Servers"
@@ -837,7 +789,6 @@ msgstr "Insumos"
 #: field:it_infrastructure.command,type:0
 #: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
 #: field:it_infrastructure.repository,type:0
-#: field:it_infrastructure.server_configuration_command,type:0
 msgid "Type"
 msgstr "Tipo"
 
@@ -942,18 +893,6 @@ msgid "git"
 msgstr "git"
 
 #. module: it_infrastructure
-#: selection:it_infrastructure.command,type:0
-#: selection:it_infrastructure.server_configuration_command,type:0
-msgid "installation"
-msgstr "Instalación"
-
-#. module: it_infrastructure
-#: selection:it_infrastructure.command,type:0
-#: selection:it_infrastructure.server_configuration_command,type:0
-msgid "maintenance"
-msgstr "Mantenimiento"
-
-#. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_repository
 #: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
 #: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_form
@@ -975,39 +914,12 @@ msgid "repository_ids"
 msgstr "Repositorios"
 
 #. module: it_infrastructure
-#: field:it_infrastructure.command,sequence:0
-#: field:it_infrastructure.server_configuration_command,sequence:0
-msgid "sequence"
-msgstr "sequence"
-
-#. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_server
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_tree
 msgid "server"
 msgstr "Servidor"
-
-#. module: it_infrastructure
-#: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_configuration
-#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_filter
-#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_form
-#: view:it_infrastructure.server_configuration:it_infrastructure.view_infrastructure_server_configuration_tree
-msgid "server_configuration"
-msgstr "Configuración de Servidor"
-
-#. module: it_infrastructure
-#: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_configuration_command
-#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_filter
-#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_form
-#: view:it_infrastructure.server_configuration_command:it_infrastructure.view_infrastructure_server_configuration_command_tree
-msgid "server_configuration_command"
-msgstr "Comando de Configuración de Servidor"
-
-#. module: it_infrastructure
-#: field:it_infrastructure.server_configuration_command,server_configuration_id:0
-msgid "server_configuration_id"
-msgstr "server_configuration_id"
 
 #. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_hostname
@@ -1021,11 +933,6 @@ msgstr "server_hostname"
 #: field:it_infrastructure.server_repository,server_id:0
 msgid "server_id"
 msgstr "server_id"
-
-#. module: it_infrastructure
-#: field:it_infrastructure.server_configuration,server_ids:0
-msgid "server_ids"
-msgstr "server_ids"
 
 #. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_repository

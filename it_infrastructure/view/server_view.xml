@@ -14,7 +14,6 @@
                 <field name="employee_id" string="Used By"/>
             </group>
             <group string="By object">
-                <field name="server_configuration_id" string="Configuration"/>
                 <field name="os_id" string="Operating System"/>
             </group>
         </search>
@@ -51,9 +50,7 @@
                     <h1>
                         <field name="name" placeholder="Name..."/>
                     </h1>
-                    <h2>
-                        <field name="server_configuration_id" placeholder="Server Configuration..."/>
-                    </h2>
+                        <field name="category_ids" widget="many2many_tags"/>
                 </div>
                 <div class="oe_right oe_button_box" name="buttons">
                     <button name="reboot_server" icon="fa-refresh" string="Reboot Server" class="oe_stat_button" help="Reboot Server"/>
@@ -111,16 +108,6 @@
                            <field name="hardware_specs"/>
                        </group>
                    </page>
-                    <page string="Installation">
-                        <group col="1">
-                            <field name="installation_command_ids" nolabel="1"/>
-                        </group>
-                    </page>
-                    <page string="Maintenance">
-                        <group col="1">
-                            <field name="maintenance_command_ids" nolabel="1"/>
-                        </group>
-                    </page>
                     <page string="Notes">
                         <group col="1">
                            <field name="note" nolabel="1"/>
@@ -151,7 +138,6 @@
             <field name="os_id"/>
             <field name="ip_address"/>
             <field name="employee_id"/>
-            <field name="server_configuration_id"/>
         </tree>
     </field>
 </record>

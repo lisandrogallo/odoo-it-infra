@@ -21,8 +21,6 @@
         u'view/device_view.xml',
         u'view/repository_branch_view.xml',
         u'view/repository_view.xml',
-        u'view/server_configuration_command_view.xml',
-        u'view/server_configuration_view.xml',
         u'view/server_hostname_view.xml',
         u'view/server_repository_view.xml',
         u'view/server_view.xml',
@@ -38,8 +36,6 @@
     'demo': [
         u'data/demo/it_infrastructure.repository_branch.csv',
         u'data/demo/it_infrastructure.repository.csv',
-        u'data/demo/it_infrastructure.server_configuration.csv',
-        u'data/demo/it_infrastructure.server_configuration_command.csv',
         u'data/demo/it_infrastructure.server.csv',
         u'data/demo/it_infrastructure.server_hostname.csv',
         u'data/demo/it_infrastructure.server_repository.csv',
