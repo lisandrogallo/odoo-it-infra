@@ -56,7 +56,7 @@ class server(models.Model):
     category_ids = fields.Many2many(
         'it_infrastructure.server_category',
         'server_category_rel',
-        string='Category'
+        string='Categories'
     )
 
     @api.one
