@@ -6,15 +6,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-23 15:13+0000\n"
-"PO-Revision-Date: 2015-01-23 14:03-0300\n"
+"POT-Creation-Date: 2015-04-16 15:45+0000\n"
+"PO-Revision-Date: 2015-04-16 12:49-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
 "X-Generator: Poedit 1.5.4\n"
-"Language: Spanish (AR)\n"
+
+#. module: it_infrastructure
+#: code:addons/it_infrastructure/server_hostname.py:52
+#, python-format
+msgid " - Wildcard"
+msgstr " - Wildcard"
+
+#. module: it_infrastructure
+#: code:addons/it_infrastructure/server.py:85
+#, python-format
+msgid "%s"
+msgstr "%s"
 
 #. module: it_infrastructure
 #: selection:it_infrastructure.software,architecture:0
@@ -85,10 +97,9 @@ msgid "By object"
 msgstr "By object"
 
 #. module: it_infrastructure
-#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
-#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
-msgid "Cancel"
-msgstr "Cancel"
+#: field:it_infrastructure.server,category_ids:0
+msgid "Categories"
+msgstr "Etiquetas"
 
 #. module: it_infrastructure
 #: field:it_infrastructure.device,device_category_id:0
@@ -110,6 +121,7 @@ msgstr "Cambios"
 
 #. module: it_infrastructure
 #: field:it_infrastructure.device_category,child_ids:0
+#: field:it_infrastructure.server_category,child_ids:0
 #: field:it_infrastructure.software_category,child_ids:0
 #: field:it_infrastructure.supply_category,child_ids:0
 msgid "Childs"
@@ -122,10 +134,16 @@ msgid "Command"
 msgstr "Comando"
 
 #. module: it_infrastructure
+#: code:addons/it_infrastructure/server_repository.py:68
+#, python-format
+msgid "Command output: %s"
+msgstr "Command output: %s"
+
+#. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_computer
 #: field:it_infrastructure.computer_change,computer_id:0
 msgid "Computer"
-msgstr "Computer"
+msgstr "Computadora"
 
 #. module: it_infrastructure
 #: sql_constraint:it_infrastructure.computer:0
@@ -150,7 +168,6 @@ msgstr "El nombre de la computadora debe ser único!"
 
 #. module: it_infrastructure
 #: model:ir.ui.menu,name:it_infrastructure.menu_configuration
-#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
 msgid "Configuration"
 msgstr "Configuración"
 
@@ -165,6 +182,7 @@ msgstr "Configuración"
 #: field:it_infrastructure.repository,create_uid:0
 #: field:it_infrastructure.repository_branch,create_uid:0
 #: field:it_infrastructure.server,create_uid:0
+#: field:it_infrastructure.server_category,create_uid:0
 #: field:it_infrastructure.server_hostname,create_uid:0
 #: field:it_infrastructure.server_repository,create_uid:0
 #: field:it_infrastructure.software,create_uid:0
@@ -186,6 +204,7 @@ msgstr "Created by"
 #: field:it_infrastructure.repository,create_date:0
 #: field:it_infrastructure.repository_branch,create_date:0
 #: field:it_infrastructure.server,create_date:0
+#: field:it_infrastructure.server_category,create_date:0
 #: field:it_infrastructure.server_hostname,create_date:0
 #: field:it_infrastructure.server_repository,create_date:0
 #: field:it_infrastructure.software,create_date:0
@@ -219,7 +238,6 @@ msgstr "Date of the last message posted on the record."
 
 #. module: it_infrastructure
 #: selection:it_infrastructure.computer,state:0
-#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
 #: selection:it_infrastructure.device,state:0
 #: selection:it_infrastructure.equipment,state:0
 #: selection:it_infrastructure.server,state:0
@@ -276,7 +294,20 @@ msgstr "Borrador"
 #. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_equipment
 msgid "Equipment"
-msgstr "Equipment"
+msgstr "Equipamiento"
+
+#. module: it_infrastructure
+#: code:addons/it_infrastructure/server_repository.py:57
+#: code:addons/it_infrastructure/server_repository.py:67
+#: code:addons/it_infrastructure/server_repository.py:72
+#, python-format
+msgid "Error executing '%s' on '%s'"
+msgstr "Error ejecutando '%s' en '%s'"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_tree
+msgid "Execute Command"
+msgstr "Ejecutar Comando"
 
 #. module: it_infrastructure
 #: field:it_infrastructure.computer,message_follower_ids:0
@@ -373,6 +404,7 @@ msgstr "Nombres de Host"
 #: field:it_infrastructure.repository,id:0
 #: field:it_infrastructure.repository_branch,id:0
 #: field:it_infrastructure.server,id:0
+#: field:it_infrastructure.server_category,id:0
 #: field:it_infrastructure.server_hostname,id:0
 #: field:it_infrastructure.server_repository,id:0
 #: field:it_infrastructure.software,id:0
@@ -413,9 +445,16 @@ msgid "Install Server Command"
 msgstr "Comando de Instalación de Servidor"
 
 #. module: it_infrastructure
-#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
-msgid "Installation"
-msgstr "Instalación"
+#: code:addons/it_infrastructure/equipment.py:58
+#, python-format
+msgid "Invalid document format"
+msgstr "Invalid document format"
+
+#. module: it_infrastructure
+#: code:addons/it_infrastructure/equipment.py:64
+#, python-format
+msgid "Invalid document year."
+msgstr "Invalid document year."
 
 #. module: it_infrastructure
 #: field:it_infrastructure.repository,is_server:0
@@ -453,6 +492,7 @@ msgstr "Last Message Date"
 #: field:it_infrastructure.repository,write_uid:0
 #: field:it_infrastructure.repository_branch,write_uid:0
 #: field:it_infrastructure.server,write_uid:0
+#: field:it_infrastructure.server_category,write_uid:0
 #: field:it_infrastructure.server_hostname,write_uid:0
 #: field:it_infrastructure.server_repository,write_uid:0
 #: field:it_infrastructure.software,write_uid:0
@@ -474,6 +514,7 @@ msgstr "Last Updated by"
 #: field:it_infrastructure.repository,write_date:0
 #: field:it_infrastructure.repository_branch,write_date:0
 #: field:it_infrastructure.server,write_date:0
+#: field:it_infrastructure.server_category,write_date:0
 #: field:it_infrastructure.server_hostname,write_date:0
 #: field:it_infrastructure.server_repository,write_date:0
 #: field:it_infrastructure.software,write_date:0
@@ -488,11 +529,6 @@ msgstr "Last Updated on"
 #: model:ir.ui.menu,name:it_infrastructure.menu_it_infrastructure_main
 msgid "Main"
 msgstr "Main"
-
-#. module: it_infrastructure
-#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
-msgid "Maintenance"
-msgstr "Mantenimiento"
 
 #. module: it_infrastructure
 #: model:res.groups,name:it_infrastructure.group_manager
@@ -533,6 +569,7 @@ msgstr "Messages and communication history"
 #: field:it_infrastructure.repository_branch,name:0
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
 #: field:it_infrastructure.server,name:0
+#: field:it_infrastructure.server_category,name:0
 #: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
 #: field:it_infrastructure.server_hostname,name:0
 #: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_filter
@@ -559,6 +596,24 @@ msgstr "Nombre..."
 #: field:it_infrastructure.workstation,netmask:0
 msgid "Network Mask"
 msgstr "Máscara de Red"
+
+#. module: it_infrastructure
+#: code:addons/it_infrastructure/repository.py:74
+#, python-format
+msgid "No Source Directory!"
+msgstr "No Source Directory!"
+
+#. module: it_infrastructure
+#: code:addons/it_infrastructure/server.py:74
+#, python-format
+msgid "Not Password Defined for the server"
+msgstr "Not Password Defined for the server"
+
+#. module: it_infrastructure
+#: code:addons/it_infrastructure/server.py:72
+#, python-format
+msgid "Not User Defined for the server"
+msgstr "Not User Defined for the server"
 
 #. module: it_infrastructure
 #: field:it_infrastructure.computer,note:0
@@ -611,6 +666,7 @@ msgstr "Paquetes Python (PIP)"
 
 #. module: it_infrastructure
 #: field:it_infrastructure.device_category,parent_id:0
+#: field:it_infrastructure.server_category,parent_id:0
 #: field:it_infrastructure.software_category,parent_id:0
 #: field:it_infrastructure.supply_category,parent_id:0
 msgid "Parent"
@@ -622,10 +678,22 @@ msgid "Password"
 msgstr "Contraseña"
 
 #. module: it_infrastructure
+#: code:addons/it_infrastructure/server.py:84
+#, python-format
+msgid "Password for user '%s':"
+msgstr "La contraseña para el usuario '%s' es:"
+
+#. module: it_infrastructure
 #: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_filter
 #: field:it_infrastructure.server_repository,path:0
 msgid "Path"
 msgstr "Ruta"
+
+#. module: it_infrastructure
+#: code:addons/it_infrastructure/repository.py:75
+#, python-format
+msgid "Please first create the source directory '%s'!"
+msgstr "Please first create the source directory '%s'!"
 
 #. module: it_infrastructure
 #: field:it_infrastructure.supply,partner_id:0
@@ -677,14 +745,10 @@ msgid "Sequence"
 msgstr "Sequence"
 
 #. module: it_infrastructure
+#: field:it_infrastructure.server_category,server_ids:0
 #: field:it_infrastructure.server_hostname,server_id:0
 msgid "Server"
 msgstr "Servidor"
-
-#. module: it_infrastructure
-#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
-msgid "Server Configuration..."
-msgstr "Configuración de Servidor..."
 
 #. module: it_infrastructure
 #: model:ir.ui.menu,name:it_infrastructure.menu_serv_env_and_inst
@@ -696,6 +760,11 @@ msgstr "Configuraciones de Servidor"
 #: model:ir.ui.menu,name:it_infrastructure.menu_server_hostname
 msgid "Server Hostnames"
 msgstr "Nombres de Host del Servidor"
+
+#. module: it_infrastructure
+#: sql_constraint:it_infrastructure.server_category:0
+msgid "Server tags must be unique!"
+msgstr "Las etiquetas deben ser únicas!"
 
 #. module: it_infrastructure
 #: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_server_servers
@@ -798,6 +867,13 @@ msgid "URL"
 msgstr "URL"
 
 #. module: it_infrastructure
+#: code:addons/it_infrastructure/server_repository.py:58
+#: code:addons/it_infrastructure/server_repository.py:73
+#, python-format
+msgid "Unknown system error"
+msgstr "Unknown system error"
+
+#. module: it_infrastructure
 #: field:it_infrastructure.computer,message_unread:0
 #: field:it_infrastructure.device,message_unread:0
 #: field:it_infrastructure.equipment,message_unread:0
@@ -831,6 +907,11 @@ msgid "Username"
 msgstr "Nombre de Inicio de Sesión"
 
 #. module: it_infrastructure
+#: field:it_infrastructure.server,vm:0
+msgid "VM"
+msgstr "VM"
+
+#. module: it_infrastructure
 #: field:it_infrastructure.server,vpn_required:0
 msgid "VPN Required"
 msgstr "Requiere VPN"
@@ -860,6 +941,12 @@ msgstr "Wildcard"
 #: model:ir.ui.menu,name:it_infrastructure.menu_workstations
 msgid "Workstations"
 msgstr "Puestos de Trabajo"
+
+#. module: it_infrastructure
+#: code:addons/it_infrastructure/server.py:65
+#, python-format
+msgid "You cannot delete a server which is not draft or cancelled."
+msgstr "You cannot delete a server which is not draft or cancelled."
 
 #. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_category
@@ -893,6 +980,16 @@ msgid "git"
 msgstr "git"
 
 #. module: it_infrastructure
+#: selection:it_infrastructure.command,type:0
+msgid "installation"
+msgstr "installation"
+
+#. module: it_infrastructure
+#: selection:it_infrastructure.command,type:0
+msgid "maintenance"
+msgstr "maintenance"
+
+#. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_repository
 #: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
 #: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_form
@@ -914,12 +1011,22 @@ msgid "repository_ids"
 msgstr "Repositorios"
 
 #. module: it_infrastructure
+#: field:it_infrastructure.command,sequence:0
+msgid "sequence"
+msgstr "sequence"
+
+#. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_server
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_tree
 msgid "server"
 msgstr "Servidor"
+
+#. module: it_infrastructure
+#: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_category
+msgid "server_category"
+msgstr "server_category"
 
 #. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_hostname
@@ -980,6 +1087,14 @@ msgid "to Active"
 msgstr "pasar a Activo"
 
 #. module: it_infrastructure
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
+msgid "to Decommissioned"
+msgstr "to Decommissioned"
+
+#. module: it_infrastructure
+#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
 #: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
 msgid "to Draft"
@@ -987,11 +1102,8 @@ msgstr "pasar a Borrador"
 
 #. module: it_infrastructure
 #: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
-msgid "to Pending"
-msgstr "pasar a Pendiente"
-
-#. module: it_infrastructure
-#: view:it_infrastructure.device:it_infrastructure.view_it_infrastructure_device_form
+#: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_form
+#: view:it_infrastructure.workstation:it_infrastructure.view_infrastructure_workstation_form
 msgid "to Stored"
 msgstr "pasar a Almacenado"
 
