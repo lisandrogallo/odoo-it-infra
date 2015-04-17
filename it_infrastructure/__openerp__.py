@@ -23,6 +23,7 @@
         u'view/repository_view.xml',
         u'view/server_hostname_view.xml',
         u'view/server_repository_view.xml',
+        u'view/server_category_view.xml',
         u'view/server_view.xml',
         u'view/software_category_view.xml',
         u'view/software_view.xml',
