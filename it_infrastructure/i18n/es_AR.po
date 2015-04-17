@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-16 15:45+0000\n"
-"PO-Revision-Date: 2015-04-16 12:49-0300\n"
+"POT-Creation-Date: 2015-04-17 13:57+0000\n"
+"PO-Revision-Date: 2015-04-17 10:58-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -73,6 +73,7 @@ msgstr "Ramas"
 #: view:it_infrastructure.repository:it_infrastructure.view_infrastructure_repository_filter
 #: view:it_infrastructure.repository_branch:it_infrastructure.view_infrastructure_repository_branch_filter
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
+#: view:it_infrastructure.server_category:it_infrastructure.view_infrastructure_server_category_filter
 #: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
 #: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_filter
 #: view:it_infrastructure.software:it_infrastructure.view_infrastructure_software_filter
@@ -99,7 +100,7 @@ msgstr "By object"
 #. module: it_infrastructure
 #: field:it_infrastructure.server,category_ids:0
 msgid "Categories"
-msgstr "Etiquetas"
+msgstr "Categories"
 
 #. module: it_infrastructure
 #: field:it_infrastructure.device,device_category_id:0
@@ -143,7 +144,7 @@ msgstr "Command output: %s"
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_computer
 #: field:it_infrastructure.computer_change,computer_id:0
 msgid "Computer"
-msgstr "Computadora"
+msgstr "Computer"
 
 #. module: it_infrastructure
 #: sql_constraint:it_infrastructure.computer:0
@@ -294,7 +295,7 @@ msgstr "Borrador"
 #. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_equipment
 msgid "Equipment"
-msgstr "Equipamiento"
+msgstr "Equipment"
 
 #. module: it_infrastructure
 #: code:addons/it_infrastructure/server_repository.py:57
@@ -302,12 +303,12 @@ msgstr "Equipamiento"
 #: code:addons/it_infrastructure/server_repository.py:72
 #, python-format
 msgid "Error executing '%s' on '%s'"
-msgstr "Error ejecutando '%s' en '%s'"
+msgstr "Error executing '%s' on '%s'"
 
 #. module: it_infrastructure
 #: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_tree
 msgid "Execute Command"
-msgstr "Ejecutar Comando"
+msgstr "Execute Command"
 
 #. module: it_infrastructure
 #: field:it_infrastructure.computer,message_follower_ids:0
@@ -569,6 +570,7 @@ msgstr "Messages and communication history"
 #: field:it_infrastructure.repository_branch,name:0
 #: view:it_infrastructure.server:it_infrastructure.view_infrastructure_server_filter
 #: field:it_infrastructure.server,name:0
+#: view:it_infrastructure.server_category:it_infrastructure.view_infrastructure_server_category_filter
 #: field:it_infrastructure.server_category,name:0
 #: view:it_infrastructure.server_hostname:it_infrastructure.view_infrastructure_server_hostname_filter
 #: field:it_infrastructure.server_hostname,name:0
@@ -681,7 +683,7 @@ msgstr "Contraseña"
 #: code:addons/it_infrastructure/server.py:84
 #, python-format
 msgid "Password for user '%s':"
-msgstr "La contraseña para el usuario '%s' es:"
+msgstr "Password for user '%s':"
 
 #. module: it_infrastructure
 #: view:it_infrastructure.server_repository:it_infrastructure.view_infrastructure_server_repository_filter
@@ -751,6 +753,12 @@ msgid "Server"
 msgstr "Servidor"
 
 #. module: it_infrastructure
+#: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_server_category
+#: model:ir.ui.menu,name:it_infrastructure.menu_server_category
+msgid "Server Categories"
+msgstr "Etiquetas"
+
+#. module: it_infrastructure
 #: model:ir.ui.menu,name:it_infrastructure.menu_serv_env_and_inst
 msgid "Server Configurations"
 msgstr "Configuraciones de Servidor"
@@ -759,7 +767,7 @@ msgstr "Configuraciones de Servidor"
 #: model:ir.actions.act_window,name:it_infrastructure.action_it_infrastructure_server_hostname
 #: model:ir.ui.menu,name:it_infrastructure.menu_server_hostname
 msgid "Server Hostnames"
-msgstr "Nombres de Host del Servidor"
+msgstr "Nombres de Host"
 
 #. module: it_infrastructure
 #: sql_constraint:it_infrastructure.server_category:0
@@ -1025,6 +1033,9 @@ msgstr "Servidor"
 
 #. module: it_infrastructure
 #: model:ir.model,name:it_infrastructure.model_it_infrastructure_server_category
+#: view:it_infrastructure.server_category:it_infrastructure.view_infrastructure_server_category_filter
+#: view:it_infrastructure.server_category:it_infrastructure.view_infrastructure_server_category_form
+#: view:it_infrastructure.server_category:it_infrastructure.view_infrastructure_server_category_tree
 msgid "server_category"
 msgstr "server_category"
 
