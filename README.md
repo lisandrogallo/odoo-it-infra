@@ -17,5 +17,5 @@ You should have received a copy of the GNU Affero General Public License along w
 
 -----
 <p align="center">
-<img alt="Bitcoin" title="Donate with Bitcoin" src="http://mw.gg/i/bitcoin.png" /> 1CPb9QZBkz3gD1rvG9ekNFK5k6jpUycika
+<img alt="Bitcoin" title="Donate with Bitcoin" src="http://mw.gg/i/bitcoin.png" /> 1H43tZYVgKQFu6H9zkUKWnSZeT3MCtDtJ2
 </p>
