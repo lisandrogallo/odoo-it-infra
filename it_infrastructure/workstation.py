@@ -11,6 +11,10 @@ class workstation(models.Model):
         'it_infrastructure.computer',
     ]
 
+    product_key = fields.Char(
+        size=29
+    )
+
     office_suite_id = fields.Many2one(
         'it_infrastructure.software',
         string='Office Suite',
