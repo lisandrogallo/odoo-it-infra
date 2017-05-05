@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from openerp import models, fields
+from openerp import fields, models
 
 
 class computer(models.Model):
@@ -11,11 +11,6 @@ class computer(models.Model):
         'it_infrastructure.equipment',
     ]
 
-    hostname = fields.Char(
-        string='Hostname',
-        required=True
-    )
-
     employee_id = fields.Many2one(
         'hr.employee',
         string='User'
@@ -23,17 +18,6 @@ class computer(models.Model):
 
     username = fields.Char(
         string='Username',
-        required=True
-    )
-
-    ip_address = fields.Char(
-        string='IP Address',
-        required=True
-    )
-
-    netmask = fields.Char(
-        string='Network Mask',
-        default='255.255.255.0',
         required=True
     )
 
@@ -64,6 +48,8 @@ class computer(models.Model):
 
     _sql_constraints = [
         ('name_unique', 'unique(name)', 'Computer name must be unique!'),
-        ('ip_address_unique', 'unique(ip_address)', 'Computer IP address must be unique!'),
-        ('hostname_unique', 'unique(hostname)', 'Computer hostname must be unique!')
+        ('ip_address_unique', 'unique(ip_address)',
+         'Computer IP address must be unique!'),
+        ('hostname_unique', 'unique(hostname)',
+         'Computer hostname must be unique!')
     ]

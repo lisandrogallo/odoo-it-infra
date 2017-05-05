@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- it_infrastructure.device -->
 <openerp>
-<data>
+    <data>
 
 <!-- SEARCH VIEW -->
 <record id="view_it_infrastructure_device_filter" model="ir.ui.view">
@@ -85,11 +85,13 @@
     <field name="arch" type="xml">
         <tree>
             <field name="name"/>
+            <field name="hostname"/>
+            <field name="ip_address"/>
+            <field name="netmask"/>
             <field name="device_category_id"/>
             <field name="stock_number"/>
-            <field name="purchase_date"/>
-            <field name="warranty"/>
             <field name="state"/>
+            <field name="supply_ids" />
             <field name="message_unread" invisible="1"/>
         </tree>
     </field>

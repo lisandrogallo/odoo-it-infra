@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from openerp import netsvc
-from openerp import models, fields, api, _
-from openerp.exceptions import Warning
 import re
 from datetime import datetime
+
 from dateutil.relativedelta import relativedelta
+
+from openerp import _, api, fields, models
+from openerp.exceptions import Warning
 
 
 class equipment(models.Model):
@@ -31,7 +32,8 @@ class equipment(models.Model):
             'it_infrastructure.equipment_stored':
             lambda self, cr, uid, obj, ctx=None: obj['state'] == 'stored',
             'it_infrastructure.equipment_decommissioned':
-            lambda self, cr, uid, obj, ctx=None: obj['state'] == 'decommissioned',
+            lambda self, cr, uid, obj, ctx=None: obj[
+                'state'] == 'decommissioned',
         },
     }
 
@@ -92,6 +94,19 @@ class equipment(models.Model):
         string='Stock Number',
         required=True,
         help='Format: XXXX (For example: 1234)'
+    )
+
+    hostname = fields.Char(
+        string='Hostname'
+    )
+
+    ip_address = fields.Char(
+        string='IP Address'
+    )
+
+    netmask = fields.Char(
+        string='Network Mask',
+        default='255.255.255.0'
     )
 
     source_document_number = fields.Char(
