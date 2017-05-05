@@ -87,7 +87,6 @@
             <field name="name"/>
             <field name="hostname"/>
             <field name="ip_address"/>
-            <field name="netmask"/>
             <field name="device_category_id"/>
             <field name="stock_number"/>
             <field name="state"/>
