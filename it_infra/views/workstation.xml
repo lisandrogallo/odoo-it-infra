@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- SEARCH VIEW -->
+    <record id="view_infrastructure_workstation_filter"
+            model="ir.ui.view">
+        <field name="name">it_infra.workstation.select</field>
+        <field name="model">it_infra.workstation</field>
+        <field name="arch"
+               type="xml">
+            <search>
+                <group>
+                    <field name="name" />
+                    <field name="user_id" />
+                    <field name="os_id" />
+                    <field name="office_suite_id" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- FORM VIEW -->
+    <record id="view_infrastructure_workstation_form"
+            model="ir.ui.view">
+        <field name="name">it_infra.workstation.form</field>
+        <field name="model">it_infra.workstation</field>
+        <field name="arch"
+               type="xml">
+            <form>
+                <header>
+                    <button name="action_draft"
+                            type="object"
+                            string="to Draft"
+                            states="active,stored,decommissioned" />
+                    <button name="action_active"
+                            type="object"
+                            string="to Active"
+                            states="draft"
+                            class="oe_highlight" />
+                    <button name="action_stored"
+                            type="object"
+                            string="to Stored"
+                            states="active"
+                            class="oe_highlight" />
+                    <button name="action_decommissioned"
+                            type="object"
+                            string="to Decommissioned"
+                            states="stored"
+                            class="oe_highlight" />
+                    <field name="state"
+                           widget="statusbar" />
+                </header>
+                <sheet>
+                    <group>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="os_id" />
+                            <field name="product_key" />
+                            <field name="office_suite_id" />
+                        </group>
+                        <group>
+                            <field name="user_id" />
+                            <field name="username" />
+                        </group>
+                        <group>
+                            <field name="hostname" />
+                            <field name="ip_address" />
+                            <field name="netmask" />
+                        </group>
+                        <group>
+                            <field name="stock_number" />
+                            <field name="purchase_date" />
+                            <field name="warranty" />
+                            <field name="source_doc_number" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Hardware">
+                            <field name="hardware_data" />
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"
+                           widget="mail_followers" />
+                    <field name="message_ids"
+                           widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- TREE VIEW -->
+    <record id="view_infrastructure_workstation_tree"
+            model="ir.ui.view">
+        <field name="name">it_infra.workstation.tree</field>
+        <field name="model">it_infra.workstation</field>
+        <field name="arch"
+               type="xml">
+            <tree decoration-bf="message_unread==True"
+                  decoration-muted="state=='cancelled'"
+                  decoration-info="state=='draft'">
+                <field name="name" />
+                <field name="os_id"
+                       widget="many2one_unclickable" />
+                <field name="office_suite_id"
+                       widget="many2one_unclickable" />
+                <field name="ip_address" />
+                <field name="user_id"
+                       widget="many2one_unclickable" />
+                <field name="state"
+                       invisible="True" />
+                <field name="message_unread"
+                       invisible="True" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- WINDOW ACTION  -->
+    <record id="action_it_infra_workstation_workstations"
+            model="ir.actions.act_window">
+        <field name="name">Workstations</field>
+        <field name="res_model">it_infra.workstation</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id"
+               ref="view_infrastructure_workstation_tree" />
+        <field name="search_view_id"
+               ref="view_infrastructure_workstation_filter" />
+    </record>
+
+</odoo>

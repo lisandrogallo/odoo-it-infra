@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="IT Infrastructure"
+              id="menu_infrastructure"
+              sequence="20"
+              groups="group_user" />
+
+    <menuitem name="Main"
+              id="menu_it_infra_main"
+              sequence="10"
+              parent="menu_infrastructure"
+              groups="group_user" />
+
+    <menuitem name="Servers"
+              id="menu_servers"
+              sequence="10"
+              action="action_it_infra_server_servers"
+              parent="menu_it_infra_main"
+              groups="group_user" />
+
+    <menuitem name="Workstations"
+              id="menu_workstations"
+              sequence="20"
+              action="action_it_infra_workstation_workstations"
+              parent="menu_it_infra_main"
+              groups="group_user" />
+
+    <menuitem name="Devices"
+              id="menu_devices"
+              sequence="30"
+              action="action_it_infra_device_devices"
+              parent="menu_it_infra_main"
+              groups="group_user" />
+
+    <menuitem name="Supplies"
+              id="menu_supplies"
+              sequence="40"
+              action="action_it_infra_supply_supplies"
+              parent="menu_it_infra_main"
+              groups="group_user" />
+
+    <menuitem name="Configuration"
+              id="menu_configuration"
+              sequence="20"
+              parent="menu_infrastructure"
+              groups="group_manager" />
+
+    <menuitem name="Server Categories"
+              id="menu_server_category"
+              sequence="10"
+              action="action_it_infra_server_category"
+              parent="menu_configuration"
+              groups="group_manager" />
+
+    <menuitem name="Software"
+              id="menu_software"
+              sequence="20"
+              action="action_it_infra_software_objects"
+              parent="menu_configuration"
+              groups="group_user" />
+
+</odoo>
