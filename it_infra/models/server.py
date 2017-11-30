@@ -44,7 +44,6 @@ class Server(models.Model):
                     'You cannot delete a server \
                     which is not draft or cancelled.'))
             res = super(Server, self).unlink()
-            self.clear_cache()
             return res
 
     @api.multi
