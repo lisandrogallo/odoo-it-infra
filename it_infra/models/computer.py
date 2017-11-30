@@ -10,23 +10,30 @@ class Computer(models.Model):
 
     user_id = fields.Many2one(
         comodel_name='res.users',
-        string='User'
+        string='User',
+        track_visibility='onchange'
     )
 
     username = fields.Char(
-        required=True
+        required=True,
+        track_visibility='onchange'
     )
 
-    office = fields.Char()
+    office = fields.Char(
+        track_visibility='onchange'
+    )
 
     os_id = fields.Many2one(
         comodel_name='it_infra.software',
         string='Operating System',
         domain=[('category_id.parent_id', 'ilike', 'Operating System')],
+        track_visibility='onchange',
         required=True
     )
 
-    hardware_data = fields.Html()
+    hardware_data = fields.Html(
+        track_visibility='onchange'
+    )
 
     _sql_constraints = [
         ('name_unique',

@@ -92,7 +92,9 @@ class Equipment(models.Model):
 
     hostname = fields.Char()
 
-    ip_address = fields.Char()
+    ip_address = fields.Char(
+        track_visibility='onchange'
+    )
 
     netmask = fields.Char(
         string='Network Mask',
@@ -106,7 +108,9 @@ class Equipment(models.Model):
 
     purchase_date = fields.Date()
 
-    office = fields.Char()
+    office = fields.Char(
+        track_visibility='onchange'
+    )
 
     warranty = fields.Integer(
         string='Warranty (months)',

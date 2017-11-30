@@ -10,15 +10,20 @@ class Server(models.Model):
     _description = 'Server'
     _inherit = 'it_infra.computer'
 
-    password = fields.Char()
+    password = fields.Char(
+        track_visibility='onchange'
+    )
 
-    open_ports = fields.Char()
+    open_ports = fields.Char(
+        track_visibility='onchange'
+    )
 
     virtual_machine = fields.Boolean()
 
     category_ids = fields.Many2many(
         comodel_name='it_infra.server_category',
         relation='server_category_rel',
+        track_visibility='onchange',
         string='Categories'
     )
 
