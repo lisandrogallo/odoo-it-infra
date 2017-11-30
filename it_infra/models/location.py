@@ -10,3 +10,5 @@ class Location(models.Model):
     name = fields.Char(
         required=True
     )
+
+    internal = fields.Boolean()

@@ -57,25 +57,28 @@
                         </h1>
                     </group>
                     <group>
-                        <group>
+                        <group string="System">
                             <field name="os_id" />
                             <field name="product_key" />
                             <field name="office_suite_id" />
-                        </group>
-                        <group>
-                            <field name="user_id" />
-                            <field name="username" />
-                        </group>
-                        <group>
                             <field name="hostname" />
                             <field name="ip_address" />
                             <field name="netmask" />
                         </group>
-                        <group>
+                        <group string="User">
+                            <field name="user_id" />
+                            <field name="username" />
+                        </group>
+                        <group string="Inventory">
                             <field name="stock_number" />
                             <field name="purchase_date" />
                             <field name="warranty" />
                             <field name="source_doc_number" />
+                        </group>
+                        <group string="Location">
+                            <field name="switch" />
+                            <field name="patch_panel" />
+                            <field name="patch_panel_port" />
                         </group>
                     </group>
                     <notebook>

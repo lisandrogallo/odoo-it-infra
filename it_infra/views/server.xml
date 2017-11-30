@@ -60,10 +60,9 @@
                         <field name="category_ids"
                                widget="many2many_tags" />
                         <field name="description" />
-                        <field name="location_id" />
                     </group>
                     <group>
-                        <group>
+                        <group string="System">
                             <field name="os_id" />
                             <field name="hostname" />
                             <field name="ip_address" />
@@ -72,7 +71,7 @@
                                    string="VM" />
                             <field name="open_ports" />
                         </group>
-                        <group>
+                        <group string="User">
                             <field name="username" />
                             <label for="password" />
                             <div>
@@ -86,11 +85,22 @@
                                         class="oe_link oe_inline" />
                             </div>
                         </group>
-                        <group>
+                        <group string="Inventory">
                             <field name="stock_number" />
                             <field name="purchase_date" />
                             <field name="warranty" />
                             <field name="source_doc_number" />
+                        </group>
+                        <group string="Location">
+                            <field name="location_id" />
+                            <field name="internal_location"
+                                   invisible="True" />
+                            <field name="switch"
+                                   attrs="{'invisible':[('internal_location', '=', False)]}" />
+                            <field name="patch_panel"
+                                   attrs="{'invisible':[('internal_location', '=', False)]}" />
+                            <field name="patch_panel_port"
+                                   attrs="{'invisible':[('internal_location', '=', False)]}" />
                         </group>
                     </group>
                     <notebook>

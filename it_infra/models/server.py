@@ -28,7 +28,12 @@ class Server(models.Model):
     )
 
     location_id = fields.Many2one(
-        comodel_name='it_infra.location'
+        comodel_name='it_infra.location',
+        required=True
+    )
+
+    internal_location = fields.Boolean(
+        related='location_id.internal'
     )
 
     @api.multi

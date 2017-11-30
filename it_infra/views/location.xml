@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <!-- TREE VIEW -->
+    <record id="view_it_infra_location_tree"
+            model="ir.ui.view">
+        <field name="name">it_infra.location.tree</field>
+        <field name="model">it_infra.location</field>
+        <field name="arch"
+               type="xml">
+            <tree>
+                <field name="name" />
+                <field name="internal" />
+            </tree>
+        </field>
+    </record>
+
     <!-- WINDOW ACTION  -->
     <record id="action_it_infra_locations"
             model="ir.actions.act_window">
