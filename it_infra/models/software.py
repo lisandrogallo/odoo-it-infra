@@ -8,8 +8,8 @@ class Software(models.Model):
     _name = 'it_infra.software'
 
     _architecture_ = [
-        ('x86', '32 bits'),
-        ('x64', '64 bits'),
+        ('(x86)', '32 bits'),
+        ('(x64)', '64 bits'),
     ]
 
     name = fields.Char(
@@ -33,8 +33,8 @@ class Software(models.Model):
         result = []
         for soft in self:
             if soft.category_id.parent_id.name == 'Operating System':
-                result.append((soft.id, "%s %s (%s)" % (
-                    soft.name, soft.version, soft.architecture or '')))
+                result.append((soft.id, "%s %s %s" % (
+                    soft.name, soft.version or '', soft.architecture or '')))
             else:
                 result.append((soft.id, "%s %s" %
                                (soft.name, soft.version or '')))

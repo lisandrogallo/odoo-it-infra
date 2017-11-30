@@ -5,7 +5,7 @@
             model="it_infra.software">
         <field name="name">Windows XP</field>
         <field name="version">Service Pack 3</field>
-        <field name="architecture">x86</field>
+        <field name="architecture">(x86)</field>
         <field name="category_id"
                ref="software_category_os_windows" />
     </record>
@@ -14,7 +14,7 @@
             model="it_infra.software">
         <field name="name">Windows 7</field>
         <field name="version">Service Pack 1</field>
-        <field name="architecture">x86</field>
+        <field name="architecture">(x86)</field>
         <field name="category_id"
                ref="software_category_os_windows" />
     </record>
@@ -23,7 +23,7 @@
             model="it_infra.software">
         <field name="name">Windows 7</field>
         <field name="version">Service Pack 1</field>
-        <field name="architecture">x64</field>
+        <field name="architecture">(x64)</field>
         <field name="category_id"
                ref="software_category_os_windows" />
     </record>
@@ -32,7 +32,7 @@
             model="it_infra.software">
         <field name="name">Debian</field>
         <field name="version">5.0 Lenny</field>
-        <field name="architecture">x86</field>
+        <field name="architecture">(x86)</field>
         <field name="category_id"
                ref="software_category_os_linux" />
     </record>
@@ -41,7 +41,7 @@
             model="it_infra.software">
         <field name="name">Debian</field>
         <field name="version">6.0 Squeeze</field>
-        <field name="architecture">x64</field>
+        <field name="architecture">(x64)</field>
         <field name="category_id"
                ref="software_category_os_linux" />
     </record>
@@ -50,7 +50,7 @@
             model="it_infra.software">
         <field name="name">Debian</field>
         <field name="version">7.0 Wheezy</field>
-        <field name="architecture">x64</field>
+        <field name="architecture">(x64)</field>
         <field name="category_id"
                ref="software_category_os_linux" />
     </record>
@@ -59,7 +59,7 @@
             model="it_infra.software">
         <field name="name">Ubuntu</field>
         <field name="version">14.04 LTS</field>
-        <field name="architecture">x64</field>
+        <field name="architecture">(x64)</field>
         <field name="category_id"
                ref="software_category_os_linux" />
     </record>
@@ -68,7 +68,7 @@
             model="it_infra.software">
         <field name="name">Ubuntu</field>
         <field name="version">12.04 LTS</field>
-        <field name="architecture">x64</field>
+        <field name="architecture">(x64)</field>
         <field name="category_id"
                ref="software_category_os_linux" />
     </record>
@@ -77,7 +77,7 @@
             model="it_infra.software">
         <field name="name">Microsoft Office</field>
         <field name="version">2003</field>
-        <field name="architecture">x86</field>
+        <field name="architecture">(x86)</field>
         <field name="category_id"
                ref="software_category_ms_office" />
     </record>
@@ -86,7 +86,7 @@
             model="it_infra.software">
         <field name="name">Microsoft Office</field>
         <field name="version">2007</field>
-        <field name="architecture">x64</field>
+        <field name="architecture">(x64)</field>
         <field name="category_id"
                ref="software_category_ms_office" />
     </record>
