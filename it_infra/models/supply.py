@@ -6,6 +6,7 @@ from odoo import models, fields
 class Supply(models.Model):
 
     _name = 'it_infra.supply'
+    _description = 'Supply'
     _inherit = ['ir.needaction_mixin', 'mail.thread']
 
     name = fields.Char(

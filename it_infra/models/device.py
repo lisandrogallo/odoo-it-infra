@@ -6,6 +6,7 @@ from odoo import fields, models
 class Device(models.Model):
 
     _name = 'it_infra.device'
+    _description = 'Device'
     _inherit = 'it_infra.equipment'
 
     device_category_id = fields.Many2one(

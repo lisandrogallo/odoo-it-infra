@@ -7,6 +7,7 @@ from odoo.exceptions import except_orm, Warning
 class Server(models.Model):
 
     _name = 'it_infra.server'
+    _description = 'Server'
     _inherit = 'it_infra.computer'
 
     password = fields.Char()
