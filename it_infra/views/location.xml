@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- WINDOW ACTION  -->
+    <record id="action_it_infra_locations"
+            model="ir.actions.act_window">
+        <field name="name">Locations</field>
+        <field name="res_model">it_infra.location</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

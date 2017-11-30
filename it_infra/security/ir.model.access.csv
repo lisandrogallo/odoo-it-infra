@@ -19,3 +19,5 @@ access_it_infra_workstation_manager,it_infra.workstation.manager,model_it_infra_
 access_it_infra_workstation_user,it_infra.workstation.user,model_it_infra_workstation,group_user,1,1,1,1
 access_it_infra_server_category_manager,it_infra.server_category.manager,model_it_infra_server_category,group_manager,1,1,1,1
 access_it_infra_server_category_user,it_infra.server_category.user,model_it_infra_server_category,group_user,1,1,1,1
+access_it_infra_location_manager,it_infra.location.manager,model_it_infra_location,group_manager,1,1,1,1
+access_it_infra_location_user,it_infra.location.user,model_it_infra_location,group_user,1,1,1,1

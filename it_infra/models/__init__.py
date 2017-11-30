@@ -13,3 +13,4 @@ from . import software_category
 from . import supply
 from . import supply_category
 from . import workstation
+from . import location

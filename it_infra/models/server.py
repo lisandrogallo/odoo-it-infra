@@ -27,6 +27,10 @@ class Server(models.Model):
         string='Categories'
     )
 
+    location_id = fields.Many2one(
+        comodel_name='it_infra.location'
+    )
+
     @api.multi
     def unlink(self):
         for server in self:

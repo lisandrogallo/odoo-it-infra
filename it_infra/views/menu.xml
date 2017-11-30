@@ -53,9 +53,16 @@
               parent="menu_configuration"
               groups="group_manager" />
 
+    <menuitem name="Server Locations"
+              id="menu_server_locations"
+              sequence="20"
+              action="action_it_infra_locations"
+              parent="menu_configuration"
+              groups="group_manager" />
+
     <menuitem name="Software"
               id="menu_software"
-              sequence="20"
+              sequence="30"
               action="action_it_infra_software_objects"
               parent="menu_configuration"
               groups="group_user" />

@@ -20,6 +20,7 @@
         u'views/software.xml',
         u'views/supply.xml',
         u'views/workstation.xml',
+        u'views/location.xml',
         u'views/menu.xml'
     ],
     'installable': True,
