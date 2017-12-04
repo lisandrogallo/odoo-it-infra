@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-30 15:27+0000\n"
-"PO-Revision-Date: 2017-11-30 12:30-0300\n"
+"POT-Creation-Date: 2017-12-04 12:02+0000\n"
+"PO-Revision-Date: 2017-12-04 09:05-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: es\n"
+"Language: es_AR\n"
 "X-Generator: Poedit 2.0.4\n"
 
 #. module: it_infra
@@ -43,6 +43,10 @@ msgstr "Arquitectura"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_ids
+#: model:ir.ui.menu,name:it_infra.menu_device_categories
+#: model:ir.ui.menu,name:it_infra.menu_server_category
+#: model:ir.ui.menu,name:it_infra.menu_software_categories
+#: model:ir.ui.menu,name:it_infra.menu_supply_categories
 msgid "Categories"
 msgstr "Categorías"
 
@@ -145,9 +149,15 @@ msgid "Device"
 msgstr "Dispositivo"
 
 #. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_device_categories
+msgid "Device Categories"
+msgstr "Categorías de Dispositivo"
+
+#. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_device_devices
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category_device_ids
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_device_ids
+#: model:ir.ui.menu,name:it_infra.menu_configuration_device
 #: model:ir.ui.menu,name:it_infra.menu_devices
 #: model:ir.ui.view,arch_db:it_infra.view_it_infra_supply_form
 msgid "Devices"
@@ -254,13 +264,13 @@ msgstr "Infraestructura IT"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_internal
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_internal_location
 msgid "Internal"
-msgstr "Internal"
+msgstr "Interno"
 
 #. module: it_infra
 #: code:addons/it_infra/models/equipment.py:59
 #, python-format
 msgid "Invalid document format"
-msgstr "Formato de document inválido"
+msgstr "Formato de documento inválido"
 
 #. module: it_infra
 #: code:addons/it_infra/models/equipment.py:65
@@ -299,7 +309,7 @@ msgstr "Dirección IP"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_category___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation___last_update
 msgid "Last Modified on"
-msgstr "Última Modifiación en"
+msgstr "Última Modificación en"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category_write_uid
@@ -350,13 +360,14 @@ msgstr "Ubicación"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_locations
+#: model:ir.ui.menu,name:it_infra.menu_server_locations
 msgid "Locations"
 msgstr "Ubicaciones"
 
 #. module: it_infra
 #: model:ir.ui.menu,name:it_infra.menu_it_infra_main
 msgid "Main"
-msgstr "Infraestructura"
+msgstr "Principal"
 
 #. module: it_infra
 #: model:res.groups,name:it_infra.group_manager
@@ -438,7 +449,7 @@ msgid "Password"
 msgstr "Contraseña"
 
 #. module: it_infra
-#: code:addons/it_infra/models/server.py:54
+#: code:addons/it_infra/models/server.py:53
 #, python-format
 msgid "Password for user '%s':"
 msgstr "Contraseña del usuario '%s':"
@@ -489,14 +500,8 @@ msgstr "Servidor"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_server_category
-#: model:ir.ui.menu,name:it_infra.menu_server_category
 msgid "Server Categories"
 msgstr "Etiquetas"
-
-#. module: it_infra
-#: model:ir.ui.menu,name:it_infra.menu_server_locations
-msgid "Server Locations"
-msgstr "Ubicaciones de Servidor"
 
 #. module: it_infra
 #: sql_constraint:it_infra.server_category:0
@@ -506,15 +511,22 @@ msgstr "Las etiquetas deben ser únicas"
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_server_servers
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_server_ids
+#: model:ir.ui.menu,name:it_infra.menu_configuration_server
 #: model:ir.ui.menu,name:it_infra.menu_servers
 msgid "Servers"
 msgstr "Servidores"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_software_ids
+#: model:ir.ui.menu,name:it_infra.menu_configuration_software
 #: model:ir.ui.menu,name:it_infra.menu_software
 msgid "Software"
 msgstr "Software"
+
+#. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_software_categories
+msgid "Software Categories"
+msgstr "Software Categories"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_software_objects
@@ -568,6 +580,7 @@ msgstr "Almacenado"
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_supply_supplies
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_supply_ids
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_category_supply_ids
+#: model:ir.ui.menu,name:it_infra.menu_configuration_supply
 #: model:ir.ui.menu,name:it_infra.menu_supplies
 #: model:ir.ui.view,arch_db:it_infra.view_it_infra_device_form
 msgid "Supplies"
@@ -577,6 +590,11 @@ msgstr "Insumos"
 #: model:ir.model,name:it_infra.model_it_infra_supply
 msgid "Supply"
 msgstr "Insumo"
+
+#. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_supply_categories
+msgid "Supply Categories"
+msgstr "Categorías de Insumo"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_switch
