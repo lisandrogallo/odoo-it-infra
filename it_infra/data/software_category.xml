@@ -32,4 +32,18 @@
                ref="software_category_office_suite" />
     </record>
 
+    <record id="software_category_vmware"
+            model="it_infra.software_category">
+        <field name="name">VMware</field>
+        <field name="parent_id"
+               ref="software_category_operating_systems" />
+    </record>
+
+    <record id="software_category_macos"
+            model="it_infra.software_category">
+        <field name="name">Mac OS</field>
+        <field name="parent_id"
+               ref="software_category_operating_systems" />
+    </record>
+
 </odoo>

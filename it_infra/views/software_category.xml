@@ -21,4 +21,13 @@
         </field>
     </record>
 
+    <!-- WINDOW ACTION  -->
+    <record id="action_it_infra_software_categories"
+            model="ir.actions.act_window">
+        <field name="name">Software Categories</field>
+        <field name="res_model">it_infra.software_category</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
 </odoo>

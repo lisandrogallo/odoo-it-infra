@@ -46,25 +46,60 @@
               parent="menu_infrastructure"
               groups="group_manager" />
 
-    <menuitem name="Server Categories"
+    <menuitem name="Servers"
+              id="menu_configuration_server"
+              sequence="10"
+              parent="menu_configuration" />
+
+    <menuitem name="Categories"
               id="menu_server_category"
               sequence="10"
               action="action_it_infra_server_category"
-              parent="menu_configuration"
-              groups="group_manager" />
+              parent="menu_configuration_server" />
 
-    <menuitem name="Server Locations"
+    <menuitem name="Locations"
               id="menu_server_locations"
               sequence="20"
               action="action_it_infra_locations"
-              parent="menu_configuration"
-              groups="group_manager" />
+              parent="menu_configuration_server" />
+
+    <menuitem name="Software"
+              id="menu_configuration_software"
+              sequence="20"
+              parent="menu_configuration" />
 
     <menuitem name="Software"
               id="menu_software"
-              sequence="30"
+              sequence="10"
               action="action_it_infra_software_objects"
-              parent="menu_configuration"
-              groups="group_user" />
+              parent="menu_configuration_software" />
+
+    <menuitem name="Categories"
+              id="menu_software_categories"
+              sequence="20"
+              action="action_it_infra_software_categories"
+              parent="menu_configuration_software" />
+
+    <menuitem name="Supplies"
+              id="menu_configuration_supply"
+              sequence="30"
+              parent="menu_configuration" />
+
+    <menuitem name="Categories"
+              id="menu_supply_categories"
+              sequence="10"
+              action="action_it_infra_supply_categories"
+              parent="menu_configuration_supply" />
+
+    <menuitem name="Devices"
+              id="menu_configuration_device"
+              sequence="40"
+              parent="menu_configuration" />
+
+    <menuitem name="Categories"
+              id="menu_device_categories"
+              sequence="10"
+              action="action_it_infra_device_categories"
+              parent="menu_configuration_device" />
 
 </odoo>

@@ -14,11 +14,13 @@
         u'security/groups.xml',
         u'security/ir.model.access.csv',
         u'views/device.xml',
+        u'views/device_category.xml',
         u'views/server_category.xml',
         u'views/server.xml',
         u'views/software_category.xml',
         u'views/software.xml',
         u'views/supply.xml',
+        u'views/supply_category.xml',
         u'views/workstation.xml',
         u'views/location.xml',
         u'views/menu.xml'
