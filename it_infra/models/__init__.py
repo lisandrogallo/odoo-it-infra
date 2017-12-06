@@ -6,7 +6,6 @@ from . import computer
 from . import device
 from . import device_category
 from . import server
-from . import server_hostname
 from . import server_category
 from . import software
 from . import software_category
