@@ -17,6 +17,8 @@ access_it_infra_supply_manager,it_infra.supply.manager,model_it_infra_supply,gro
 access_it_infra_supply_user,it_infra.supply.user,model_it_infra_supply,group_user,1,1,1,1
 access_it_infra_workstation_manager,it_infra.workstation.manager,model_it_infra_workstation,group_manager,1,1,1,1
 access_it_infra_workstation_user,it_infra.workstation.user,model_it_infra_workstation,group_user,1,1,1,1
+access_it_infra_workstation_maintenance_manager,it_infra.workstation_maintenance.manager,model_it_infra_workstation_maintenance,group_manager,1,1,1,1
+access_it_infra_workstation_maintenance_user,it_infra.workstation_maintenance.user,model_it_infra_workstation_maintenance,group_user,1,1,1,1
 access_it_infra_server_category_manager,it_infra.server_category.manager,model_it_infra_server_category,group_manager,1,1,1,1
 access_it_infra_server_category_user,it_infra.server_category.user,model_it_infra_server_category,group_user,1,1,1,1
 access_it_infra_location_manager,it_infra.location.manager,model_it_infra_location,group_manager,1,1,1,1
