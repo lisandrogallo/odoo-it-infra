@@ -82,6 +82,14 @@
                         </group>
                     </group>
                     <notebook>
+                        <page string="Maintenance">
+                            <field name="workstation_maintenance_ids">
+                                <tree editable="top">
+                                    <field name="name" />
+                                    <field name="date" />
+                                </tree>
+                            </field>
+                        </page>
                         <page string="Hardware">
                             <field name="hardware_data" />
                         </page>

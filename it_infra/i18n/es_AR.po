@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-04 12:02+0000\n"
-"PO-Revision-Date: 2017-12-04 09:05-0300\n"
+"POT-Creation-Date: 2018-02-27 13:09+0000\n"
+"PO-Revision-Date: 2018-02-27 10:11-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "Language: es_AR\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #. module: it_infra
 #: selection:it_infra.software,architecture:0
@@ -97,12 +97,12 @@ msgstr "Configuración"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_create_uid
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_category_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_create_uid
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance_create_uid
 msgid "Created by"
 msgstr "Creado por"
 
@@ -115,14 +115,19 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_create_date
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_category_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_create_date
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance_create_date
 msgid "Created on"
 msgstr "Creado en"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance_date
+msgid "Date"
+msgstr "Fecha"
 
 #. module: it_infra
 #: selection:it_infra.computer,state:0 selection:it_infra.device,state:0
@@ -140,6 +145,7 @@ msgstr "Dado de Baja"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_description
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_description
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_description
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance_name
 msgid "Description"
 msgstr "Descripción"
 
@@ -172,14 +178,14 @@ msgstr "Dispositivos"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_display_name
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_category_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_display_name
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance_display_name
 msgid "Display Name"
-msgstr "Mostrar Nombre"
+msgstr "Nombre mostrado"
 
 #. module: it_infra
 #: selection:it_infra.computer,state:0 selection:it_infra.device,state:0
@@ -231,11 +237,6 @@ msgid "Hostname"
 msgstr "Nombre de Host"
 
 #. module: it_infra
-#: sql_constraint:it_infra.server_hostname:0
-msgid "Hostname must be unique per server!"
-msgstr "El nombre de host debe ser único!"
-
-#. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category_id
@@ -243,13 +244,13 @@ msgstr "El nombre de host debe ser único!"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_id
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_id_5101
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_category_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_id
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance_id
 msgid "ID"
 msgstr "ID"
 
@@ -302,14 +303,14 @@ msgstr "Dirección IP"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category___last_update
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_category___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation___last_update
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance___last_update
 msgid "Last Modified on"
-msgstr "Última Modificación en"
+msgstr "Última Modifiación en"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category_write_uid
@@ -319,12 +320,12 @@ msgstr "Última Modificación en"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_write_uid
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_category_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_write_uid
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_write_uid
 msgid "Last Updated by"
 msgstr "Última actualización de"
@@ -337,15 +338,15 @@ msgstr "Última actualización de"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_write_date
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_category_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_write_date
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_write_date
 msgid "Last Updated on"
-msgstr "Última actualización el"
+msgstr "Última actualización en"
 
 #. module: it_infra
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
@@ -370,6 +371,11 @@ msgid "Main"
 msgstr "Principal"
 
 #. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
+msgid "Maintenance"
+msgstr "Mantenimiento"
+
+#. module: it_infra
 #: model:res.groups,name:it_infra.group_manager
 msgid "Manager"
 msgstr "Responsable"
@@ -382,7 +388,6 @@ msgstr "Responsable"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_name
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_name
@@ -494,7 +499,6 @@ msgstr "Cantidad"
 
 #. module: it_infra
 #: model:ir.model,name:it_infra.model_it_infra_server
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname_server_id
 msgid "Server"
 msgstr "Servidor"
 
@@ -624,7 +628,7 @@ msgstr "Usuario"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_username
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_username
 msgid "Username"
-msgstr "Nombre de usuario"
+msgstr "Nombre de Usuario"
 
 #. module: it_infra
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
@@ -657,14 +661,19 @@ msgid "Warranty (months)"
 msgstr "Garantía (meses)"
 
 #. module: it_infra
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname_wildcard
-msgid "Wildcard"
-msgstr "Wildcard"
-
-#. module: it_infra
 #: model:ir.model,name:it_infra.model_it_infra_workstation
 msgid "Workstation"
 msgstr "Puesto de Trabajo"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance_workstation_id
+msgid "Workstation id"
+msgstr "Puesto de Trabajo"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_workstation_maintenance_ids
+msgid "Workstation maintenance ids"
+msgstr "Mantenimientos"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_workstation_workstations
@@ -727,6 +736,11 @@ msgstr "it_infra.software_category"
 #: model:ir.model,name:it_infra.model_it_infra_supply_category
 msgid "it_infra.supply_category"
 msgstr "it_infra.supply_category"
+
+#. module: it_infra
+#: model:ir.model,name:it_infra.model_it_infra_workstation_maintenance
+msgid "it_infra.workstation_maintenance"
+msgstr "it_infra.workstation_maintenance"
 
 #. module: it_infra
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form

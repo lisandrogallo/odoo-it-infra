@@ -20,3 +20,8 @@ class Workstation(models.Model):
         domain=[('category_id.parent_id', 'ilike', 'Office Suite')],
         track_visibility='onchange'
     )
+
+    workstation_maintenance_ids = fields.One2many(
+        comodel_name='it_infra.workstation_maintenance',
+        inverse_name='workstation_id'
+    )

@@ -12,4 +12,5 @@ from . import software_category
 from . import supply
 from . import supply_category
 from . import workstation
+from . import workstation_maintenance
 from . import location
