@@ -36,6 +36,10 @@ class Server(models.Model):
         related='location_id.internal'
     )
 
+    webadmin = fields.Char(
+        string='Web Admin'
+    )
+
     @api.multi
     def unlink(self):
         for server in self:

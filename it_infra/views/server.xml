@@ -57,6 +57,7 @@
                         </h1>
                     </group>
                     <group>
+                        <field name="webadmin" widget="url" />
                         <field name="category_ids"
                                widget="many2many_tags" />
                         <field name="description" />
@@ -130,15 +131,16 @@
                   decoration-muted="state=='cancelled'"
                   decoration-info="state=='draft'">
                 <field name="name" />
+                <field name="webadmin" widget="url" />
                 <field name="category_ids"
                        widget="many2many_tags" />
                 <field name="virtual_machine"
                        string="VM" />
-                <field name="os_id"
-                       widget="many2one_unclickable" />
+                <!-- <field name="os_id"
+                       widget="many2one_unclickable" /> -->
                 <field name="ip_address" />
-                <field name="location_id"
-                       widget="many2one_unclickable" />
+                <!-- <field name="location_id"
+                       widget="many2one_unclickable" /> -->
                 <field name="state"
                        invisible="True" />
                 <field name="message_unread"
