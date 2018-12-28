@@ -121,9 +121,3 @@ class Equipment(models.Model):
         selection=_states_,
         default='draft'
     )
-
-    _sql_constraints = [
-        ('stock_number_unique',
-         'unique(stock_number)',
-         'Stock number already exists')
-    ]
