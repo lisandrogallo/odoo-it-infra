@@ -33,22 +33,19 @@
                         </h1>
                     </group>
                     <group>
-                        <group>
-                            <field name="description" />
-                        </group>
-                        <group attrs="{'invisible':[('is_pendrive', '=', False)]}">
-                            <field name="partner_id" 
-                                string="User"/> 
-                        </group>
+                        <field name="description" />
                     </group>
-                    <group attrs="{'invisible':[('is_pendrive', '=', True)]}">
-                        <group>
-                            <field name="supply_category_id"
-                                   domain="[('parent_id', '!=', False)]" />
-                            <field name="quantity" />
-                        </group>
-                        <group>
-                            <field name="partner_id"/>     
+                    <group>
+                        <group attrs="{'invisible':[('is_pendrive', '=', True)]}">
+                                <field name="supply_category_id"
+                                    domain="[('parent_id', '!=', False)]" />
+                                <field name="quantity" />
+                                <field name="partner_id"/>     
+                        </group>             
+                        <group attrs="{'invisible':[('is_pendrive', '=', False)]}">
+                            <field name="user_id" />
+                            <field name="loan_date"
+                                   attrs="{'required':[('is_pendrive', '=', True), ('user_id', '!=', False)]}" />
                         </group>
                     </group>
                     <notebook attrs="{'invisible':[('is_pendrive', '=', True)]}">
@@ -93,7 +90,7 @@
             <tree>
                 <field name="name" />
                 <field name="description" />
-                <field name="partner_id" string="User" />
+                <field name="user_id" />
             </tree>
         </field>
     </record>    

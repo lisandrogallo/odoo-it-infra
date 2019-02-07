@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from datetime import date
 
 
 class Supply(models.Model):
@@ -28,6 +29,12 @@ class Supply(models.Model):
         track_visibility='onchange'
     )
 
+    user_id = fields.Many2one(
+        comodel_name='res.users',
+        string='User',
+        track_visibility='onchange'
+    )
+
     device_ids = fields.Many2many(
         comodel_name='it_infra.device',
         relation='it_infra_supply_ids_device_ids_rel',
@@ -37,3 +44,5 @@ class Supply(models.Model):
     )
 
     is_pendrive = fields.Boolean()
+
+    loan_date = fields.Date()
