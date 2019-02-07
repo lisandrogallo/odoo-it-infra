@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-27 13:09+0000\n"
-"PO-Revision-Date: 2018-02-27 10:11-0300\n"
+"POT-Creation-Date: 2019-02-07 13:09+0000\n"
+"PO-Revision-Date: 2019-02-07 11:08-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "Language: es_AR\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #. module: it_infra
 #: selection:it_infra.software,architecture:0
@@ -28,8 +28,20 @@ msgid "64 bits"
 msgstr "64 bits"
 
 #. module: it_infra
+#: selection:it_infra.network_device,network_device_type:0
+msgid "Access Point"
+msgstr "Access Point"
+
+#. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_network_device_access_points
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_network_device_access_points
+msgid "Access Points"
+msgstr "Access Points"
+
+#. module: it_infra
 #: selection:it_infra.computer,state:0 selection:it_infra.device,state:0
-#: selection:it_infra.equipment,state:0 selection:it_infra.server,state:0
+#: selection:it_infra.equipment,state:0
+#: selection:it_infra.network_device,state:0 selection:it_infra.server,state:0
 #: selection:it_infra.workstation,state:0
 #: model:mail.message.subtype,description:it_infra.equipment_active
 #: model:mail.message.subtype,name:it_infra.equipment_active
@@ -40,6 +52,41 @@ msgstr "Activo"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_architecture
 msgid "Architecture"
 msgstr "Arquitectura"
+
+#. module: it_infra
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_assets
+msgid "Assets"
+msgstr "Bienes de Uso"
+
+#. module: it_infra
+#: selection:it_infra.server,server_type:0
+msgid "Bare Metal"
+msgstr "Bare Metal"
+
+#. module: it_infra
+#: selection:it_infra.network_device_port,cable_color:0
+msgid "Black"
+msgstr "Negro"
+
+#. module: it_infra
+#: selection:it_infra.network_device_port,cable_color:0
+msgid "Blue"
+msgstr "Azul"
+
+#. module: it_infra
+#: model:ir.model,name:it_infra.model_it_infra_brand
+msgid "Brand"
+msgstr "Marca"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_brand_id
+msgid "Brand id"
+msgstr "Marca"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_cable_color
+msgid "Cable color"
+msgstr "Color de Cable"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_ids
@@ -66,6 +113,11 @@ msgid "Childs"
 msgstr "Childs"
 
 #. module: it_infra
+#: selection:it_infra.server,server_type:0
+msgid "Cloud"
+msgstr "Cloud"
+
+#. module: it_infra
 #: sql_constraint:it_infra.computer:0 sql_constraint:it_infra.server:0
 #: sql_constraint:it_infra.workstation:0
 msgid "Computer IP address must be unique!"
@@ -84,17 +136,36 @@ msgid "Computer name must be unique!"
 msgstr "El nombre del equipo debe ser único"
 
 #. module: it_infra
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_computers
+msgid "Computers"
+msgstr "Computadoras"
+
+#. module: it_infra
 #: model:ir.ui.menu,name:it_infra.menu_configuration
 msgid "Configuration"
 msgstr "Configuración"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_connected_to
+msgid "Connected to"
+msgstr "Conectado a"
+
+#. module: it_infra
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_goods
+msgid "Consumer Goods"
+msgstr "Bienes de Consumo"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_brand_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_create_uid
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_create_uid
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_create_uid
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_create_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_create_uid
@@ -107,12 +178,16 @@ msgid "Created by"
 msgstr "Creado por"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_brand_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_create_date
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_create_date
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_create_date
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_create_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_create_date
@@ -125,13 +200,21 @@ msgid "Created on"
 msgstr "Creado en"
 
 #. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
+msgid "Credentials"
+msgstr "Credenciales"
+
+#. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_maintenance_date
 msgid "Date"
 msgstr "Fecha"
 
 #. module: it_infra
 #: selection:it_infra.computer,state:0 selection:it_infra.device,state:0
-#: selection:it_infra.equipment,state:0 selection:it_infra.server,state:0
+#: selection:it_infra.equipment,state:0
+#: selection:it_infra.network_device,state:0 selection:it_infra.server,state:0
 #: selection:it_infra.workstation,state:0
 #: model:mail.message.subtype,description:it_infra.equipment_decommissioned
 #: model:mail.message.subtype,name:it_infra.equipment_decommissioned
@@ -142,6 +225,7 @@ msgstr "Dado de Baja"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_description
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_description
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_description
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_description
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_description
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_description
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_description
@@ -157,25 +241,27 @@ msgstr "Dispositivo"
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_device_categories
 msgid "Device Categories"
-msgstr "Categorías de Dispositivo"
+msgstr "Categorías de Bienes de Uso"
 
 #. module: it_infra
-#: model:ir.actions.act_window,name:it_infra.action_it_infra_device_devices
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category_device_ids
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_device_ids
 #: model:ir.ui.menu,name:it_infra.menu_configuration_device
-#: model:ir.ui.menu,name:it_infra.menu_devices
 #: model:ir.ui.view,arch_db:it_infra.view_it_infra_supply_form
 msgid "Devices"
-msgstr "Dispositivos"
+msgstr "Bienes de Uso"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_brand_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_display_name
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_display_name
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_display_name
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_display_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_display_name
@@ -188,8 +274,24 @@ msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_dns_server_1
+msgid "Dns server 1"
+msgstr "Servidor DNS 1"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_dns_server_2
+msgid "Dns server 2"
+msgstr "Servidor DNS 2"
+
+#. module: it_infra
+#: selection:it_infra.server,server_type:0
+msgid "Docker Stack"
+msgstr "Docker Stack"
+
+#. module: it_infra
 #: selection:it_infra.computer,state:0 selection:it_infra.device,state:0
-#: selection:it_infra.equipment,state:0 selection:it_infra.server,state:0
+#: selection:it_infra.equipment,state:0
+#: selection:it_infra.network_device,state:0 selection:it_infra.server,state:0
 #: selection:it_infra.workstation,state:0
 #: model:mail.message.subtype,description:it_infra.equipment_draft
 #: model:mail.message.subtype,name:it_infra.equipment_draft
@@ -200,6 +302,7 @@ msgstr "Borrador"
 #: model:ir.model.fields,help:it_infra.field_it_infra_computer_source_doc_number
 #: model:ir.model.fields,help:it_infra.field_it_infra_device_source_doc_number
 #: model:ir.model.fields,help:it_infra.field_it_infra_equipment_source_doc_number
+#: model:ir.model.fields,help:it_infra.field_it_infra_network_device_source_doc_number
 #: model:ir.model.fields,help:it_infra.field_it_infra_server_source_doc_number
 #: model:ir.model.fields,help:it_infra.field_it_infra_workstation_source_doc_number
 msgid "Format: XXX-AAA-YYYY (For example: 123-ABC-2014)"
@@ -209,10 +312,21 @@ msgstr "Formato: XXX-AAA-YYYY (Por ejemplo: 123-ABC-2014)"
 #: model:ir.model.fields,help:it_infra.field_it_infra_computer_stock_number
 #: model:ir.model.fields,help:it_infra.field_it_infra_device_stock_number
 #: model:ir.model.fields,help:it_infra.field_it_infra_equipment_stock_number
+#: model:ir.model.fields,help:it_infra.field_it_infra_network_device_stock_number
 #: model:ir.model.fields,help:it_infra.field_it_infra_server_stock_number
 #: model:ir.model.fields,help:it_infra.field_it_infra_workstation_stock_number
 msgid "Format: XXXX (For example: 1234)"
 msgstr "Formato: XXXX (Por ejemplo: 1234)"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_gateway
+msgid "Gateway"
+msgstr "Gateway"
+
+#. module: it_infra
+#: selection:it_infra.network_device_port,cable_color:0
+msgid "Gray"
+msgstr "Gris"
 
 #. module: it_infra
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
@@ -231,18 +345,23 @@ msgstr "Datos del Hardware"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_hostname
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_hostname
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_hostname
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_hostname
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_hostname
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_hostname
 msgid "Hostname"
 msgstr "Nombre de Host"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_brand_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_id
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_id
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_id
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_id_5101
@@ -255,11 +374,21 @@ msgid "ID"
 msgstr "ID"
 
 #. module: it_infra
+#: model:ir.model,name:it_infra.model_it_infra_isp
+msgid "ISP"
+msgstr "ISP"
+
+#. module: it_infra
 #: model:ir.module.category,description:it_infra.module_category_infrastructure
 #: model:ir.module.category,name:it_infra.module_category_infrastructure
 #: model:ir.ui.menu,name:it_infra.menu_infrastructure
 msgid "IT Infrastructure"
 msgstr "Infraestructura IT"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_inter_vlan_routing
+msgid "Inter vlan routing"
+msgstr "Inter-VLAN Routing"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_internal
@@ -280,6 +409,7 @@ msgid "Invalid document year."
 msgstr "Año de documento inválido"
 
 #. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
 msgid "Inventory"
@@ -289,18 +419,30 @@ msgstr "Inventario"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_ip_address
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_ip_address
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_ip_address
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_ip_address
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_ip_address
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_ip_address
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_ip_address
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_ip_address
 msgid "Ip address"
 msgstr "Dirección IP"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_is_pendrive
+msgid "Is pendrive"
+msgstr "Es Pendrive?"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_brand___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location___last_update
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device___last_update
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port___last_update
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category___last_update
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software___last_update
@@ -313,12 +455,16 @@ msgid "Last Modified on"
 msgstr "Última Modifiación en"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_brand_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_write_uid
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_write_uid
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_write_uid
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_write_uid
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_write_uid
@@ -331,12 +477,16 @@ msgid "Last Updated by"
 msgstr "Última actualización de"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_brand_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_write_date
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_write_date
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_write_date
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_write_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_write_date
@@ -349,12 +499,14 @@ msgid "Last Updated on"
 msgstr "Última actualización en"
 
 #. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
 msgid "Location"
 msgstr "Ubicación"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_location_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_location_id
 msgid "Location id"
 msgstr "Ubicación"
@@ -366,9 +518,10 @@ msgid "Locations"
 msgstr "Ubicaciones"
 
 #. module: it_infra
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_main
-msgid "Main"
-msgstr "Principal"
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_mac_address
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_mac_address
+msgid "Mac address"
+msgstr "Dirección MAC"
 
 #. module: it_infra
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
@@ -381,12 +534,26 @@ msgid "Manager"
 msgstr "Responsable"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_membership_number
+msgid "Membership number"
+msgstr "Nº de Cliente"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_model
+msgid "Model"
+msgstr "Modelo"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_brand_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_category_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_category_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_location_name
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_name
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_name
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_name
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_category_name
@@ -398,6 +565,7 @@ msgid "Name"
 msgstr "Nombre"
 
 #. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
 #: model:ir.ui.view,arch_db:it_infra.view_it_infra_device_form
@@ -409,15 +577,57 @@ msgstr "Nombre..."
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_netmask
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_netmask
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_netmask
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_netmask
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_netmask
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_netmask
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_netmask
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_netmask
-msgid "Network Mask"
+msgid "Netmask"
 msgstr "Máscara de Red"
+
+#. module: it_infra
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_network_devices
+msgid "Network"
+msgstr "Red"
+
+#. module: it_infra
+#: model:ir.model,name:it_infra.model_it_infra_network_device
+msgid "Network Device"
+msgstr "Dispositivo de Red"
+
+#. module: it_infra
+#: model:ir.model,name:it_infra.model_it_infra_network_device_port
+msgid "Network Device Port"
+msgstr "Puerto"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_network_device_id
+msgid "Network device id"
+msgstr "Dispositivo de Red"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_network_device_port_ids
+msgid "Network device port ids"
+msgstr "Puertos"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_network_device_type
+msgid "Network device type"
+msgstr "Tipo"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_notes
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_provider_notes
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
+#: model:ir.ui.view,arch_db:it_infra.view_it_infra_provider_form
+msgid "Notes"
+msgstr "Notas"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_office
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_office
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_office
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_office
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_office
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_office
 msgid "Office"
@@ -449,12 +659,13 @@ msgid "Parent"
 msgstr "Padre"
 
 #. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_password
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_password
 msgid "Password"
 msgstr "Contraseña"
 
 #. module: it_infra
-#: code:addons/it_infra/models/server.py:53
+#: code:addons/it_infra/models/server.py:66
 #, python-format
 msgid "Password for user '%s':"
 msgstr "Contraseña del usuario '%s':"
@@ -474,19 +685,49 @@ msgid "Patch panel port"
 msgstr "Boca de Red"
 
 #. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_supply_pendrives
+#: model:ir.ui.menu,name:it_infra.menu_pendrives
+msgid "Pendrives"
+msgstr "Pendrives"
+
+#. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
+msgid "Ports"
+msgstr "Puertos"
+
+#. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_assets_printers
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_assets_printers
+msgid "Printers"
+msgstr "Impresoras"
+
+#. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_product_key
 msgid "Product key"
 msgstr "Clave del Producto"
 
 #. module: it_infra
+#: model:ir.model,name:it_infra.model_it_infra_provider
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_partner_id
 msgid "Provider"
-msgstr "Proveedor"
+msgstr "Proveedor de Internet"
+
+#. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_providers
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_providers
+msgid "Providers"
+msgstr "Proveedores de Internet"
+
+#. module: it_infra
+#: model:ir.actions.act_window,help:it_infra.action_it_infra_supply_pendrives
+msgid "Pulse aquí para añadir un nuevo documento"
+msgstr "Pulse aquí para añadir un nuevo documento"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_purchase_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_purchase_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_purchase_date
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_purchase_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_purchase_date
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_purchase_date
 msgid "Purchase date"
@@ -496,6 +737,23 @@ msgstr "Fecha de Compra"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_supply_quantity
 msgid "Quantity"
 msgstr "Cantidad"
+
+#. module: it_infra
+#: selection:it_infra.network_device,network_device_type:0
+msgid "Router"
+msgstr "Router"
+
+#. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_network_device_routers
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_network_device_routers
+msgid "Routers"
+msgstr "Routers"
+
+#. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_assets_scanners
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_assets_scanners
+msgid "Scanners"
+msgstr "Escáners"
 
 #. module: it_infra
 #: model:ir.model,name:it_infra.model_it_infra_server
@@ -513,10 +771,15 @@ msgid "Server tags must be unique!"
 msgstr "Las etiquetas deben ser únicas"
 
 #. module: it_infra
-#: model:ir.actions.act_window,name:it_infra.action_it_infra_server_servers
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_server_type
+msgid "Server type"
+msgstr "Tipo"
+
+#. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_computers_servers
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_server_ids
 #: model:ir.ui.menu,name:it_infra.menu_configuration_server
-#: model:ir.ui.menu,name:it_infra.menu_servers
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_computers_servers
 msgid "Servers"
 msgstr "Servidores"
 
@@ -530,7 +793,7 @@ msgstr "Software"
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_software_categories
 msgid "Software Categories"
-msgstr "Software Categories"
+msgstr "Categorías"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_software_objects
@@ -541,6 +804,7 @@ msgstr "Lista de Software"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_source_doc_number
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_source_doc_number
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_source_doc_number
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_source_doc_number
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_source_doc_number
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_source_doc_number
 msgid "Source Document"
@@ -550,6 +814,8 @@ msgstr "Documento Origen"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_state
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_state
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_state
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_state
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_state
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_state
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_state
 msgid "State"
@@ -559,21 +825,16 @@ msgstr "Estado"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_stock_number
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_stock_number
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_stock_number
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_stock_number
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_stock_number
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_stock_number
 msgid "Stock number"
 msgstr "Nº de Inventario"
 
 #. module: it_infra
-#: sql_constraint:it_infra.computer:0 sql_constraint:it_infra.device:0
-#: sql_constraint:it_infra.equipment:0 sql_constraint:it_infra.server:0
-#: sql_constraint:it_infra.workstation:0
-msgid "Stock number already exists"
-msgstr "El Nº de inventario ya existe"
-
-#. module: it_infra
 #: selection:it_infra.computer,state:0 selection:it_infra.device,state:0
-#: selection:it_infra.equipment,state:0 selection:it_infra.server,state:0
+#: selection:it_infra.equipment,state:0
+#: selection:it_infra.network_device,state:0 selection:it_infra.server,state:0
 #: selection:it_infra.workstation,state:0
 #: model:mail.message.subtype,description:it_infra.equipment_stored
 #: model:mail.message.subtype,name:it_infra.equipment_stored
@@ -593,19 +854,26 @@ msgstr "Insumos"
 #. module: it_infra
 #: model:ir.model,name:it_infra.model_it_infra_supply
 msgid "Supply"
-msgstr "Insumo"
+msgstr "Bien de Consumo"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_supply_categories
 msgid "Supply Categories"
-msgstr "Categorías de Insumo"
+msgstr "Categorías de Bienes de Consumo"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_switch
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_switch
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_switch
+#: selection:it_infra.network_device,network_device_type:0
 msgid "Switch"
 msgstr "Switch"
+
+#. module: it_infra
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_network_device_switches
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_network_device_switches
+msgid "Switches"
+msgstr "Switches"
 
 #. module: it_infra
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
@@ -617,24 +885,19 @@ msgstr "Sistema"
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_user_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_user_id
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_user_id
-#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
-#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
+#: model:ir.ui.view,arch_db:it_infra.view_it_infra_supply_form
+#: model:ir.ui.view,arch_db:it_infra.view_it_infra_supply_pendrive_tree
 #: model:res.groups,name:it_infra.group_user
 msgid "User"
 msgstr "Usuario"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_username
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_username
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_username
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_username
 msgid "Username"
-msgstr "Nombre de Usuario"
-
-#. module: it_infra
-#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
-#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_tree
-msgid "VM"
-msgstr "VM"
+msgstr "Nombre de usuario"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_software_version
@@ -642,23 +905,40 @@ msgid "Version"
 msgstr "Versión"
 
 #. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
 msgid "View Password"
 msgstr "Ver Contraseña"
 
 #. module: it_infra
-#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_virtual_machine
-msgid "Virtual machine"
+#: selection:it_infra.server,server_type:0
+msgid "Virtual Machine"
 msgstr "Máquina Virtual"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_port_vlan
+msgid "Vlan"
+msgstr "VLAN"
 
 #. module: it_infra
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_computer_warranty
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_device_warranty
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_equipment_warranty
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_network_device_warranty
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_warranty
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_workstation_warranty
 msgid "Warranty (months)"
 msgstr "Garantía (meses)"
+
+#. module: it_infra
+#: model:ir.model.fields,field_description:it_infra.field_it_infra_server_webadmin
+msgid "Web Admin"
+msgstr "Web Admin"
+
+#. module: it_infra
+#: selection:it_infra.network_device_port,cable_color:0
+msgid "White"
+msgstr "Blanco"
 
 #. module: it_infra
 #: model:ir.model,name:it_infra.model_it_infra_workstation
@@ -676,13 +956,18 @@ msgid "Workstation maintenance ids"
 msgstr "Mantenimientos"
 
 #. module: it_infra
-#: model:ir.actions.act_window,name:it_infra.action_it_infra_workstation_workstations
-#: model:ir.ui.menu,name:it_infra.menu_workstations
+#: model:ir.actions.act_window,name:it_infra.action_it_infra_computers_workstations
+#: model:ir.ui.menu,name:it_infra.menu_it_infra_computers_workstations
 msgid "Workstations"
 msgstr "Puestos de Trabajo"
 
 #. module: it_infra
-#: code:addons/it_infra/models/server.py:43
+#: selection:it_infra.network_device_port,cable_color:0
+msgid "Yellow"
+msgstr "Amarillo"
+
+#. module: it_infra
+#: code:addons/it_infra/models/server.py:56
 #, python-format
 msgid "You cannot delete a server                     which is not draft or cancelled."
 msgstr "No se puede borrar un servidor                     cuyo estado no sea borrador o cancelado"
@@ -718,11 +1003,6 @@ msgid "it_infra.server_category"
 msgstr "it_infra.server_category"
 
 #. module: it_infra
-#: model:ir.model,name:it_infra.model_it_infra_server_hostname
-msgid "it_infra.server_hostname"
-msgstr "it_infra.server_hostname"
-
-#. module: it_infra
 #: model:ir.model,name:it_infra.model_it_infra_software
 msgid "it_infra.software"
 msgstr "it_infra.software"
@@ -743,6 +1023,7 @@ msgid "it_infra.workstation_maintenance"
 msgstr "it_infra.workstation_maintenance"
 
 #. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
 #: model:ir.ui.view,arch_db:it_infra.view_it_infra_device_form
@@ -750,6 +1031,7 @@ msgid "to Active"
 msgstr "pasar a Activo"
 
 #. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
 #: model:ir.ui.view,arch_db:it_infra.view_it_infra_device_form
@@ -757,6 +1039,7 @@ msgid "to Decommissioned"
 msgstr "pasar a Baja"
 
 #. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
 #: model:ir.ui.view,arch_db:it_infra.view_it_infra_device_form
@@ -764,6 +1047,7 @@ msgid "to Draft"
 msgstr "pasar a Borrador"
 
 #. module: it_infra
+#: model:ir.ui.view,arch_db:it_infra.view_infrastructure_network_device_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_server_form
 #: model:ir.ui.view,arch_db:it_infra.view_infrastructure_workstation_form
 #: model:ir.ui.view,arch_db:it_infra.view_it_infra_device_form
