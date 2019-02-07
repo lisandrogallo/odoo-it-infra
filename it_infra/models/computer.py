@@ -8,12 +8,12 @@ class Computer(models.Model):
     _name = 'it_infra.computer'
     _inherit = 'it_infra.equipment'
 
-    _identifier_ = [
-        ('A', 'A'),
-        ('B', 'B'),
-        ('C', 'C'),
-        ('D', 'D')
-    ]
+    # _identifier_ = [
+    #     ('A', 'A'),
+    #     ('B', 'B'),
+    #     ('C', 'C'),
+    #     ('D', 'D')
+    # ]
 
     user_id = fields.Many2one(
         comodel_name='res.users',
@@ -42,15 +42,15 @@ class Computer(models.Model):
         track_visibility='onchange'
     )
 
-    switch = fields.Selection(
-        selection=_identifier_
-    )
+    # switch = fields.Selection(
+    #     selection=_identifier_
+    # )
 
-    patch_panel = fields.Selection(
-        selection=_identifier_
-    )
+    # patch_panel = fields.Selection(
+    #     selection=_identifier_
+    # )
 
-    patch_panel_port = fields.Char()
+    # patch_panel_port = fields.Char()
 
     _sql_constraints = [
         ('name_unique',

@@ -75,11 +75,11 @@
                             <field name="warranty" />
                             <field name="source_doc_number" />
                         </group>
-                        <group string="Location">
+                        <!-- <group string="Location">
                             <field name="switch" />
                             <field name="patch_panel" />
                             <field name="patch_panel_port" />
-                        </group>
+                        </group> -->
                     </group>
                     <notebook>
                         <page string="Maintenance">

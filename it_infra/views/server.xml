@@ -95,12 +95,12 @@
                             <field name="location_id" />
                             <field name="internal_location"
                                    invisible="True" />
-                            <field name="switch"
+                            <!-- <field name="switch"
                                    attrs="{'invisible':[('internal_location', '=', False)]}" />
                             <field name="patch_panel"
                                    attrs="{'invisible':[('internal_location', '=', False)]}" />
                             <field name="patch_panel_port"
-                                   attrs="{'invisible':[('internal_location', '=', False)]}" />
+                                   attrs="{'invisible':[('internal_location', '=', False)]}" /> -->
                         </group>
                     </group>
                     <notebook>
