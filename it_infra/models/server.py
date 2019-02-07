@@ -13,6 +13,8 @@ class Server(models.Model):
     _server_type_ = [
         ('vm', 'Virtual Machine'),
         ('bare_metal', 'Bare Metal'),
+        ('bare_metal_sa', 'Bare Metal (Standalone)'),
+        ('hypervisor', 'Hypervisor'),
         ('docker', 'Docker Stack'),
         ('cloud', 'Cloud')
     ]

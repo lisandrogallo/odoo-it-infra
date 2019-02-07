@@ -57,7 +57,7 @@
                         </h1>
                     </group>
                     <group>
-                        <field name="hosted_in_id" />
+                        <field name="hosted_in_id" attrs="{'invisible':[('server_type', 'not in', ['vm', 'docker'])]}"/>
                         <field name="webadmin" widget="url" />
                         <field name="category_ids"
                                widget="many2many_tags" />
@@ -105,7 +105,7 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Hosted Servers">
+                        <page string="Hosted Servers" attrs="{'invisible':[u'|', (u'server_type', u'=', u'bare_metal_sa'), (u'hosted_in_id', u'!=', False)]}">
                             <field name="hosted_server_ids">
                                 <tree>
                                     <field name="name"/>
