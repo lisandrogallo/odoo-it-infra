@@ -28,6 +28,7 @@
                         <group>
                             <field name="name"/>
                             <field name="membership_number"/>
+                            <field name="contact"/>
                         </group>
                         <group>
                             <field name="ip_address" />

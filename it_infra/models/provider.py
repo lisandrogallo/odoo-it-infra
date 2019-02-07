@@ -12,6 +12,8 @@ class Provider(models.Model):
 
     membership_number = fields.Char()
 
+    contact = fields.Char()
+
     ip_address = fields.Char()
 
     netmask = fields.Char()
