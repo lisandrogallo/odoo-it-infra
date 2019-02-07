@@ -49,6 +49,17 @@ class Server(models.Model):
         string='Web Admin'
     )
 
+    hosted_in_id = fields.Many2one(
+        comodel_name='it_infra.server',
+        track_visibility='onchange'
+    )
+
+    hosted_server_ids = fields.One2many(
+        comodel_name='it_infra.server',
+        inverse_name='hosted_in_id',
+        readonly=True
+    )
+
     @api.multi
     def unlink(self):
         for server in self:
