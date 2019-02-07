@@ -86,7 +86,7 @@
                                         class="oe_link oe_inline" />
                             </div>
                         </group>
-                        <group string="Inventory">
+                        <group string="Inventory" attrs="{'invisible':[('server_type', 'not in', ['bare_metal', 'bare_metal_sa', 'hypervisor'])]}">
                             <field name="stock_number" />
                             <field name="purchase_date" />
                             <field name="warranty" />
