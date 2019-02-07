@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields
-from datetime import datetime
+from datetime import date
 
 
 class WorkstationMaintenance(models.Model):
@@ -15,7 +15,7 @@ class WorkstationMaintenance(models.Model):
     )
 
     date = fields.Date(
-        default=datetime.today(),
+        default=date.today(),
         required=True
     )
 
