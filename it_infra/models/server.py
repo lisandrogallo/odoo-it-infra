@@ -10,6 +10,13 @@ class Server(models.Model):
     _description = 'Server'
     _inherit = 'it_infra.computer'
 
+    _server_type_ = [
+        ('vm', 'Virtual Machine'),
+        ('bare_metal', 'Bare Metal'),
+        ('docker', 'Docker Stack'),
+        ('cloud', 'Cloud')
+    ]
+
     password = fields.Char(
         track_visibility='onchange'
     )
@@ -18,7 +25,9 @@ class Server(models.Model):
         track_visibility='onchange'
     )
 
-    virtual_machine = fields.Boolean()
+    server_type = fields.Selection(
+        selection=_server_type_
+    )
 
     category_ids = fields.Many2many(
         comodel_name='it_infra.server_category',
