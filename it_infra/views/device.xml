@@ -97,7 +97,7 @@
             <tree>
                 <field name="name" />
                 <field name="ip_address" />
-                <field name="device_category_id" />
+                <field name="device_category_id" invisible="True"/>
                 <field name="stock_number" />
                 <field name="state" />
                 <field name="supply_ids" />
@@ -106,12 +106,23 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="action_it_infra_device_devices"
+    <record id="action_it_infra_assets_printers"
             model="ir.actions.act_window">
-        <field name="name">Devices</field>
+        <field name="name">Printers</field>
         <field name="res_model">it_infra.device</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
+        <field name="domain">[(u'device_category_id', u'ilike', u'Impresora')]</field>
+    </record>
+
+    <!-- WINDOW ACTION -->
+    <record id="action_it_infra_assets_scanners"
+            model="ir.actions.act_window">
+        <field name="name">Scanners</field>
+        <field name="res_model">it_infra.device</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[(u'device_category_id', u'ilike', u'Esc\xe1ner')]</field>
     </record>
 
 </odoo>

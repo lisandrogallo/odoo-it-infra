@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class Supply(models.Model):
@@ -17,15 +17,15 @@ class Supply(models.Model):
 
     supply_category_id = fields.Many2one(
         comodel_name='it_infra.supply_category',
-        string='Category',
-        required=True
+        string='Category'
     )
 
     quantity = fields.Integer()
 
     partner_id = fields.Many2one(
         comodel_name='res.partner',
-        string='Provider'
+        string='Provider',
+        track_visibility='onchange'
     )
 
     device_ids = fields.Many2many(
@@ -35,3 +35,5 @@ class Supply(models.Model):
         column2='device_id',
         string='Devices'
     )
+
+    is_pendrive = fields.Boolean()
