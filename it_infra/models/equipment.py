@@ -39,7 +39,7 @@ class Equipment(models.Model):
     @api.multi
     @api.constrains('stock_number')
     def _check_stock_number(self):
-        if len(str(self.stock_number)) != 4:
+        if len(self.stock_number) != 4:
             return False
         return True
 
@@ -86,7 +86,7 @@ class Equipment(models.Model):
 
     description = fields.Text()
 
-    stock_number = fields.Integer(
+    stock_number = fields.Char(
         help='Format: XXXX (For example: 1234)'
     )
 
