@@ -13,10 +13,10 @@ class Server(models.Model):
     _server_type_ = [
         ('bare_metal', 'Bare Metal'),
         ('bare_metal_sa', 'Bare Metal (Standalone)'),
-        ('cloud', 'Cloud')
+        ('cloud', 'Cloud'),
         ('hypervisor', 'Hypervisor'),
         ('vm', 'Virtual Machine'),
-        ('docker', 'Docker Stack'),
+        ('docker', 'Docker Stack')
     ]
 
     password = fields.Char(
