@@ -23,6 +23,9 @@
         u'views/supply_category.xml',
         u'views/workstation.xml',
         u'views/location.xml',
+        u'views/network_device.xml',
+        u'views/network_device_port.xml',
+        u'views/provider.xml',
         u'views/menu.xml'
     ],
     'installable': True,

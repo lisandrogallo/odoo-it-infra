@@ -23,3 +23,11 @@ access_it_infra_server_category_manager,it_infra.server_category.manager,model_i
 access_it_infra_server_category_user,it_infra.server_category.user,model_it_infra_server_category,group_user,1,1,1,1
 access_it_infra_location_manager,it_infra.location.manager,model_it_infra_location,group_manager,1,1,1,1
 access_it_infra_location_user,it_infra.location.user,model_it_infra_location,group_user,1,1,1,1
+access_it_infra_brand_manager,it_infra.brand.manager,model_it_infra_brand,group_manager,1,1,1,1
+access_it_infra_brand_user,it_infra.brand.user,model_it_infra_brand,group_user,1,1,1,1
+access_it_infra_network_device_manager,it_infra.network_device.manager,model_it_infra_network_device,group_manager,1,1,1,1
+access_it_infra_network_device_user,it_infra.network_device.user,model_it_infra_network_device,group_user,1,1,1,1
+access_it_infra_network_device_port_manager,it_infra.network_device_port.manager,model_it_infra_network_device_port,group_manager,1,1,1,1
+access_it_infra_network_device_port_user,it_infra.network_device_port.user,model_it_infra_network_device_port,group_user,1,1,1,1
+access_it_infra_provider_manager,it_infra.provider.manager,model_it_infra_provider,group_manager,1,1,1,1
+access_it_infra_provider_user,it_infra.provider.user,model_it_infra_provider,group_user,1,1,1,1

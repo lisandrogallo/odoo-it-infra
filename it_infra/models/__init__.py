@@ -14,3 +14,7 @@ from . import supply_category
 from . import workstation
 from . import workstation_maintenance
 from . import location
+from . import brand
+from . import network_device
+from . import network_device_port
+from . import provider

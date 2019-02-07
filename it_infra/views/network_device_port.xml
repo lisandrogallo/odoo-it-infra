@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- TREE VIEW -->
+    <record id="view_infrastructure_network_device_port_tree"
+            model="ir.ui.view">
+        <field name="name">it_infra.network_device_port.tree</field>
+        <field name="model">it_infra.network_device_port</field>
+        <field name="arch"
+               type="xml">
+            <tree editable="top"
+                  decoration-muted="state==False">
+                <field name="name" />
+                <field name="mac_address" />
+                <field name="ip_address" />
+                <field name="netmask" />
+                <field name="vlan" />
+                <field name="inter_vlan_routing" />
+                <field name="connected_to" />
+                <field name="cable_color" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

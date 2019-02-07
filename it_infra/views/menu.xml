@@ -20,7 +20,39 @@
               groups="group_user" />
 
     <menuitem name="Workstations"
-              id="menu_workstations"
+    <menuitem name="Network"
+              id="menu_it_infra_network_devices"
+              sequence="7"
+              parent="menu_infrastructure"
+              groups="group_user" />
+
+    <menuitem name="Routers"
+              id="menu_it_infra_network_device_routers"
+              sequence="5"
+              action="action_it_infra_network_device_routers"
+              parent="menu_it_infra_network_devices"
+              groups="group_user" />
+
+    <menuitem name="Switches"
+              id="menu_it_infra_network_device_switches"
+              sequence="10"
+              action="action_it_infra_network_device_switches"
+              parent="menu_it_infra_network_devices"
+              groups="group_user" />
+
+    <menuitem name="Access Points"
+              id="menu_it_infra_network_device_access_points"
+              sequence="15"
+              action="action_it_infra_network_device_access_points"
+              parent="menu_it_infra_network_devices"
+              groups="group_user" />
+
+    <menuitem name="Providers"
+              id="menu_it_infra_providers"
+              sequence="20"
+              action="action_it_infra_providers"
+              parent="menu_it_infra_network_devices"
+              groups="group_user" />              
               sequence="20"
               action="action_it_infra_workstation_workstations"
               parent="menu_it_infra_main"
