@@ -97,8 +97,7 @@ class Equipment(models.Model):
     )
 
     netmask = fields.Char(
-        string='Network Mask',
-        default='255.255.255.0'
+        default='/24'
     )
 
     source_doc_number = fields.Char(

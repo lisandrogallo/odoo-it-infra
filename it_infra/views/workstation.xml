@@ -65,7 +65,7 @@
                             <field name="ip_address" />
                             <field name="netmask" />
                         </group>
-                        <group string="User">
+                        <group string="Credentials">
                             <field name="user_id" />
                             <field name="username" />
                         </group>
@@ -132,7 +132,7 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="action_it_infra_workstation_workstations"
+    <record id="action_it_infra_computers_workstations"
             model="ir.actions.act_window">
         <field name="name">Workstations</field>
         <field name="res_model">it_infra.workstation</field>
