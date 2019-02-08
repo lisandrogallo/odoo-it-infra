@@ -44,8 +44,7 @@
                         </group>             
                         <group attrs="{'invisible':[('is_pendrive', '=', False)]}">
                             <field name="user_id" />
-                            <field name="loan_date"
-                                   attrs="{'required':[('is_pendrive', '=', True), ('user_id', '!=', False)]}" />
+                            <field name="loan_date" />
                         </group>
                     </group>
                     <notebook attrs="{'invisible':[('is_pendrive', '=', True)]}">
