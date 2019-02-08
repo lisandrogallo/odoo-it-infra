@@ -19,9 +19,7 @@ class Server(models.Model):
         ('docker', 'Docker Stack')
     ]
 
-    password = fields.Char(
-        track_visibility='onchange'
-    )
+    password = fields.Char()
 
     open_ports = fields.Char(
         track_visibility='onchange'

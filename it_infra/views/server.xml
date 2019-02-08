@@ -146,8 +146,8 @@
                 <field name="location_id"
                        widget="many2one_unclickable" />
                 <field name="server_type"/>
-                <!-- <field name="os_id"
-                       widget="many2one_unclickable" /> -->
+                <field name="os_id"
+                       widget="many2one_unclickable" />
                 <field name="ip_address" />
                 <field name="state"
                        invisible="True" />

@@ -30,7 +30,9 @@ class NetworkDevicePort(models.Model):
         default='/24'
     )
     
-    state = fields.Boolean()
+    state = fields.Boolean(
+        string='Active'
+    )
 
     vlan = fields.Char()
 
