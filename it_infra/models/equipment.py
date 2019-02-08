@@ -39,8 +39,9 @@ class Equipment(models.Model):
     @api.multi
     @api.constrains('stock_number')
     def _check_stock_number(self):
-        if len(self.stock_number) != 4:
-            return False
+        if self.stock_number:
+            if len(self.stock_number) != 4:
+                return False
         return True
 
     __check_doc_number_re = re.compile(r'([0-9]{3}\-[A-z]{3}\-[0-9]{4})$')
