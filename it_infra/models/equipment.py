@@ -18,20 +18,6 @@ class Equipment(models.Model):
         ('decommissioned', 'Decommissioned'),
     ]
 
-    _track = {
-        'state': {
-            'it_infra.equipment_draft':
-            lambda self, cr, uid, obj, ctx=None: obj['state'] == 'draft',
-            'it_infra.equipment_active':
-            lambda self, cr, uid, obj, ctx=None: obj['state'] == 'active',
-            'it_infra.equipment_stored':
-            lambda self, cr, uid, obj, ctx=None: obj['state'] == 'stored',
-            'it_infra.equipment_decommissioned':
-            lambda self, cr, uid, obj, ctx=None: obj['state'] ==
-            'decommissioned',
-        },
-    }
-
     @api.constrains('stock_number')
     def _check_stock_number(self):
         if self.stock_number:
@@ -60,16 +46,16 @@ class Equipment(models.Model):
                     raise exceptions.UserError(_('Invalid document year.'))
 
     def action_draft(self):
-        self.write({'state': 'draft'})
+        self.state = 'draft'
 
     def action_active(self):
-        self.write({'state': 'active'})
+        self.state = 'active'
 
     def action_stored(self):
-        self.write({'state': 'stored'})
+        self.state = 'stored'
 
     def action_decommissioned(self):
-        self.write({'state': 'decommissioned'})
+        self.state = 'decommissioned'
 
     name = fields.Char(required=True)
 
