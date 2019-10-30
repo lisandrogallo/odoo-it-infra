@@ -5,7 +5,7 @@ IT Infrastructure Management for Odoo
 
 ## Credits
 
-**Author:** Lisandro Gallo (@lisogallo) liso [at] riseup.net
+**Author:** [Lisandro Gallo](https://github.com/lisandrogallo)
 
 ## License
 
