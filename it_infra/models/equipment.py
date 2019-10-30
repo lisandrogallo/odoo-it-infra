@@ -1,17 +1,14 @@
-
 import re
 from datetime import datetime
-
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, api, fields, models
-from odoo.exceptions import Warning
+from odoo import _, api, fields, models, exceptions
 
 
 class Equipment(models.Model):
 
     _name = 'it_infra.equipment'
-    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _order = "purchase_date desc"
 
     _states_ = [
@@ -30,12 +27,11 @@ class Equipment(models.Model):
             'it_infra.equipment_stored':
             lambda self, cr, uid, obj, ctx=None: obj['state'] == 'stored',
             'it_infra.equipment_decommissioned':
-            lambda self, cr, uid, obj, ctx=None: obj[
-                'state'] == 'decommissioned',
+            lambda self, cr, uid, obj, ctx=None: obj['state'] ==
+            'decommissioned',
         },
     }
 
-    @api.multi
     @api.constrains('stock_number')
     def _check_stock_number(self):
         if self.stock_number:
@@ -51,54 +47,41 @@ class Equipment(models.Model):
             if self.__check_doc_number_re.match(self.source_doc_number):
                 self.source_doc_number = self.source_doc_number.upper()
 
-    @api.multi
     @api.constrains('source_doc_number')
     def _check_doc_number(self):
         if self.source_doc_number:
             if not self.__check_doc_number_re.match(self.source_doc_number):
-                raise Warning(_('Invalid document format'))
+                raise exceptions.UserError(_('Invalid document format'))
             else:
                 tmp = self.source_doc_number.split('-')[2]
                 input_date = datetime.strptime(tmp, '%Y')
                 year_limit = datetime.today() - relativedelta(years=20)
                 if input_date < year_limit or input_date > datetime.today():
-                    raise Warning(_('Invalid document year.'))
+                    raise exceptions.UserError(_('Invalid document year.'))
 
-    @api.multi
     def action_draft(self):
         self.write({'state': 'draft'})
 
-    @api.multi
     def action_active(self):
         self.write({'state': 'active'})
 
-    @api.multi
     def action_stored(self):
         self.write({'state': 'stored'})
 
-    @api.multi
     def action_decommissioned(self):
         self.write({'state': 'decommissioned'})
 
-    name = fields.Char(
-        required=True
-    )
+    name = fields.Char(required=True)
 
     description = fields.Text()
 
-    stock_number = fields.Char(
-        help='Format: XXXX (For example: 1234)'
-    )
+    stock_number = fields.Char(help='Format: XXXX (For example: 1234)')
 
     hostname = fields.Char()
 
-    ip_address = fields.Char(
-        track_visibility='onchange'
-    )
+    ip_address = fields.Char(track_visibility='onchange')
 
-    netmask = fields.Char(
-        default='/24'
-    )
+    netmask = fields.Char(default='/24')
 
     source_doc_number = fields.Char(
         string='Source Document',
@@ -107,16 +90,8 @@ class Equipment(models.Model):
 
     purchase_date = fields.Date()
 
-    office = fields.Char(
-        track_visibility='onchange'
-    )
+    office = fields.Char(track_visibility='onchange')
 
-    warranty = fields.Integer(
-        string='Warranty (months)',
-        default=12
-    )
+    warranty = fields.Integer(string='Warranty (months)', default=12)
 
-    state = fields.Selection(
-        selection=_states_,
-        default='draft'
-    )
+    state = fields.Selection(selection=_states_, default='draft')

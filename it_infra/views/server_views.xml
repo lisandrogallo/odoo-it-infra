@@ -2,10 +2,10 @@
 <odoo>
 
     <!-- SEARCH VIEW -->
-    <record id="view_infrastructure_workstation_filter"
+    <record id="server_view_search"
             model="ir.ui.view">
-        <field name="name">it_infra.workstation.select</field>
-        <field name="model">it_infra.workstation</field>
+        <field name="name">it_infra.server.view.search</field>
+        <field name="model">it_infra.server</field>
         <field name="arch"
                type="xml">
             <search>
@@ -13,17 +13,17 @@
                     <field name="name" />
                     <field name="user_id" />
                     <field name="os_id" />
-                    <field name="office_suite_id" />
+                    <field name="location_id" />
                 </group>
             </search>
         </field>
     </record>
 
     <!-- FORM VIEW -->
-    <record id="view_infrastructure_workstation_form"
+    <record id="server_view_form"
             model="ir.ui.view">
-        <field name="name">it_infra.workstation.form</field>
-        <field name="model">it_infra.workstation</field>
+        <field name="name">it_infra.server.view.form</field>
+        <field name="model">it_infra.server</field>
         <field name="arch"
                type="xml">
             <form>
@@ -57,36 +57,60 @@
                         </h1>
                     </group>
                     <group>
+                        <field name="hosted_in_id" attrs="{'invisible':[('server_type', 'not in', ['vm', 'docker'])]}"/>
+                        <field name="webadmin" widget="url" />
+                        <field name="category_ids"
+                               widget="many2many_tags" />
+                        <field name="description" />
+                    </group>
+                    <group>
                         <group string="System">
                             <field name="os_id" />
-                            <field name="product_key" />
-                            <field name="office_suite_id" />
                             <field name="hostname" />
                             <field name="ip_address" />
                             <field name="netmask" />
+                            <field name="server_type"/>
+                            <field name="open_ports" />
                         </group>
                         <group string="Credentials">
-                            <field name="user_id" />
                             <field name="username" />
+                            <label for="password" />
+                            <div>
+                                <field name="password"
+                                       password="True"
+                                       class="oe_inline" />
+                                <button name="show_passwd"
+                                        string="View Password"
+                                        icon="fa-eye"
+                                        type="object"
+                                        class="oe_link oe_inline" />
+                            </div>
                         </group>
-                        <group string="Inventory">
+                        <group string="Inventory" attrs="{'invisible':[('server_type', 'not in', ['bare_metal', 'bare_metal_sa', 'hypervisor'])]}">
                             <field name="stock_number" />
                             <field name="purchase_date" />
                             <field name="warranty" />
                             <field name="source_doc_number" />
                         </group>
-                        <!-- <group string="Location">
-                            <field name="switch" />
-                            <field name="patch_panel" />
-                            <field name="patch_panel_port" />
-                        </group> -->
+                        <group string="Location">
+                            <field name="location_id" />
+                            <field name="internal_location"
+                                   invisible="True" />
+                            <!-- <field name="switch"
+                                   attrs="{'invisible':[('internal_location', '=', False)]}" />
+                            <field name="patch_panel"
+                                   attrs="{'invisible':[('internal_location', '=', False)]}" />
+                            <field name="patch_panel_port"
+                                   attrs="{'invisible':[('internal_location', '=', False)]}" /> -->
+                        </group>
                     </group>
                     <notebook>
-                        <page string="Maintenance">
-                            <field name="workstation_maintenance_ids">
-                                <tree editable="top">
-                                    <field name="name" />
-                                    <field name="date" />
+                        <page string="Hosted Servers" attrs="{'invisible':[u'|', (u'server_type', u'=', u'bare_metal_sa'), (u'hosted_in_id', u'!=', False)]}">
+                            <field name="hosted_server_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="category_ids" />
+                                    <field name="ip_address" />
                                 </tree>
                             </field>
                         </page>
@@ -106,23 +130,25 @@
     </record>
 
     <!-- TREE VIEW -->
-    <record id="view_infrastructure_workstation_tree"
+    <record id="server_view_tree"
             model="ir.ui.view">
-        <field name="name">it_infra.workstation.tree</field>
-        <field name="model">it_infra.workstation</field>
+        <field name="name">it_infra.server.view.tree</field>
+        <field name="model">it_infra.server</field>
         <field name="arch"
                type="xml">
             <tree decoration-bf="message_unread==True"
                   decoration-muted="state=='cancelled'"
                   decoration-info="state=='draft'">
                 <field name="name" />
+                <field name="webadmin" widget="url" />
+                <field name="category_ids"
+                       widget="many2many_tags" />
+                <field name="location_id"
+                       widget="many2one_unclickable" />
+                <field name="server_type"/>
                 <field name="os_id"
                        widget="many2one_unclickable" />
-                <field name="office_suite_id"
-                       widget="many2one_unclickable" />
                 <field name="ip_address" />
-                <field name="user_id"
-                       widget="many2one_unclickable" />
                 <field name="state"
                        invisible="True" />
                 <field name="message_unread"
@@ -132,16 +158,15 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="action_it_infra_computers_workstations"
+    <record id="server_action_form"
             model="ir.actions.act_window">
-        <field name="name">Workstations</field>
-        <field name="res_model">it_infra.workstation</field>
-        <field name="view_type">form</field>
+        <field name="name">Servers</field>
+        <field name="res_model">it_infra.server</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id"
-               ref="view_infrastructure_workstation_tree" />
+               ref="server_view_tree" />
         <field name="search_view_id"
-               ref="view_infrastructure_workstation_filter" />
+               ref="server_view_search" />
     </record>
 
 </odoo>

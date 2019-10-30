@@ -2,9 +2,9 @@
 <odoo>
 
     <!-- TREE VIEW -->
-    <record id="view_it_infra_location_tree"
+    <record id="location_view_tree"
             model="ir.ui.view">
-        <field name="name">it_infra.location.tree</field>
+        <field name="name">it_infra.location.view.tree</field>
         <field name="model">it_infra.location</field>
         <field name="arch"
                type="xml">
@@ -16,11 +16,10 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="action_it_infra_locations"
+    <record id="location_action_form"
             model="ir.actions.act_window">
         <field name="name">Locations</field>
         <field name="res_model">it_infra.location</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 

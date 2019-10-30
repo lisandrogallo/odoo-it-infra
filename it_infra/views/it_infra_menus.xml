@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="IT Infrastructure"
+              id="it_infra_menu_root"
+              sequence="20"
+              groups="group_user" />
+
+    <menuitem name="Configuration"
+              id="it_infra_menu_configuration"
+              sequence="20"
+              parent="it_infra_menu_root"
+              groups="group_manager" />
+
+</odoo>

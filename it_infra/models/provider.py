@@ -1,11 +1,9 @@
-
 from odoo import fields, models
 
 
 class Provider(models.Model):
 
     _name = 'it_infra.provider'
-    _description = 'Provider'
 
     name = fields.Char()
 
@@ -23,4 +21,4 @@ class Provider(models.Model):
 
     dns_server_2 = fields.Char()
 
-    notes = fields.Html() 
+    notes = fields.Html()

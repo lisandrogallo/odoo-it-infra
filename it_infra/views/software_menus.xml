@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Software"
+              id="it_infra_menu_configuration_software"
+              sequence="20"
+              parent="it_infra_menu_configuration" />
+
+    <menuitem name="Software"
+              id="menu_software"
+              sequence="10"
+              action="software_action_form"
+              parent="it_infra_menu_configuration_software" />
+
+</odoo>

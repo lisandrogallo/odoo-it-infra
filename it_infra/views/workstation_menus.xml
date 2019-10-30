@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Workstations"
+              id="it_infra_menu_workstation"
+              sequence="20"
+              action="workstation_action_form"
+              parent="it_infra_menu_root"
+              groups="group_user" />
+
+</odoo>

@@ -2,10 +2,10 @@
 <odoo>
 
     <!-- TREE VIEW -->
-    <record id="view_it_infra_device_category_tree"
+    <record id="supply_category_view_tree"
             model="ir.ui.view">
-        <field name="name">it_infra.device_category.tree</field>
-        <field name="model">it_infra.device_category</field>
+        <field name="name">it_infra.supply_category.view.tree</field>
+        <field name="model">it_infra.supply_category</field>
         <field name="arch"
                type="xml">
             <tree>
@@ -16,11 +16,10 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="action_it_infra_device_categories"
+    <record id="supply_category_action_form"
             model="ir.actions.act_window">
-        <field name="name">Device Categories</field>
-        <field name="res_model">it_infra.device_category</field>
-        <field name="view_type">form</field>
+        <field name="name">Supply Categories</field>
+        <field name="res_model">it_infra.supply_category</field>
         <field name="view_mode">tree,form</field>
     </record>
 

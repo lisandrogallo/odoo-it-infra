@@ -2,9 +2,9 @@
 <odoo>
 
     <!-- TREE VIEW -->
-    <record id="view_it_infra_provider_tree"
+    <record id="provider_view_tree"
             model="ir.ui.view">
-        <field name="name">it_infra.provider.tree</field>
+        <field name="name">it_infra.provider.view.tree</field>
         <field name="model">it_infra.provider</field>
         <field name="arch"
                type="xml">
@@ -16,9 +16,9 @@
     </record>
 
     <!-- FORM VIEW -->
-    <record id="view_it_infra_provider_form"
+    <record id="provider_view_form"
             model="ir.ui.view">
-        <field name="name">it_infra.provider.form</field>
+        <field name="name">it_infra.provider.view.form</field>
         <field name="model">it_infra.provider</field>
         <field name="arch"
                type="xml">
@@ -50,11 +50,10 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="action_it_infra_providers"
+    <record id="provider_action_form"
             model="ir.actions.act_window">
         <field name="name">Providers</field>
         <field name="res_model">it_infra.provider</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 

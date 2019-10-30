@@ -1,16 +1,12 @@
-
-from odoo import models, fields, api
+from odoo import models, fields
 
 
 class Category(models.Model):
 
     _name = 'it_infra.category'
 
-    name = fields.Char(
-        required=True
-    )
+    name = fields.Char(required=True)
 
-    @api.multi
     def name_get(self):
         result = []
         for cat in self:

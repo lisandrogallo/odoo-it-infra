@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Assets"
+              id="it_infra_menu_device"
+              sequence="10"
+              parent="it_infra_menu_root"
+              groups="group_user" />
+
+    <menuitem name="Printers"
+              id="it_infra_menu_device_printer"
+              sequence="10"
+              action="device_printer_action_form"
+              parent="it_infra_menu_device"
+              groups="group_user" />
+
+    <menuitem name="Scanners"
+              id="it_infra_menu_device_scanner"
+              sequence="20"
+              action="device_printer_action_form"
+              parent="it_infra_menu_device"
+              groups="group_user" />
+
+</odoo>

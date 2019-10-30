@@ -2,9 +2,9 @@
 <odoo>
 
     <!-- SEARCH VIEW -->
-    <record id="view_it_infra_device_filter"
+    <record id="device_view_search"
             model="ir.ui.view">
-        <field name="name">it_infra.device.select</field>
+        <field name="name">it_infra.device.view.search</field>
         <field name="model">it_infra.device</field>
         <field name="arch"
                type="xml">
@@ -19,9 +19,9 @@
     </record>
 
     <!-- FORM VIEW -->
-    <record id="view_it_infra_device_form"
+    <record id="device_view_form"
             model="ir.ui.view">
-        <field name="name">it_infra.device.form</field>
+        <field name="name">it_infra.device.view.form</field>
         <field name="model">it_infra.device</field>
         <field name="arch"
                type="xml">
@@ -88,9 +88,9 @@
     </record>
 
     <!-- TREE VIEW -->
-    <record id="view_it_infra_device_tree"
+    <record id="device_view_tree"
             model="ir.ui.view">
-        <field name="name">it_infra.device.tree</field>
+        <field name="name">it_infra.device.view.tree</field>
         <field name="model">it_infra.device</field>
         <field name="arch"
                type="xml">
@@ -106,21 +106,19 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="action_it_infra_assets_printers"
+    <record id="device_printer_action_form"
             model="ir.actions.act_window">
         <field name="name">Printers</field>
         <field name="res_model">it_infra.device</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[(u'device_category_id', u'ilike', u'Impresora')]</field>
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="action_it_infra_assets_scanners"
+    <record id="device_scanner_action_form"
             model="ir.actions.act_window">
         <field name="name">Scanners</field>
         <field name="res_model">it_infra.device</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[(u'device_category_id', u'ilike', u'Esc\xe1ner')]</field>
     </record>

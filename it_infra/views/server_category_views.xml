@@ -2,9 +2,9 @@
 <odoo>
 
     <!-- SEARCH VIEW -->
-    <record id="view_infrastructure_server_category_filter"
+    <record id="server_category_view_search"
             model="ir.ui.view">
-        <field name="name">it_infra.server_category.select</field>
+        <field name="name">it_infra.server_category.view.search</field>
         <field name="model">it_infra.server_category</field>
         <field name="arch"
                type="xml">
@@ -17,9 +17,9 @@
     </record>
 
     <!-- FORM VIEW -->
-    <record id="view_infrastructure_server_category_form"
+    <record id="server_category_view_form"
             model="ir.ui.view">
-        <field name="name">it_infra.server_category.form</field>
+        <field name="name">it_infra.server_category.view.form</field>
         <field name="model">it_infra.server_category</field>
         <field name="arch"
                type="xml">
@@ -35,9 +35,9 @@
     </record>
 
     <!-- TREE VIEW -->
-    <record id="view_infrastructure_server_category_tree"
+    <record id="server_category_view_tree"
             model="ir.ui.view">
-        <field name="name">it_infra.server_category.tree</field>
+        <field name="name">it_infra.server_category.view.tree</field>
         <field name="model">it_infra.server_category</field>
         <field name="arch"
                type="xml">
@@ -49,16 +49,15 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="action_it_infra_server_category"
+    <record id="server_category_action_form"
             model="ir.actions.act_window">
         <field name="name">Server Categories</field>
         <field name="res_model">it_infra.server_category</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id"
-               ref="view_infrastructure_server_category_tree" />
+               ref="server_category_view_tree" />
         <field name="search_view_id"
-               ref="view_infrastructure_server_category_filter" />
+               ref="server_category_view_search" />
     </record>
 
 </odoo>

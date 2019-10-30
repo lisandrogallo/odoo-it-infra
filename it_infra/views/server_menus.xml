@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Servers"
+              id="it_infra_menu_server"
+              sequence="10"
+              action="server_action_form"
+              parent="it_infra_menu_root"
+              groups="group_user" />
+
+    <menuitem name="Servers"
+              id="it_infra_menu_server_configuration"
+              sequence="10"
+              parent="it_infra_menu_configuration" />
+
+</odoo>

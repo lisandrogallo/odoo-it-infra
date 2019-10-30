@@ -2,9 +2,9 @@
 <odoo>
 
     <!-- FORM VIEW -->
-    <record id="view_infrastructure_software_category_form"
+    <record id="software_category_view_form"
             model="ir.ui.view">
-        <field name="name">it_infra.software_category.form</field>
+        <field name="name">it_infra.software_category.view.form</field>
         <field name="model">it_infra.software_category</field>
         <field name="arch"
                type="xml">
@@ -22,11 +22,10 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="action_it_infra_software_categories"
+    <record id="software_category_action_form"
             model="ir.actions.act_window">
         <field name="name">Software Categories</field>
         <field name="res_model">it_infra.software_category</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 

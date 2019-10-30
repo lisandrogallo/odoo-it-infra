@@ -2,9 +2,9 @@
 <odoo>
 
     <!-- FORM VIEW -->
-    <record id="view_infrastructure_network_device_form"
+    <record id="network_device_view_form"
             model="ir.ui.view">
-        <field name="name">it_infra.network_device.form</field>
+        <field name="name">it_infra.network_device.view.form</field>
         <field name="model">it_infra.network_device</field>
         <field name="arch"
                type="xml">
@@ -80,7 +80,7 @@
                         <page string="Notes">
                             <br/>
                             <field name="notes" />
-                        </page>                        
+                        </page>
                     </notebook>
                 </sheet>
                 <div class="oe_chatter">
@@ -94,9 +94,9 @@
     </record>
 
     <!-- TREE VIEW -->
-    <record id="view_infrastructure_network_device_tree"
+    <record id="network_device_view_tree"
             model="ir.ui.view">
-        <field name="name">it_infra.network_device.tree</field>
+        <field name="name">it_infra.network_device.view.tree</field>
         <field name="model">it_infra.network_device</field>
         <field name="arch"
                type="xml">
@@ -118,36 +118,33 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="action_it_infra_network_device_routers"
+    <record id="network_device_router_action_form"
             model="ir.actions.act_window">
         <field name="name">Routers</field>
         <field name="res_model">it_infra.network_device</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[(u'network_device_type', u'ilike', u'router')]</field>
-        <field name="context">{'default_network_device_type': 'router'}</field>        
+        <field name="context">{'default_network_device_type': 'router'}</field>
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="action_it_infra_network_device_switches"
+    <record id="network_device_switch_action_form"
             model="ir.actions.act_window">
         <field name="name">Switches</field>
         <field name="res_model">it_infra.network_device</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[(u'network_device_type', u'ilike', u'switch')]</field>
-        <field name="context">{'default_network_device_type': 'switch'}</field>        
+        <field name="context">{'default_network_device_type': 'switch'}</field>
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="action_it_infra_network_device_access_points"
+    <record id="network_device_access_point_action_form"
             model="ir.actions.act_window">
         <field name="name">Access Points</field>
         <field name="res_model">it_infra.network_device</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[(u'network_device_type', u'ilike', u'ap')]</field>
-        <field name="context">{'default_network_device_type': 'ap'}</field>        
+        <field name="context">{'default_network_device_type': 'ap'}</field>
     </record>
 
 </odoo>

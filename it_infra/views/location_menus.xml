@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Locations"
+              id="it_infra_menu_locations"
+              sequence="20"
+              action="location_action_form"
+              parent="it_infra_menu_server_configuration" />
+
+</odoo>

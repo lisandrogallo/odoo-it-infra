@@ -32,7 +32,7 @@ msgstr "Access Point"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_network_device_access_points
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_network_device_access_points
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_network_device_access_points
 msgid "Access Points"
 msgstr "Access Points"
 
@@ -55,7 +55,7 @@ msgid "Architecture"
 msgstr "Arquitectura"
 
 #. module: it_infra
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_assets
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_assets
 msgid "Assets"
 msgstr "Bienes de Uso"
 
@@ -145,7 +145,7 @@ msgid "Computer name must be unique!"
 msgstr "El nombre del equipo debe ser único"
 
 #. module: it_infra
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_computers
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_computers
 msgid "Computers"
 msgstr "Computadoras"
 
@@ -160,7 +160,7 @@ msgid "Connected to"
 msgstr "Conectado a"
 
 #. module: it_infra
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_goods
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_goods
 msgid "Consumer Goods"
 msgstr "Bienes de Consumo"
 
@@ -623,7 +623,7 @@ msgid "Netmask"
 msgstr "Máscara de Red"
 
 #. module: it_infra
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_network_devices
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_network_devices
 msgid "Network"
 msgstr "Red"
 
@@ -720,7 +720,7 @@ msgstr "Puertos"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_assets_printers
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_assets_printers
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_assets_printers
 msgid "Printers"
 msgstr "Impresoras"
 
@@ -737,7 +737,7 @@ msgstr "Proveedor de Internet"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_providers
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_providers
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_providers
 msgid "Providers"
 msgstr "Proveedores de Internet"
 
@@ -763,13 +763,13 @@ msgstr "Router"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_network_device_routers
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_network_device_routers
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_network_device_routers
 msgid "Routers"
 msgstr "Routers"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_assets_scanners
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_assets_scanners
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_assets_scanners
 msgid "Scanners"
 msgstr "Escáners"
 
@@ -797,7 +797,7 @@ msgstr "Tipo"
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_computers_servers
 #: model:ir.model.fields,field_description:it_infra.field_it_infra_server_category_server_ids
 #: model:ir.ui.menu,name:it_infra.menu_configuration_server
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_computers_servers
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_computers_servers
 msgid "Servers"
 msgstr "Servidores"
 
@@ -887,7 +887,7 @@ msgstr "Switch"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_network_device_switches
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_network_device_switches
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_network_device_switches
 msgid "Switches"
 msgstr "Switches"
 
@@ -972,7 +972,7 @@ msgstr "Mantenimientos"
 
 #. module: it_infra
 #: model:ir.actions.act_window,name:it_infra.action_it_infra_computers_workstations
-#: model:ir.ui.menu,name:it_infra.menu_it_infra_computers_workstations
+#: model:ir.ui.menu,name:it_infra.it_infra_menu_computers_workstations
 msgid "Workstations"
 msgstr "Puestos de Trabajo"
 

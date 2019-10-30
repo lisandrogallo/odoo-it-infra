@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Categories"
+              id="it_infra_menu_supply_category"
+              sequence="10"
+              action="supply_action_form"
+              parent="it_infra_menu_supply_configuration" />
+
+</odoo>
