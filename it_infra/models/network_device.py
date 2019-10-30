@@ -17,9 +17,9 @@ class NetworkDevice(models.Model):
 
     network_device_type = fields.Selection(selection=_network_device_types_)
 
-    username = fields.Char(required=True, track_visibility='onchange')
+    username = fields.Char(required=True, tracking=True)
 
-    password = fields.Char(track_visibility='onchange')
+    password = fields.Char(tracking=True)
 
     location_id = fields.Many2one(comodel_name='it_infra.location',
                                   required=True)

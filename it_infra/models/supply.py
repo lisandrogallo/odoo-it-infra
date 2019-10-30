@@ -17,11 +17,11 @@ class Supply(models.Model):
 
     partner_id = fields.Many2one(comodel_name='res.partner',
                                  string='Provider',
-                                 track_visibility='onchange')
+                                 tracking=True)
 
     user_id = fields.Many2one(comodel_name='res.users',
                               string='User',
-                              track_visibility='onchange')
+                              tracking=True)
 
     device_ids = fields.Many2many(
         comodel_name='it_infra.device',

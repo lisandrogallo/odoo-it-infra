@@ -15,20 +15,20 @@ class Computer(models.Model):
 
     user_id = fields.Many2one(comodel_name='res.users',
                               string='User',
-                              track_visibility='onchange')
+                              tracking=True)
 
-    username = fields.Char(required=True, track_visibility='onchange')
+    username = fields.Char(required=True, tracking=True)
 
-    office = fields.Char(track_visibility='onchange')
+    office = fields.Char(tracking=True)
 
     os_id = fields.Many2one(comodel_name='it_infra.software',
                             string='Operating System',
                             domain=[('category_id.parent_id', 'ilike',
                                      'Operating System')],
-                            track_visibility='onchange',
+                            tracking=True,
                             required=True)
 
-    hardware_data = fields.Html(track_visibility='onchange')
+    hardware_data = fields.Html(tracking=True)
 
     # switch = fields.Selection(
     #     selection=_identifier_

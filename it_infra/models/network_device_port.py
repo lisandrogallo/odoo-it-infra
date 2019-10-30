@@ -12,7 +12,7 @@ class NetworkDevicePort(models.Model):
 
     mac_address = fields.Char(size=18)
 
-    ip_address = fields.Char(track_visibility='onchange')
+    ip_address = fields.Char(tracking=True)
 
     netmask = fields.Char(default='/24')
 

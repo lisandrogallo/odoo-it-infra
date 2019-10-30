@@ -13,13 +13,13 @@ class Server(models.Model):
 
     password = fields.Char()
 
-    open_ports = fields.Char(track_visibility='onchange')
+    open_ports = fields.Char(tracking=True)
 
     server_type = fields.Selection(selection=_server_type_)
 
     category_ids = fields.Many2many(comodel_name='it_infra.server_category',
                                     relation='server_category_rel',
-                                    track_visibility='onchange',
+                                    tracking=True,
                                     string='Categories')
 
     location_id = fields.Many2one(comodel_name='it_infra.location',
@@ -30,7 +30,7 @@ class Server(models.Model):
     webadmin = fields.Char(string='Web Admin')
 
     hosted_in_id = fields.Many2one(comodel_name='it_infra.server',
-                                   track_visibility='onchange')
+                                   tracking=True)
 
     hosted_server_ids = fields.One2many(comodel_name='it_infra.server',
                                         inverse_name='hosted_in_id',
