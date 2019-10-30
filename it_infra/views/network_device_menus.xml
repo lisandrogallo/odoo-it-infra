@@ -3,27 +3,27 @@
 
     <menuitem name="Network"
               id="it_infra_menu_network_device"
-              sequence="7"
+              sequence="30"
               parent="it_infra_menu_root"
               groups="group_user" />
 
     <menuitem name="Routers"
               id="it_infra_menu_network_device_router"
-              sequence="5"
+              sequence="10"
               action="network_device_router_action_form"
               parent="it_infra_menu_network_device"
               groups="group_user" />
 
     <menuitem name="Switches"
               id="it_infra_menu_network_device_switche"
-              sequence="10"
+              sequence="20"
               action="network_device_switch_action_form"
               parent="it_infra_menu_network_device"
               groups="group_user" />
 
     <menuitem name="Access Points"
               id="it_infra_menu_network_device_access_point"
-              sequence="15"
+              sequence="30"
               action="network_device_access_point_action_form"
               parent="it_infra_menu_network_device"
               groups="group_user" />

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <menuitem name="Categories"
+    <menuitem name="Supplies"
               id="it_infra_menu_supply_category"
-              sequence="10"
-              action="supply_action_form"
-              parent="it_infra_menu_supply_configuration" />
+              sequence="30"
+              action="supply_category_action_form"
+              parent="it_infra_menu_configuration_category" />
 
 </odoo>

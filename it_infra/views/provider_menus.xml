@@ -3,7 +3,7 @@
 
     <menuitem name="Providers"
               id="it_infra_menu_providers"
-              sequence="20"
+              sequence="40"
               action="provider_action_form"
               parent="it_infra_menu_network_device"
               groups="group_user" />

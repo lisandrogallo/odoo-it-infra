@@ -3,7 +3,7 @@
 
     <menuitem name="Consumer Goods"
               id="it_infra_menu_goods"
-              sequence="15"
+              sequence="50"
               parent="it_infra_menu_root"
               groups="group_user" />
 
