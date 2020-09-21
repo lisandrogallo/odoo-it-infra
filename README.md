@@ -1,7 +1,7 @@
-odoo-it-infra
+Odoo IT Infra
 =============
 
-IT Infrastructure Management for Odoo
+IT Infrastructure and Assets Management for Odoo
 
 ## Credits
 
