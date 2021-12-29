@@ -16,7 +16,7 @@ class NetworkDevicePort(models.Model):
 
     name = fields.Char()
 
-    mac_address = fields.Char(size=18)
+    mac_address = fields.Char()
 
     ip_address = fields.Char()
 

@@ -13,7 +13,7 @@ class NetworkDevice(models.Model):
         ("ap", "Access Point"),
     ]
 
-    mac_address = fields.Char(size=18)
+    mac_address = fields.Char()
 
     brand_id = fields.Many2one(comodel_name="it_infra.brand")
 

@@ -7,7 +7,7 @@ class Workstation(models.Model):
     _description = "Workstation"
     _inherit = "it_infra.computer"
 
-    product_key = fields.Char(size=29)
+    product_key = fields.Char()
 
     office_suite_id = fields.Many2one(
         comodel_name="it_infra.software",
