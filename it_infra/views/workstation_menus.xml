@@ -2,10 +2,10 @@
 <odoo>
 
     <menuitem name="Workstations"
-        id="it_infra_menu_workstation"
+        id="workstation_menu"
         sequence="20"
-        action="workstation_action_form"
-        parent="it_infra_menu_root"
+        action="workstation_action_view_form"
+        parent="root_menu"
         groups="group_user" />
 
 </odoo>

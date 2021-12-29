@@ -50,7 +50,7 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="provider_action_form"
+    <record id="provider_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Providers</field>
         <field name="res_model">it_infra.provider</field>

@@ -2,23 +2,23 @@
 <odoo>
 
     <menuitem name="Assets"
-        id="it_infra_menu_device"
+        id="device_menu"
         sequence="40"
-        parent="it_infra_menu_root"
+        parent="root_menu"
         groups="group_user" />
 
     <menuitem name="Printers"
-        id="it_infra_menu_device_printer"
+        id="device_printer_menu"
         sequence="5"
-        action="device_printer_action_form"
-        parent="it_infra_menu_device"
+        action="device_printer_action_view_form"
+        parent="device_menu"
         groups="group_user" />
 
     <menuitem name="Scanners"
-        id="it_infra_menu_device_scanner"
+        id="device_scanner_menu"
         sequence="10"
-        action="device_printer_action_form"
-        parent="it_infra_menu_device"
+        action="device_printer_action_view_form"
+        parent="device_menu"
         groups="group_user" />
 
 </odoo>

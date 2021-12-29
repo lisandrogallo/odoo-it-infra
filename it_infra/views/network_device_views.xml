@@ -105,7 +105,7 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="network_device_router_action_form"
+    <record id="network_device_router_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Routers</field>
         <field name="res_model">it_infra.network_device</field>
@@ -115,7 +115,7 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="network_device_switch_action_form"
+    <record id="network_device_switch_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Switches</field>
         <field name="res_model">it_infra.network_device</field>
@@ -125,7 +125,7 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="network_device_access_point_action_form"
+    <record id="network_device_access_point_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Access Points</field>
         <field name="res_model">it_infra.network_device</field>

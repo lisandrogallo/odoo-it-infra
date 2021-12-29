@@ -2,9 +2,9 @@
 <odoo>
 
     <menuitem name="Supplies"
-        id="it_infra_menu_supply_category"
+        id="supply_category_menu"
         sequence="30"
-        action="supply_category_action_form"
-        parent="it_infra_menu_configuration_category" />
+        action="supply_category_action_view_form"
+        parent="configuration_category_menu" />
 
 </odoo>

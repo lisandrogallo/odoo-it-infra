@@ -2,9 +2,9 @@
 <odoo>
 
     <menuitem name="Server Locations"
-        id="it_infra_menu_location"
+        id="location_menu"
         sequence="20"
-        action="location_action_form"
-        parent="it_infra_menu_configuration" />
+        action="location_action_view_form"
+        parent="configuration_menu" />
 
 </odoo>

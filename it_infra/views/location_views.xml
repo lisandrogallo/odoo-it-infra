@@ -16,7 +16,7 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="location_action_form"
+    <record id="location_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Locations</field>
         <field name="res_model">it_infra.location</field>

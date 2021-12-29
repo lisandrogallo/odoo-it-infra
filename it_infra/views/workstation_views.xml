@@ -76,11 +76,6 @@
                             <field name="warranty" />
                             <field name="source_doc_number" />
                         </group>
-                        <!-- <group string="Location">
-                            <field name="switch" />
-                            <field name="patch_panel" />
-                            <field name="patch_panel_port" />
-                        </group> -->
                     </group>
                     <notebook>
                         <page string="Maintenance">
@@ -124,7 +119,7 @@
     </record>
 
     <!-- WINDOW ACTION  -->
-    <record id="workstation_action_form"
+    <record id="workstation_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Workstations</field>
         <field name="res_model">it_infra.workstation</field>

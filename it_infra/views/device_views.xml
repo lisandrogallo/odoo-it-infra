@@ -102,7 +102,7 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="device_printer_action_form"
+    <record id="device_printer_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Printers</field>
         <field name="res_model">it_infra.device</field>
@@ -111,7 +111,7 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="device_scanner_action_form"
+    <record id="device_scanner_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Scanners</field>
         <field name="res_model">it_infra.device</field>

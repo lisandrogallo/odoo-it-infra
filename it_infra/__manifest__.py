@@ -4,7 +4,7 @@
     "author": "Lisandro Gallo",
     "license": "AGPL-3",
     "data": [
-        "security/groups.xml",
+        "security/it_infra_groups.xml",
         "security/ir.model.access.csv",
         "data/software_category_data.xml",
         "data/software_data.xml",

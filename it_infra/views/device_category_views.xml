@@ -16,7 +16,7 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="device_category_action_form"
+    <record id="device_category_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Device Categories</field>
         <field name="res_model">it_infra.device_category</field>

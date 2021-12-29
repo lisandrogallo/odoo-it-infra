@@ -2,9 +2,9 @@
 <odoo>
 
     <menuitem name="Software List"
-        id="it_infra_menu_configuration_software"
+        id="configuration_software_menu"
         sequence="10"
-        action="software_action_form"
-        parent="it_infra_menu_configuration" />
+        action="software_action_view_form"
+        parent="configuration_menu" />
 
 </odoo>

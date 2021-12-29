@@ -1,6 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_it_infra_server_manager,it_infra.server.manager,model_it_infra_server,group_manager,1,1,1,1
 access_it_infra_server_user,it_infra.server.user,model_it_infra_server,group_user,1,1,1,1
+access_it_infra_computer_manager,it_infra.computer.manager,model_it_infra_computer,group_manager,1,1,1,1
+access_it_infra_computer_user,it_infra.computer.user,model_it_infra_computer,group_user,1,1,1,1
+access_it_infra_equipment_manager,it_infra.equipment.manager,model_it_infra_equipment,group_manager,1,1,1,1
+access_it_infra_equipment_user,it_infra.equipment.user,model_it_infra_equipment,group_user,1,1,1,1
 access_it_infra_category_manager,it_infra.category.manager,model_it_infra_category,group_manager,1,1,1,1
 access_it_infra_category_user,it_infra.category.user,model_it_infra_category,group_user,1,1,1,1
 access_it_infra_device_category_manager,it_infra.device_category.manager,model_it_infra_device_category,group_manager,1,1,1,1

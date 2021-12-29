@@ -91,7 +91,7 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="supply_action_form"
+    <record id="supply_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Supplies</field>
         <field name="res_model">it_infra.supply</field>
@@ -102,7 +102,7 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="supply_pendrive_action_form"
+    <record id="supply_pendrive_action_view_form"
         model="ir.actions.act_window">
         <field name="name">Pendrives</field>
         <field name="res_model">it_infra.supply</field>
