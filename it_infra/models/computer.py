@@ -7,23 +7,20 @@ class Computer(models.Model):
     _inherit = "it_infra.equipment"
     _description = "Computer"
 
-    user_id = fields.Many2one(
-        comodel_name="res.users", string="User", tracking=True
-    )
+    user_id = fields.Many2one(comodel_name="res.users", string="User")
 
-    username = fields.Char(required=True, tracking=True)
+    username = fields.Char(required=True)
 
-    office = fields.Char(tracking=True)
+    office = fields.Char()
 
     os_id = fields.Many2one(
         comodel_name="it_infra.software",
         string="Operating System",
         domain=[("category_id.parent_id", "ilike", "Operating System")],
-        tracking=True,
         required=True,
     )
 
-    hardware_data = fields.Html(tracking=True)
+    hardware_data = fields.Html()
 
     _sql_constraints = [
         ("name_unique", "unique(name)", "Computer name must be unique!"),

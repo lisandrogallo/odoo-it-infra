@@ -5,7 +5,6 @@ class Supply(models.Model):
 
     _name = "it_infra.supply"
     _description = "Supply"
-    _inherit = ["mail.thread", "mail.activity.mixin"]
 
     name = fields.Char(required=True)
 
@@ -17,13 +16,9 @@ class Supply(models.Model):
 
     quantity = fields.Integer()
 
-    partner_id = fields.Many2one(
-        comodel_name="res.partner", string="Provider", tracking=True
-    )
+    partner_id = fields.Many2one(comodel_name="res.partner", string="Provider")
 
-    user_id = fields.Many2one(
-        comodel_name="res.users", string="User", tracking=True
-    )
+    user_id = fields.Many2one(comodel_name="res.users", string="User")
 
     device_ids = fields.Many2many(
         comodel_name="it_infra.device",

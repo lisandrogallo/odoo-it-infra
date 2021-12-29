@@ -7,13 +7,12 @@ class Workstation(models.Model):
     _description = "Workstation"
     _inherit = "it_infra.computer"
 
-    product_key = fields.Char(size=29, tracking=True)
+    product_key = fields.Char(size=29)
 
     office_suite_id = fields.Many2one(
         comodel_name="it_infra.software",
         string="Office Suite",
         domain=[("category_id.parent_id", "ilike", "Office Suite")],
-        tracking=True,
     )
 
     workstation_maintenance_ids = fields.One2many(

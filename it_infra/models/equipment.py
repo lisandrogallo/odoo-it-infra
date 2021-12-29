@@ -9,7 +9,6 @@ class Equipment(models.Model):
 
     _name = "it_infra.equipment"
     _description = "Equipment"
-    _inherit = ["mail.thread", "mail.activity.mixin"]
     _order = "purchase_date desc"
 
     _states_ = [
@@ -66,7 +65,7 @@ class Equipment(models.Model):
 
     hostname = fields.Char()
 
-    ip_address = fields.Char(tracking=True)
+    ip_address = fields.Char()
 
     netmask = fields.Char(default="/24")
 
@@ -77,10 +76,8 @@ class Equipment(models.Model):
 
     purchase_date = fields.Date()
 
-    office = fields.Char(tracking=True)
+    office = fields.Char()
 
     warranty = fields.Integer(string="Warranty (months)", default=12)
 
-    state = fields.Selection(
-        selection=_states_, default="draft", tracking=True
-    )
+    state = fields.Selection(selection=_states_, default="draft")

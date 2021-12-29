@@ -3,12 +3,10 @@
     "version": "14.0.1.0.0",
     "author": "Lisandro Gallo",
     "license": "AGPL-3",
-    "depends": ["mail"],
     "data": [
         "security/groups.xml",
         "security/ir.model.access.csv",
         "data/software_category_data.xml",
-        "data/equipment_track_data.xml",
         "data/software_data.xml",
         "views/it_infra_menus.xml",
         "views/device_views.xml",

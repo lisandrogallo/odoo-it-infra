@@ -21,9 +21,9 @@ class NetworkDevice(models.Model):
 
     network_device_type = fields.Selection(selection=_network_device_types_)
 
-    username = fields.Char(required=True, tracking=True)
+    username = fields.Char(required=True)
 
-    password = fields.Char(tracking=True)
+    password = fields.Char()
 
     location_id = fields.Many2one(
         comodel_name="it_infra.location", required=True

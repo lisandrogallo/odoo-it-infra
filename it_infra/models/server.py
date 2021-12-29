@@ -18,14 +18,13 @@ class Server(models.Model):
 
     password = fields.Char()
 
-    open_ports = fields.Char(tracking=True)
+    open_ports = fields.Char()
 
     server_type = fields.Selection(selection=_server_type_)
 
     category_ids = fields.Many2many(
         comodel_name="it_infra.server_category",
         relation="server_category_rel",
-        tracking=True,
         string="Categories",
     )
 
@@ -37,9 +36,7 @@ class Server(models.Model):
 
     webadmin = fields.Char(string="Web Admin")
 
-    hosted_in_id = fields.Many2one(
-        comodel_name="it_infra.server", tracking=True
-    )
+    hosted_in_id = fields.Many2one(comodel_name="it_infra.server")
 
     hosted_server_ids = fields.One2many(
         comodel_name="it_infra.server",
