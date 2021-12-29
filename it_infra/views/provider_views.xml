@@ -3,11 +3,11 @@
 
     <!-- TREE VIEW -->
     <record id="provider_view_tree"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.provider.view.tree</field>
         <field name="model">it_infra.provider</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <tree>
                 <field name="name" />
                 <field name="ip_address" />
@@ -17,18 +17,18 @@
 
     <!-- FORM VIEW -->
     <record id="provider_view_form"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.provider.view.form</field>
         <field name="model">it_infra.provider</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <form>
                 <sheet>
                     <group>
                         <group>
-                            <field name="name"/>
-                            <field name="membership_number"/>
-                            <field name="contact"/>
+                            <field name="name" />
+                            <field name="membership_number" />
+                            <field name="contact" />
                         </group>
                         <group>
                             <field name="ip_address" />
@@ -40,8 +40,8 @@
                     </group>
                     <notebook>
                         <page string="Notes">
-                            <br/>
-                            <field name="notes"/>
+                            <br />
+                            <field name="notes" />
                         </page>
                     </notebook>
                 </sheet>
@@ -51,7 +51,7 @@
 
     <!-- WINDOW ACTION  -->
     <record id="provider_action_form"
-            model="ir.actions.act_window">
+        model="ir.actions.act_window">
         <field name="name">Providers</field>
         <field name="res_model">it_infra.provider</field>
         <field name="view_mode">tree,form</field>

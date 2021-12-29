@@ -3,11 +3,11 @@
 
     <!-- SEARCH VIEW -->
     <record id="supply_view_search"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.supply.view.search</field>
         <field name="model">it_infra.supply</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <search>
                 <group>
                     <field name="name" />
@@ -19,17 +19,19 @@
 
     <!-- FORM VIEW -->
     <record id="supply_view_form"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.supply.view.form</field>
         <field name="model">it_infra.supply</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <form>
                 <sheet>
                     <group>
-                        <field name="is_pendrive" invisible="True" />
+                        <field name="is_pendrive"
+                            invisible="True" />
                         <h1>
-                            <field name="name" placeholder="Name..."/>
+                            <field name="name"
+                                placeholder="Name..." />
                         </h1>
                     </group>
                     <group>
@@ -38,9 +40,9 @@
                     <group>
                         <group attrs="{'invisible':[('is_pendrive', '=', True)]}">
                             <field name="supply_category_id"
-                                   domain="[('parent_id', '!=', False)]" />
+                                domain="[('parent_id', '!=', False)]" />
                             <field name="quantity" />
-                            <field name="partner_id"/>
+                            <field name="partner_id" />
                         </group>
                         <group attrs="{'invisible':[('is_pendrive', '=', False)]}">
                             <field name="user_id" />
@@ -55,9 +57,9 @@
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids"
-                           widget="mail_followers" />
+                        widget="mail_followers" />
                     <field name="message_ids"
-                           widget="mail_thread" />
+                        widget="mail_thread" />
                 </div>
             </form>
         </field>
@@ -65,11 +67,11 @@
 
     <!-- TREE VIEW -->
     <record id="supply_view_tree"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.supply.view.tree</field>
         <field name="model">it_infra.supply</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <tree>
                 <field name="name" />
                 <field name="description" />
@@ -81,11 +83,11 @@
 
     <!-- TREE VIEW -->
     <record id="supply_pendrive_view_tree"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.supply.pendrive.view.tree</field>
         <field name="model">it_infra.supply</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <tree>
                 <field name="name" />
                 <field name="description" />
@@ -96,23 +98,25 @@
 
     <!-- WINDOW ACTION -->
     <record id="supply_action_form"
-            model="ir.actions.act_window">
+        model="ir.actions.act_window">
         <field name="name">Supplies</field>
         <field name="res_model">it_infra.supply</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[('is_pendrive', '=', False)]</field>
-        <field name="view_ids" eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('it_infra.supply_view_tree')}),(0, 0, {'view_mode': 'form', 'view_id': ref('it_infra.supply_view_form')})]"/>
+        <field name="view_ids"
+            eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('it_infra.supply_view_tree')}),(0, 0, {'view_mode': 'form', 'view_id': ref('it_infra.supply_view_form')})]" />
     </record>
 
     <!-- WINDOW ACTION -->
     <record id="supply_pendrive_action_form"
-            model="ir.actions.act_window">
+        model="ir.actions.act_window">
         <field name="name">Pendrives</field>
         <field name="res_model">it_infra.supply</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[('is_pendrive', '=', True)]</field>
         <field name="context">{'default_is_pendrive': True }</field>
-        <field name="view_ids" eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('it_infra.supply_pendrive_view_tree')}),(0, 0, {'view_mode': 'form', 'view_id': ref('it_infra.supply_view_form')})]"/>
+        <field name="view_ids"
+            eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('it_infra.supply_pendrive_view_tree')}),(0, 0, {'view_mode': 'form', 'view_id': ref('it_infra.supply_view_form')})]" />
     </record>
 
 

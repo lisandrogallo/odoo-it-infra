@@ -3,10 +3,15 @@ from odoo import fields, models
 
 class NetworkDevicePort(models.Model):
 
-    _name = 'it_infra.network_device_port'
+    _name = "it_infra.network_device_port"
 
-    _cable_colors_ = [('blue', 'Blue'), ('yellow', 'Yellow'),
-                      ('white', 'White'), ('gray', 'Gray'), ('black', 'Black')]
+    _cable_colors_ = [
+        ("blue", "Blue"),
+        ("yellow", "Yellow"),
+        ("white", "White"),
+        ("gray", "Gray"),
+        ("black", "Black"),
+    ]
 
     name = fields.Char()
 
@@ -14,16 +19,16 @@ class NetworkDevicePort(models.Model):
 
     ip_address = fields.Char(tracking=True)
 
-    netmask = fields.Char(default='/24')
+    netmask = fields.Char(default="/24")
 
-    state = fields.Boolean(string='Active')
+    state = fields.Boolean(string="Active")
 
     vlan = fields.Char()
 
     inter_vlan_routing = fields.Char()
 
-    connected_to = fields.Many2one(comodel_name='it_infra.equipment')
+    connected_to = fields.Many2one(comodel_name="it_infra.equipment")
 
     cable_color = fields.Selection(selection=_cable_colors_)
 
-    network_device_id = fields.Many2one(comodel_name='it_infra.network_device')
+    network_device_id = fields.Many2one(comodel_name="it_infra.network_device")

@@ -3,11 +3,11 @@
 
     <!-- SEARCH VIEW -->
     <record id="server_view_search"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.server.view.search</field>
         <field name="model">it_infra.server</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <search>
                 <group>
                     <field name="name" />
@@ -21,46 +21,49 @@
 
     <!-- FORM VIEW -->
     <record id="server_view_form"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.server.view.form</field>
         <field name="model">it_infra.server</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <form>
                 <header>
                     <button name="action_draft"
-                            type="object"
-                            string="to Draft"
-                            states="active,stored,decommissioned" />
+                        type="object"
+                        string="to Draft"
+                        states="active,stored,decommissioned" />
                     <button name="action_active"
-                            type="object"
-                            string="to Active"
-                            states="draft"
-                            class="oe_highlight" />
+                        type="object"
+                        string="to Active"
+                        states="draft"
+                        class="oe_highlight" />
                     <button name="action_stored"
-                            type="object"
-                            string="to Stored"
-                            states="active"
-                            class="oe_highlight" />
+                        type="object"
+                        string="to Stored"
+                        states="active"
+                        class="oe_highlight" />
                     <button name="action_decommissioned"
-                            type="object"
-                            string="to Decommissioned"
-                            states="stored"
-                            class="oe_highlight" />
+                        type="object"
+                        string="to Decommissioned"
+                        states="stored"
+                        class="oe_highlight" />
                     <field name="state"
-                           widget="statusbar" />
+                        widget="statusbar" />
                 </header>
                 <sheet>
                     <group>
                         <h1>
-                            <field name="name" placeholder="Name..."/>
+                            <field name="name"
+                                placeholder="Name..." />
                         </h1>
                     </group>
                     <group>
-                        <field name="hosted_in_id" attrs="{'invisible':[('server_type', 'not in', ['vm', 'docker'])]}"/>
-                        <field name="webadmin" widget="url" />
+                        <field name="hosted_in_id"
+                            attrs="{'invisible':[('server_type', 'not in', ['vm', 'docker'])]}" />
+                        <field name="webadmin"
+                            widget="url" />
                         <field name="category_ids"
-                               widget="many2many_tags" />
+                            widget="many2many_tags" />
                         <field name="description" />
                     </group>
                     <group>
@@ -69,7 +72,7 @@
                             <field name="hostname" />
                             <field name="ip_address" />
                             <field name="netmask" />
-                            <field name="server_type"/>
+                            <field name="server_type" />
                             <field name="open_ports" />
                         </group>
                         <group string="Credentials">
@@ -77,16 +80,17 @@
                             <label for="password" />
                             <div>
                                 <field name="password"
-                                       password="True"
-                                       class="oe_inline" />
+                                    password="True"
+                                    class="oe_inline" />
                                 <button name="show_passwd"
-                                        string="View Password"
-                                        icon="fa-eye"
-                                        type="object"
-                                        class="oe_link oe_inline" />
+                                    string="View Password"
+                                    icon="fa-eye"
+                                    type="object"
+                                    class="oe_link oe_inline" />
                             </div>
                         </group>
-                        <group string="Inventory" attrs="{'invisible':[('server_type', 'not in', ['bare_metal', 'bare_metal_sa', 'hypervisor'])]}">
+                        <group string="Inventory"
+                            attrs="{'invisible':[('server_type', 'not in', ['bare_metal', 'bare_metal_sa', 'hypervisor'])]}">
                             <field name="stock_number" />
                             <field name="purchase_date" />
                             <field name="warranty" />
@@ -95,7 +99,7 @@
                         <group string="Location">
                             <field name="location_id" />
                             <field name="internal_location"
-                                   invisible="True" />
+                                invisible="True" />
                             <!-- <field name="switch"
                                    attrs="{'invisible':[('internal_location', '=', False)]}" />
                             <field name="patch_panel"
@@ -105,10 +109,11 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Hosted Servers" attrs="{'invisible':[u'|', (u'server_type', u'=', u'bare_metal_sa'), (u'hosted_in_id', u'!=', False)]}">
+                        <page string="Hosted Servers"
+                            attrs="{'invisible':[u'|', (u'server_type', u'=', u'bare_metal_sa'), (u'hosted_in_id', u'!=', False)]}">
                             <field name="hosted_server_ids">
                                 <tree>
-                                    <field name="name"/>
+                                    <field name="name" />
                                     <field name="category_ids" />
                                     <field name="ip_address" />
                                 </tree>
@@ -121,9 +126,9 @@
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids"
-                           widget="mail_followers" />
+                        widget="mail_followers" />
                     <field name="message_ids"
-                           widget="mail_thread" />
+                        widget="mail_thread" />
                 </div>
             </form>
         </field>
@@ -131,42 +136,43 @@
 
     <!-- TREE VIEW -->
     <record id="server_view_tree"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.server.view.tree</field>
         <field name="model">it_infra.server</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <tree decoration-bf="message_unread==True"
-                  decoration-muted="state=='cancelled'"
-                  decoration-info="state=='draft'">
+                decoration-muted="state=='cancelled'"
+                decoration-info="state=='draft'">
                 <field name="name" />
-                <field name="webadmin" widget="url" />
+                <field name="webadmin"
+                    widget="url" />
                 <field name="category_ids"
-                       widget="many2many_tags" />
+                    widget="many2many_tags" />
                 <field name="location_id"
-                       widget="many2one_unclickable" />
-                <field name="server_type"/>
+                    widget="many2one_unclickable" />
+                <field name="server_type" />
                 <field name="os_id"
-                       widget="many2one_unclickable" />
+                    widget="many2one_unclickable" />
                 <field name="ip_address" />
                 <field name="state"
-                       invisible="True" />
+                    invisible="True" />
                 <field name="message_unread"
-                       invisible="True" />
+                    invisible="True" />
             </tree>
         </field>
     </record>
 
     <!-- WINDOW ACTION  -->
     <record id="server_action_form"
-            model="ir.actions.act_window">
+        model="ir.actions.act_window">
         <field name="name">Servers</field>
         <field name="res_model">it_infra.server</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id"
-               ref="server_view_tree" />
+            ref="server_view_tree" />
         <field name="search_view_id"
-               ref="server_view_search" />
+            ref="server_view_search" />
     </record>
 
 </odoo>

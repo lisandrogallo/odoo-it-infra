@@ -3,11 +3,11 @@
 
     <!-- TREE VIEW -->
     <record id="location_view_tree"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.location.view.tree</field>
         <field name="model">it_infra.location</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <tree>
                 <field name="name" />
                 <field name="internal" />
@@ -17,7 +17,7 @@
 
     <!-- WINDOW ACTION  -->
     <record id="location_action_form"
-            model="ir.actions.act_window">
+        model="ir.actions.act_window">
         <field name="name">Locations</field>
         <field name="res_model">it_infra.location</field>
         <field name="view_mode">tree,form</field>

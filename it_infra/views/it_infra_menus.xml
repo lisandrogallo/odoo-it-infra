@@ -2,20 +2,20 @@
 <odoo>
 
     <menuitem name="IT Infrastructure"
-              id="it_infra_menu_root"
-              sequence="20"
-              groups="group_user" />
+        id="it_infra_menu_root"
+        sequence="20"
+        groups="group_user" />
 
     <menuitem name="Configuration"
-              id="it_infra_menu_configuration"
-              sequence="60"
-              parent="it_infra_menu_root"
-              groups="group_manager" />
+        id="it_infra_menu_configuration"
+        sequence="60"
+        parent="it_infra_menu_root"
+        groups="group_manager" />
 
     <menuitem name="Categories"
-              id="it_infra_menu_configuration_category"
-              sequence="30"
-              parent="it_infra_menu_configuration"
-              groups="group_manager" />
+        id="it_infra_menu_configuration_category"
+        sequence="30"
+        parent="it_infra_menu_configuration"
+        groups="group_manager" />
 
 </odoo>

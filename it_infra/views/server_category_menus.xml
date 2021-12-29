@@ -2,9 +2,9 @@
 <odoo>
 
     <menuitem name="Servers"
-              id="it_infra_menu_server_category"
-              sequence="10"
-              action="server_category_action_form"
-              parent="it_infra_menu_configuration_category" />
+        id="it_infra_menu_server_category"
+        sequence="10"
+        action="server_category_action_form"
+        parent="it_infra_menu_configuration_category" />
 
 </odoo>

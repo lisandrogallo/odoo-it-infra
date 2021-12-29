@@ -2,10 +2,10 @@
 <odoo>
 
     <menuitem name="Servers"
-              id="it_infra_menu_server"
-              sequence="10"
-              action="server_action_form"
-              parent="it_infra_menu_root"
-              groups="group_user" />
+        id="it_infra_menu_server"
+        sequence="10"
+        action="server_action_form"
+        parent="it_infra_menu_root"
+        groups="group_user" />
 
 </odoo>

@@ -2,9 +2,9 @@
 <odoo>
 
     <menuitem name="Devices"
-              id="it_infra_menu_device_category"
-              sequence="30"
-              action="device_category_action_form"
-              parent="it_infra_menu_configuration_category" />
+        id="it_infra_menu_device_category"
+        sequence="30"
+        action="device_category_action_form"
+        parent="it_infra_menu_configuration_category" />
 
 </odoo>

@@ -3,13 +3,13 @@
 
     <!-- TREE VIEW -->
     <record id="view_network_device_port_view_tree"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">it_infra.network_device_port.view.tree</field>
         <field name="model">it_infra.network_device_port</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <tree editable="top"
-                  decoration-muted="state==False">
+                decoration-muted="state==False">
                 <field name="name" />
                 <field name="mac_address" />
                 <field name="ip_address" />

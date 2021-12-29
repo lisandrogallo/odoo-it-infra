@@ -3,7 +3,7 @@ from odoo import fields, models
 
 class Provider(models.Model):
 
-    _name = 'it_infra.provider'
+    _name = "it_infra.provider"
 
     name = fields.Char()
 

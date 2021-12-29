@@ -2,28 +2,28 @@
 <odoo>
 
     <menuitem name="Consumer Goods"
-              id="it_infra_menu_goods"
-              sequence="50"
-              parent="it_infra_menu_root"
-              groups="group_user" />
+        id="it_infra_menu_goods"
+        sequence="50"
+        parent="it_infra_menu_root"
+        groups="group_user" />
 
     <menuitem name="Supplies"
-              id="menu_supplies"
-              sequence="10"
-              action="supply_action_form"
-              parent="it_infra_menu_goods"
-              groups="group_user" />
+        id="menu_supplies"
+        sequence="10"
+        action="supply_action_form"
+        parent="it_infra_menu_goods"
+        groups="group_user" />
 
     <menuitem name="Pendrives"
-              id="menu_pendrives"
-              sequence="20"
-              action="supply_pendrive_action_form"
-              parent="it_infra_menu_goods"
-              groups="group_user" />
+        id="menu_pendrives"
+        sequence="20"
+        action="supply_pendrive_action_form"
+        parent="it_infra_menu_goods"
+        groups="group_user" />
 
     <menuitem name="Supplies"
-              id="it_infra_menu_supply_configuration"
-              sequence="30"
-              parent="it_infra_menu_configuration" />
+        id="it_infra_menu_supply_configuration"
+        sequence="30"
+        parent="it_infra_menu_configuration" />
 
 </odoo>
