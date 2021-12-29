@@ -5,6 +5,7 @@ class Computer(models.Model):
 
     _name = "it_infra.computer"
     _inherit = "it_infra.equipment"
+    _description = "Computer"
 
     user_id = fields.Many2one(
         comodel_name="res.users", string="User", tracking=True

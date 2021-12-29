@@ -8,6 +8,7 @@ from odoo import _, api, exceptions, fields, models
 class Equipment(models.Model):
 
     _name = "it_infra.equipment"
+    _description = "Equipment"
     _inherit = ["mail.thread", "mail.activity.mixin"]
     _order = "purchase_date desc"
 

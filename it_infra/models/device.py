@@ -5,6 +5,7 @@ class Device(models.Model):
 
     _name = "it_infra.device"
     _inherit = "it_infra.equipment"
+    _description = "Device"
 
     device_category_id = fields.Many2one(
         comodel_name="it_infra.device_category",

@@ -4,6 +4,7 @@ from odoo import _, exceptions, fields, models
 class Server(models.Model):
 
     _name = "it_infra.server"
+    _description = "Server"
     _inherit = "it_infra.computer"
 
     _server_type_ = [

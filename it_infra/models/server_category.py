@@ -4,6 +4,7 @@ from odoo import fields, models
 class ServerCategory(models.Model):
 
     _name = "it_infra.server_category"
+    _description = "Server Category"
 
     name = fields.Char(required=True)
 

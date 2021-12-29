@@ -4,6 +4,7 @@ from odoo import fields, models
 class NetworkDevice(models.Model):
 
     _name = "it_infra.network_device"
+    _description = "Network Device"
     _inherit = "it_infra.equipment"
 
     _network_device_types_ = [

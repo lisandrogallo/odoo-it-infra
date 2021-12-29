@@ -4,6 +4,7 @@ from odoo import fields, models
 class Category(models.Model):
 
     _name = "it_infra.category"
+    _description = "Category"
 
     name = fields.Char(required=True)
 

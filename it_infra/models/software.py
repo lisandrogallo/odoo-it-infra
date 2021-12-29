@@ -4,6 +4,7 @@ from odoo import fields, models
 class Software(models.Model):
 
     _name = "it_infra.software"
+    _description = "Software"
 
     _architecture_ = [("(x86)", "32 bits"), ("(x64)", "64 bits")]
 

@@ -5,6 +5,7 @@ class DeviceCategory(models.Model):
 
     _name = "it_infra.device_category"
     _inherit = "it_infra.category"
+    _description = "Device Category"
 
     device_ids = fields.One2many(
         comodel_name="it_infra.device",
