@@ -97,6 +97,7 @@
                 <field name="stock_number" />
                 <field name="state" />
                 <field name="supply_ids" />
+                <field name="office" />
             </tree>
         </field>
     </record>
