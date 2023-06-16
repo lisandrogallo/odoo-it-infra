@@ -13,6 +13,7 @@
                     <field name="name" />
                     <field name="office" />
                     <field name="state" />
+                    <filter name="filter_state" string="Activo" domain="[('state', '=', 'active')]"/>
                 </group>
             </search>
         </field>
@@ -108,6 +109,7 @@
         <field name="name">Printers</field>
         <field name="res_model">it_infra.device</field>
         <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_filter_state': True }</field>
         <field name="domain">[(u'device_category_id', u'ilike', u'Impresora')]</field>
     </record>
 
