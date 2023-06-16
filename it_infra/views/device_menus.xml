@@ -17,7 +17,7 @@
     <menuitem name="Scanners"
         id="device_scanner_menu"
         sequence="10"
-        action="device_printer_action_view_form"
+        action="device_scanner_action_view_form"
         parent="device_menu"
         groups="group_user" />
 
